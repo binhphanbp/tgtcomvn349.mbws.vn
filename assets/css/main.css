@@ -1,5 +1,5 @@
 /* ==========================================================================
-   TGT TIMEX - Master Premium UX/UI & Responsive Precision Stylesheet
+   TGT TIMEX - Master Mobile-First & Responsive Precision Stylesheet
    Color Palette: Navy Blue (#0F233D / #0A192F) + Agriculture Green (#059669) + Accent Orange (#EA580C)
    Typography: 'Lexend' (Headings) + 'Roboto' (Body)
    ========================================================================== */
@@ -283,7 +283,7 @@ img {
     gap: 0.4rem;
 }
 
-/* --- Header Navbar --- */
+/* --- Header Navbar Desktop --- */
 .header-nav {
     position: sticky;
     top: 0;
@@ -1235,24 +1235,38 @@ textarea.form-control {
 
 /* --- Mobile Devices (< 768px) --- */
 @media (max-width: 768px) {
+    /* Hide top bar completely on mobile to eliminate overlap */
     .top-bar { display: none !important; }
 
+    /* Sticky Mobile Header Pinned 100% at Top */
     .header-nav {
-        position: sticky;
-        top: 0;
-        z-index: 2000;
-        background-color: #FFFFFF;
-        border-bottom: 1px solid #E2E8F0;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        height: 60px !important;
+        z-index: 9999 !important;
+        background-color: #FFFFFF !important;
+        border-bottom: 1px solid #E2E8F0 !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    /* Padding top to prevent content behind fixed header */
+    body {
+        padding-top: 60px !important;
     }
     
     .nav-wrapper {
-        height: 60px;
-        padding: 0;
+        height: 60px !important;
+        padding: 0 !important;
     }
     
+    /* Hide desktop button in header on mobile */
     .nav-right-actions .btn-primary { display: none !important; }
     .mobile-only-btn { display: block !important; }
     
+    /* Toggle Icon Box */
     .mobile-toggle {
         display: flex !important;
         align-items: center;
@@ -1271,27 +1285,29 @@ textarea.form-control {
     .logo-title { font-size: 1.1rem; }
     .logo-subtitle { font-size: 0.55rem; }
 
+    /* Fullscreen Mobile Drawer Menu Pinned Directly Below Mobile Header */
     .nav-menu {
-        position: fixed;
-        top: 60px;
-        left: 0;
-        right: 0;
-        width: 100vw;
-        height: calc(100vh - 60px);
-        background-color: #FFFFFF;
+        position: fixed !important;
+        top: 60px !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        width: 100vw !important;
+        height: calc(100vh - 60px) !important;
+        background-color: #FFFFFF !important;
         flex-direction: column;
         align-items: flex-start;
         padding: 1.5rem 1.25rem;
-        transform: translateX(-100%);
-        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        z-index: 1999;
-        overflow-y: auto;
-        box-sizing: border-box;
+        transform: translateX(-100%) !important;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+        z-index: 9998 !important;
+        overflow-y: auto !important;
+        box-sizing: border-box !important;
     }
     
     .nav-menu.active {
-        transform: translateX(0);
+        transform: translateX(0) !important;
     }
     
     .nav-link {
@@ -1313,6 +1329,7 @@ textarea.form-control {
     
     .nav-link.active::after { display: none; }
 
+    /* Hero Section Mobile */
     .hero-section { padding: 2.25rem 0 3.5rem 0; }
     .hero-text-box h1 { font-size: 1.6rem; line-height: 1.25; }
     .hero-text-box p { font-size: 0.875rem; margin-bottom: 1.25rem; }
@@ -1323,6 +1340,7 @@ textarea.form-control {
     .hero-feature-card { padding: 1.1rem; }
     .hero-feature-card h3 { font-size: 0.975rem; }
 
+    /* Stats Banner Mobile Grid */
     .stats-banner { margin-top: -1.5rem; padding: 0; }
     .stats-card-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1334,32 +1352,39 @@ textarea.form-control {
     .stat-number { font-size: 1.35rem; margin-bottom: 0.15rem; }
     .stat-label { font-size: 0.725rem; }
 
+    /* Section Mobile Spacing */
     .section-padding { padding: 2.75rem 0; }
     .section-title { font-size: 1.45rem; }
     .section-subtitle { font-size: 0.85rem; }
 
+    /* Grids Mobile Stack */
     .services-grid, .product-grid, .news-grid, .usp-grid { grid-template-columns: 1fr; gap: 1.15rem; }
     .workflow-grid { grid-template-columns: 1fr; gap: 0.85rem; }
     .footer-grid { grid-template-columns: 1fr; gap: 1.75rem; }
 
+    /* RFQ Box Mobile */
     .rfq-box { padding: 1.25rem; }
     .form-grid { grid-template-columns: 1fr; gap: 0.75rem; }
     .form-group.full-width { grid-column: span 1; }
 
+    /* CTA Banner Mobile */
     #b2b-cta div { padding: 1.85rem 1.15rem !important; }
     #b2b-cta h2 { font-size: 1.4rem !important; }
     #b2b-cta p { font-size: 0.875rem !important; }
     #b2b-cta div > div { flex-direction: column; width: 100%; }
     #b2b-cta .btn { width: 100%; }
 
+    /* Product Cards Mobile */
     .product-img-wrapper { height: 180px; }
     .product-actions { flex-direction: column; }
     .product-actions .btn { width: 100%; }
 
+    /* Modals Mobile */
     .modal-card { max-width: 95%; max-height: 90vh; }
     .modal-header { padding: 1rem; }
     .modal-body { padding: 1rem; }
 
+    /* Floating Widget Mobile */
     .floating-contact { bottom: 15px; right: 15px; }
     .float-btn { width: 42px; height: 42px; font-size: 1.1rem; }
 }
