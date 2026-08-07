@@ -73,6 +73,50 @@ img {
 .bg-green-light { background-color: #F0FDF4 !important; }
 .bg-navy-dark { background-color: #0A192F !important; color: #FFFFFF !important; }
 
+/* Force High Contrast Text inside ALL dark background sections */
+.bg-navy-dark h1,
+.bg-navy-dark h2,
+.bg-navy-dark h3,
+.bg-navy-dark h4,
+.bg-navy-dark .section-title,
+.workflow-section h1,
+.workflow-section h2,
+.workflow-section h3,
+.workflow-section h4,
+.workflow-section .section-title,
+.hero-section h1,
+.hero-section h2,
+.hero-section h3,
+.hero-section h4,
+.hero-section .section-title,
+#b2b-cta h1,
+#b2b-cta h2,
+#b2b-cta h3,
+#b2b-cta h4,
+#b2b-cta .section-title {
+    color: #FFFFFF !important;
+}
+
+.bg-navy-dark p,
+.bg-navy-dark .section-subtitle,
+.workflow-section p,
+.workflow-section .section-subtitle,
+.hero-section p,
+.hero-section .section-subtitle,
+#b2b-cta p,
+#b2b-cta .section-subtitle {
+    color: #CBD5E1 !important;
+}
+
+.bg-navy-dark .sub-tag,
+.workflow-section .sub-tag,
+.hero-section .sub-tag,
+#b2b-cta .sub-tag {
+    background-color: rgba(16, 185, 129, 0.25) !important;
+    color: #34D399 !important;
+    border: 1px solid rgba(52, 211, 153, 0.3) !important;
+}
+
 .section-header {
     text-align: center;
     max-width: 760px;
@@ -360,16 +404,16 @@ img {
 .hero-text-box h1 {
     font-size: clamp(1.75rem, 4vw, 2.75rem);
     font-weight: 800;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     margin-bottom: 1rem;
     line-height: 1.2;
 }
 
-.hero-text-box h1 span { color: #34D399; }
+.hero-text-box h1 span { color: #34D399 !important; }
 
 .hero-text-box p {
     font-size: 0.975rem;
-    color: #E2E8F0;
+    color: #E2E8F0 !important;
     margin-bottom: 1.75rem;
     max-width: 620px;
     line-height: 1.6;
@@ -392,7 +436,7 @@ img {
 }
 
 .hero-feature-card h3 {
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     font-size: 1.1rem;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
@@ -426,13 +470,13 @@ img {
 }
 
 .hero-feature-info h4 {
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     font-size: 0.9rem;
     margin-bottom: 0.15rem;
 }
 
 .hero-feature-info p {
-    color: #CBD5E1;
+    color: #CBD5E1 !important;
     font-size: 0.8rem;
     line-height: 1.4;
 }
@@ -568,14 +612,14 @@ img {
 }
 
 .about-badge-overlay h4 {
-    color: #34D399;
+    color: #34D399 !important;
     font-size: 1.35rem;
     font-weight: 800;
     line-height: 1;
 }
 
 .about-badge-overlay p {
-    color: #E2E8F0;
+    color: #E2E8F0 !important;
     font-size: 0.8rem;
     margin-top: 3px;
 }
@@ -669,7 +713,7 @@ img {
     top: 10px;
     left: 10px;
     background-color: #0F233D;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     font-family: 'Lexend', sans-serif;
     font-size: 0.7rem;
     font-weight: 600;
@@ -682,7 +726,7 @@ img {
     top: 10px;
     right: 10px;
     background-color: #059669;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     font-family: 'Lexend', sans-serif;
     font-size: 0.7rem;
     font-weight: 600;
@@ -736,8 +780,8 @@ img {
 
 /* --- Workflow Section --- */
 .workflow-section {
-    background-color: #0A192F;
-    color: #FFFFFF;
+    background-color: #0A192F !important;
+    color: #FFFFFF !important;
 }
 
 .workflow-grid {
@@ -747,8 +791,8 @@ img {
 }
 
 .workflow-step {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 10px;
     padding: 1.25rem 0.85rem;
     text-align: center;
@@ -758,7 +802,7 @@ img {
     width: 36px;
     height: 36px;
     background-color: #059669;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -770,13 +814,13 @@ img {
 }
 
 .workflow-step h4 {
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     font-size: 0.95rem;
     margin-bottom: 0.35rem;
 }
 
 .workflow-step p {
-    color: #CBD5E1;
+    color: #CBD5E1 !important;
     font-size: 0.8rem;
     line-height: 1.45;
 }
@@ -829,8 +873,8 @@ img {
 
 /* --- FOOTER ARCHITECTURE --- */
 .footer {
-    background-color: #0A192F;
-    color: #CBD5E1;
+    background-color: #0A192F !important;
+    color: #CBD5E1 !important;
     padding-top: 3.5rem;
     font-size: 0.875rem;
     border-top: 4px solid #059669;
