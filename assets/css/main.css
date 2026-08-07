@@ -542,7 +542,7 @@ img {
     line-height: 1.3;
 }
 
-/* --- USP / Vision Card Grid (High Premium UI) --- */
+/* --- USP / Vision Card Grid --- */
 .usp-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1105,7 +1105,7 @@ textarea.form-control {
     background-color: #050C18;
 }
 
-/* --- Floating Call & Zalo Widget --- */
+/* --- Floating Call, Zalo & Back-to-Top Widget --- */
 .floating-contact {
     position: fixed;
     bottom: 20px;
@@ -1113,7 +1113,7 @@ textarea.form-control {
     z-index: 9999;
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 0.65rem;
 }
 
 .float-btn {
@@ -1125,14 +1125,35 @@ textarea.form-control {
     justify-content: center;
     color: #FFFFFF;
     font-size: 1.2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
     transition: all 0.25s ease;
     border: none;
+    cursor: pointer;
 }
 
 .float-btn:hover { transform: scale(1.1); }
 .float-zalo { background-color: #0068FF; }
 .float-phone { background-color: #059669; }
+
+/* Back To Top Floating Button */
+.float-backtotop {
+    background-color: #0F233D;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.float-backtotop.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.float-backtotop:hover {
+    background-color: #059669;
+    transform: scale(1.1) translateY(-2px);
+}
 
 /* --- Modals --- */
 .modal-overlay {
@@ -1214,10 +1235,8 @@ textarea.form-control {
 
 /* --- Mobile Devices (< 768px) --- */
 @media (max-width: 768px) {
-    /* Hide top bar completely on mobile */
     .top-bar { display: none !important; }
 
-    /* Sticky Mobile Header */
     .header-nav {
         position: sticky;
         top: 0;
@@ -1234,7 +1253,6 @@ textarea.form-control {
     .nav-right-actions .btn-primary { display: none !important; }
     .mobile-only-btn { display: block !important; }
     
-    /* Toggle Icon Box */
     .mobile-toggle {
         display: flex !important;
         align-items: center;
@@ -1253,7 +1271,6 @@ textarea.form-control {
     .logo-title { font-size: 1.1rem; }
     .logo-subtitle { font-size: 0.55rem; }
 
-    /* Fullscreen Mobile Drawer */
     .nav-menu {
         position: fixed;
         top: 60px;
@@ -1296,7 +1313,6 @@ textarea.form-control {
     
     .nav-link.active::after { display: none; }
 
-    /* Hero Section Mobile */
     .hero-section { padding: 2.25rem 0 3.5rem 0; }
     .hero-text-box h1 { font-size: 1.6rem; line-height: 1.25; }
     .hero-text-box p { font-size: 0.875rem; margin-bottom: 1.25rem; }
@@ -1307,7 +1323,6 @@ textarea.form-control {
     .hero-feature-card { padding: 1.1rem; }
     .hero-feature-card h3 { font-size: 0.975rem; }
 
-    /* Stats Banner Mobile Grid */
     .stats-banner { margin-top: -1.5rem; padding: 0; }
     .stats-card-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1319,39 +1334,32 @@ textarea.form-control {
     .stat-number { font-size: 1.35rem; margin-bottom: 0.15rem; }
     .stat-label { font-size: 0.725rem; }
 
-    /* Section Mobile Spacing */
     .section-padding { padding: 2.75rem 0; }
     .section-title { font-size: 1.45rem; }
     .section-subtitle { font-size: 0.85rem; }
 
-    /* Grids Mobile Stack */
     .services-grid, .product-grid, .news-grid, .usp-grid { grid-template-columns: 1fr; gap: 1.15rem; }
     .workflow-grid { grid-template-columns: 1fr; gap: 0.85rem; }
     .footer-grid { grid-template-columns: 1fr; gap: 1.75rem; }
 
-    /* RFQ Box Mobile */
     .rfq-box { padding: 1.25rem; }
     .form-grid { grid-template-columns: 1fr; gap: 0.75rem; }
     .form-group.full-width { grid-column: span 1; }
 
-    /* CTA Banner Mobile */
     #b2b-cta div { padding: 1.85rem 1.15rem !important; }
     #b2b-cta h2 { font-size: 1.4rem !important; }
     #b2b-cta p { font-size: 0.875rem !important; }
     #b2b-cta div > div { flex-direction: column; width: 100%; }
     #b2b-cta .btn { width: 100%; }
 
-    /* Product Cards Mobile */
     .product-img-wrapper { height: 180px; }
     .product-actions { flex-direction: column; }
     .product-actions .btn { width: 100%; }
 
-    /* Modals Mobile */
     .modal-card { max-width: 95%; max-height: 90vh; }
     .modal-header { padding: 1rem; }
     .modal-body { padding: 1rem; }
 
-    /* Floating Widget Mobile */
     .floating-contact { bottom: 15px; right: 15px; }
     .float-btn { width: 42px; height: 42px; font-size: 1.1rem; }
 }

@@ -5,6 +5,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     initHeaderScroll();
     initMobileMenu();
+    initBackToTop();
     initProductFilter();
     initProductModal();
     initRfqModal();
@@ -66,7 +67,29 @@ function initMobileMenu() {
     });
 }
 
-/* 3. Product Filtering System */
+/* 3. Back to Top Button Logic */
+function initBackToTop() {
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    if (!backToTopBtn) return;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 280) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+/* 4. Product Filtering System */
 function initProductFilter() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const productCards = document.querySelectorAll('.product-card');
@@ -92,7 +115,7 @@ function initProductFilter() {
     });
 }
 
-/* 4. Product Quick View Modal */
+/* 5. Product Quick View Modal */
 const productDatabase = {
     'potato-fresh': {
         title: 'Khoai Tây Tươi Nhập Khẩu & Nội Địa',
@@ -223,7 +246,7 @@ function initProductModal() {
     });
 }
 
-/* 5. RFQ Quote Modal System */
+/* 6. RFQ Quote Modal System */
 function initRfqModal() {
     const rfqModal = document.getElementById('rfqModal');
     if (!rfqModal) return;
@@ -251,7 +274,7 @@ function initRfqModal() {
     });
 }
 
-/* 6. Animated Stats Counter */
+/* 7. Animated Stats Counter */
 function initStatsCounter() {
     const statNumbers = document.querySelectorAll('.stat-number');
     if (!statNumbers.length) return;
@@ -287,7 +310,7 @@ function initStatsCounter() {
     checkScroll();
 }
 
-/* 7. Form Handlers & Notifications */
+/* 8. Form Handlers & Notifications */
 function initFormHandlers() {
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {
