@@ -18,7 +18,7 @@ function initHeaderScroll() {
     if (!header) return;
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 40) {
+        if (window.scrollY > 30) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
@@ -32,15 +32,18 @@ function initMobileMenu() {
     const navMenu = document.querySelector('.nav-menu');
     if (!toggleBtn || !navMenu) return;
 
-    toggleBtn.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        const icon = toggleBtn.querySelector('i');
-        if (icon) {
-            if (navMenu.classList.contains('active')) {
-                icon.className = 'fas fa-times';
-            } else {
-                icon.className = 'fas fa-bars';
-            }
+    toggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = navMenu.classList.contains('active');
+        
+        if (isOpen) {
+            navMenu.classList.remove('active');
+            document.body.classList.remove('menu-open');
+            toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        } else {
+            navMenu.classList.add('active');
+            document.body.classList.add('menu-open');
+            toggleBtn.innerHTML = '<i class="fas fa-xmark"></i>';
         }
     });
 
@@ -48,9 +51,18 @@ function initMobileMenu() {
     navMenu.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
-            const icon = toggleBtn.querySelector('i');
-            if (icon) icon.className = 'fas fa-bars';
+            document.body.classList.remove('menu-open');
+            toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
         });
+    });
+
+    // Close on click outside drawer
+    document.addEventListener('click', (e) => {
+        if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+            navMenu.classList.remove('active');
+            document.body.classList.remove('menu-open');
+            toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        }
     });
 }
 
@@ -72,7 +84,6 @@ function initProductFilter() {
                 const category = card.getAttribute('data-category');
                 if (filterValue === 'all' || category === filterValue) {
                     card.style.display = 'flex';
-                    card.style.animation = 'fadeIn 0.4s ease forwards';
                 } else {
                     card.style.display = 'none';
                 }
@@ -283,7 +294,6 @@ function initFormHandlers() {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            // Simple validation
             let valid = true;
             const requiredInputs = form.querySelectorAll('[required]');
             requiredInputs.forEach(input => {
@@ -299,7 +309,6 @@ function initFormHandlers() {
                 showToast('Gửi yêu cầu báo giá thành công! Đội ngũ TGT TIMEX sẽ liên hệ lại với Quý khách trong vòng 15 phút.');
                 form.reset();
                 
-                // Close modals if open
                 const rfqModal = document.getElementById('rfqModal');
                 const prodModal = document.getElementById('productDetailModal');
                 if (rfqModal) rfqModal.classList.remove('active');
@@ -335,16 +344,15 @@ function showToast(message, type = 'success') {
         color: white;
         padding: 14px 20px;
         border-radius: 8px;
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        font-size: 0.9rem;
+        font-family: 'Lexend', sans-serif;
+        font-size: 0.875rem;
         font-weight: 600;
         box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         display: flex;
         align-items: center;
         gap: 10px;
-        min-width: 300px;
-        max-width: 450px;
-        animation: slideInRight 0.3s forwards;
+        min-width: 280px;
+        max-width: 420px;
     `;
 
     toast.innerHTML = `
