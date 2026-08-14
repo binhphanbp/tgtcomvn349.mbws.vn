@@ -1,0 +1,645 @@
+Mình đã kiểm tra trực tiếp website TGT TIMEX hiện tại. Nhìn tổng thể, **website đang đi đúng hướng B2B nông sản**, đặc biệt phần “sourcing theo yêu cầu – số lượng lớn – báo giá B2B” khá đúng với định hướng của TGT. Tuy nhiên, nếu mục tiêu là **dùng website để tìm khách hàng doanh nghiệp và tạo đơn hàng**, mình sẽ chỉnh khá nhiều ở phần **độ tin cậy, năng lực thực tế, sản phẩm và chuyển đổi khách hàng**. citeturn1view0\
+\
+## 1. Đánh giá nhanh website hiện tại\
+\
+| Hạng mục | Đánh giá |\
+|---|---:|\
+| Giao diện | ⭐⭐⭐⭐☆ |\
+| Định vị B2B | ⭐⭐⭐⭐☆ |\
+| Danh mục sản phẩm | ⭐⭐⭐⭐☆ |\
+| CTA/báo giá | ⭐⭐⭐⭐☆ |\
+| Thể hiện năng lực thật | ⭐⭐☆☆☆ |\
+| Độ tin cậy với khách doanh nghiệp | ⭐⭐⭐☆☆ |\
+| SEO | ⭐⭐⭐☆☆ |\
+| Khả năng tạo lead B2B | ⭐⭐⭐⭐☆ |\
+| Phù hợp với TGT hiện tại | ⭐⭐⭐☆☆ |\
+| Tiềm năng sau khi chỉnh | ⭐⭐⭐⭐⭐ |\
+\
+**Điểm mình đánh giá cao nhất:** website không đi theo kiểu “công ty bán nông sản chung chung” mà đã có tư duy **B2B sourcing**: khách đưa yêu cầu → TGT tìm nguồn → báo giá → mẫu → giao hàng. Đây là hướng rất phù hợp với TGT. citeturn1view0\
+\
+---\
+\
+# 2. Vấn đề lớn nhất hiện nay: Website đang “nói hơi nhiều” về năng lực\
+\
+Ví dụ website đang ghi:\
+\
+> “Quy mô hàng ngàn tấn”\
+\
+> “15+ năm kinh nghiệm XNK & thương mại”\
+\
+> “Hệ thống kho lạnh hiện đại”\
+\
+> “HACCP, ISO 22000, Phytosanitary”\
+\
+> “Xuất khẩu đi Trung Quốc, EU, Mỹ, Hàn Quốc”\
+\
+> “báo giá trong vòng 15 phút”\
+\
+Đây là những thông tin **rất mạnh**, nhưng nếu khách B2B vào website và muốn kiểm chứng thì hiện tại chưa có đủ bằng chứng đi kèm. citeturn1view0\
+\
+Đối với khách doanh nghiệp, **“nói mình mạnh” chưa bằng “cho tôi xem bằng chứng”.**\
+\
+### Nên bổ sung:\
+\
+**Năng lực thực tế**\
+\
+- Đã cung ứng bao nhiêu tấn/tháng?\
+- Sản lượng/container trung bình?\
+- Các thị trường nhập khẩu?\
+- Các tỉnh/vùng cung ứng?\
+- Năng lực kho?\
+- Năng lực vận chuyển?\
+- MOQ từng nhóm sản phẩm?\
+- Lead time?\
+- Năng lực sourcing quốc tế?\
+\
+**Bằng chứng**\
+\
+- Hình ảnh container thực tế\
+- Hình ảnh loading hàng\
+- Hình ảnh kho\
+- Hình ảnh kiểm hàng\
+- Hình ảnh đóng gói\
+- Hình ảnh chứng từ XNK\
+- Hình ảnh sản phẩm thực tế\
+- Hình ảnh giao hàng cho khách\
+- Case study\
+\
+---\
+\
+# 3. TGT nên xác định lại “khách hàng mục tiêu”\
+\
+Hiện website đang nói khá rộng:\
+\
+> đại lý, nhà phân phối, chợ đầu mối, nhà máy, HORECA, chuỗi bán lẻ...\
+\
+Điều này không sai nhưng **hơi rộng**.\
+\
+TGT nên chia thành 6 nhóm rất rõ:\
+\
+### ① Nhà máy chế biến\
+\
+Ví dụ:\
+\
+- Nhà máy snack\
+- Nhà máy khoai tây chiên\
+- Nhà máy thực phẩm\
+- Nhà máy chế biến gia vị\
+\
+**Thông tin họ quan tâm:**\
+\
+- Quy cách\
+- Size\
+- Độ khô\
+- Độ đường\
+- Độ ẩm\
+- Tiêu chuẩn\
+- Sản lượng/tháng\
+- Hợp đồng dài hạn\
+\
+---\
+\
+### ② Bếp ăn công nghiệp\
+\
+Quan tâm:\
+\
+- Giá\
+- Sản lượng\
+- Giao hàng định kỳ\
+- Quy cách đóng gói\
+- Hóa đơn\
+- ATTP\
+- Tính ổn định nguồn hàng\
+\
+---\
+\
+### ③ HORECA\
+\
+- Nhà hàng\
+- Khách sạn\
+- Resort\
+- Chuỗi F&B\
+\
+Quan tâm:\
+\
+- Size\
+- Độ đồng đều\
+- Chất lượng\
+- Quy cách\
+- Giao hàng\
+- Giá\
+\
+---\
+\
+### ④ Chợ đầu mối / đại lý\
+\
+Đây có thể là **một nhóm cực kỳ quan trọng với TGT**.\
+\
+Nên có riêng:\
+\
+**“Giá sỉ – nguồn hàng số lượng lớn – giao theo tấn/container”**\
+\
+---\
+\
+### ⑤ Siêu thị / chuỗi bán lẻ\
+\
+Quan tâm:\
+\
+- Tiêu chuẩn\
+- Bao bì\
+- Barcode\
+- Truy xuất nguồn gốc\
+- VietGAP/GlobalGAP\
+- Hồ sơ sản phẩm\
+\
+---\
+\
+### ⑥ Doanh nghiệp XNK\
+\
+Quan tâm:\
+\
+- FOB\
+- CIF\
+- CFR\
+- DDP\
+- Phytosanitary\
+- Packing list\
+- Invoice\
+- CO\
+- CQ\
+- Hải quan\
+- Container\
+\
+---\
+\
+# 4. Phần cần làm mạnh nhất: “Sản phẩm”\
+\
+Hiện sản phẩm khá đẹp nhưng **chưa đủ tính thương mại B2B**.\
+\
+Ví dụ khoai tây đang có:\
+\
+- Size\
+- Quy cách đóng gói\
+- MOQ\
+- Mô tả chung. citeturn1view0\
+\
+Nhưng khách mua chuyên nghiệp còn cần:\
+\
+### Mỗi sản phẩm nên có một “Product Data Sheet”\
+\
+Ví dụ:\
+\
+**KHOAI TÂY TƯƠI – HÀ LAN**\
+\
+**Xuất xứ:** Hà Lan  \
+**Giống:** …  \
+**Mục đích sử dụng:** HORECA / nhà máy / bán lẻ  \
+**Size:** 45–55 / 55–65 / 65–75 mm  \
+**Độ khô:** …  \
+**DM:** …  \
+**Tỷ lệ lỗi:** …  \
+**Thời gian bảo quản:** …  \
+**Nhiệt độ bảo quản:** …  \
+**Đóng gói:** 10kg / 20kg / Jumbo  \
+**MOQ:** 5 tấn / 1 container  \
+**Lead time:** …  \
+**Mùa vụ:** …  \
+**Chứng từ:** …  \
+**Năng lực cung ứng:** … tấn/tháng\
+\
+Và đặc biệt:\
+\
+### **“Yêu cầu báo giá”**\
+\
+Khách nhập:\
+\
+> Tôi cần 20 tấn khoai tây size 55–65mm, giao Hà Nội, giao hàng tháng 9.\
+\
+Đây mới thực sự là **lead B2B chất lượng cao**.\
+\
+---\
+\
+# 5. Một điểm cần sửa ngay: thông tin “Email Nợ Báo Giá”\
+\
+Ở form hiện tại website đang hiển thị:\
+\
+> “Email Nợ Báo Giá”\
+\
+Có vẻ đây là lỗi text, có thể intended là **“Email nhận báo giá”**. citeturn1view0\
+\
+Cần sửa ngay vì lỗi nhỏ này ảnh hưởng trực tiếp đến cảm nhận chuyên nghiệp.\
+\
+Nên thành:\
+\
+**Email nhận báo giá**\
+\
+---\
+\
+# 6. Form báo giá hiện tại tốt nhưng nên nâng cấp\
+\
+Hiện form đã có:\
+\
+- Họ tên\
+- Doanh nghiệp\
+- SĐT/Zalo\
+- Email\
+- Sản phẩm\
+- Số lượng\
+- Yêu cầu quy cách. citeturn1view0\
+\
+Mình đề xuất thêm:\
+\
+### “Bạn mua với mục đích nào?”\
+\
+☐ Nhà máy  \
+☐ Đại lý  \
+☐ Chợ đầu mối  \
+☐ Nhà hàng/HORECA  \
+☐ Bếp ăn  \
+☐ Siêu thị  \
+☐ Xuất khẩu  \
+☐ Khác\
+\
+### “Bạn cần hàng khi nào?”\
+\
+☐ Ngay  \
+☐ 1–7 ngày  \
+☐ 7–30 ngày  \
+☐ Hợp đồng dài hạn\
+\
+### “Hình thức giao hàng”\
+\
+☐ Tại kho TGT  \
+☐ Hà Nội  \
+☐ Các tỉnh phía Bắc  \
+☐ Toàn quốc  \
+☐ FOB/CIF/CFR/DDP\
+\
+Như vậy sales nhận được **lead đã được phân loại**, không phải gọi lại hỏi từ đầu.\
+\
+---\
+\
+# 7. Website cần thêm một mục cực kỳ quan trọng: “Năng lực TGT”\
+\
+Hiện phần giới thiệu có đề cập năng lực nhưng chưa đủ sâu. citeturn1view0\
+\
+Mình đề xuất làm một trang:\
+\
+# NĂNG LỰC CUNG ỨNG\
+\
+### TGT có thể cung ứng:\
+\
+**Nông sản tươi**\
+\
+Khoai tây | Hành tây | Tỏi | Gừng | Cà rốt...\
+\
+**Nông sản nhập khẩu**\
+\
+Hà Lan | Ấn Độ | Trung Quốc | Úc | New Zealand...\
+\
+**Nông sản xuất khẩu**\
+\
+Việt Nam → Trung Quốc  \
+Việt Nam → Hàn Quốc  \
+Việt Nam → EU  \
+...\
+\
+### Năng lực\
+\
+**01** Nguồn hàng  \
+**02** Sourcing  \
+**03** Kiểm soát chất lượng  \
+**04** Kho vận  \
+**05** Logistics  \
+**06** XNK  \
+**07** Giao hàng\
+\
+---\
+\
+# 8. Nên có “Case Study” – đây là thứ website đang thiếu\
+\
+Ví dụ:\
+\
+## CASE STUDY 01\
+### Cung ứng 28 tấn khoai tây cho đại lý miền Bắc\
+\
+**Sản phẩm:** Khoai tây Hà Lan  \
+**Khối lượng:** 28 tấn  \
+**Quy cách:** Bao 10kg  \
+**Khách hàng:** Đại lý phân phối  \
+**Thời gian:** 3 ngày  \
+**Điểm giao:** Hà Nội\
+\
+→ Hình ảnh container  \
+→ Hình ảnh hàng  \
+→ Hình ảnh giao hàng\
+\
+---\
+\
+## CASE STUDY 02\
+### Sourcing khoai tây theo quy cách nhà máy\
+\
+**Nhu cầu:** 100 tấn/tháng  \
+**Size:** …  \
+**Nguồn:** Hà Lan  \
+**Quy cách:** …  \
+**Thời hạn:** Hợp đồng 6 tháng\
+\
+Đây là cách **biến năng lực thành bằng chứng**.\
+\
+---\
+\
+# 9. Nên có trang “Đối tác”\
+\
+Nếu TGT đã có khách hàng/đối tác cho phép công bố:\
+\
+**Đối tác & khách hàng**\
+\
+- Logo\
+- Tên doanh nghiệp\
+- Lĩnh vực\
+- Sản phẩm cung ứng\
+\
+Nếu chưa được phép công khai tên thì dùng:\
+\
+> “Nhà máy chế biến thực phẩm – miền Bắc”\
+\
+> “Chuỗi F&B – Hà Nội”\
+\
+> “Đại lý nông sản – Hà Nội”\
+\
+vẫn tốt hơn là không có gì.\
+\
+---\
+\
+# 10. Phần “Tin tức” nên đổi thành công cụ bán hàng\
+\
+Hiện website có các bài về xu hướng nhập khẩu, khoai tây đông lạnh, xuất khẩu... citeturn1view0\
+\
+Hướng này đúng.\
+\
+Nhưng nên viết theo kiểu **khách hàng tìm Google → vào bài → để lại nhu cầu**.\
+\
+Ví dụ:\
+\
+### “Giá khoai tây Hà Lan hôm nay”\
+\
+### “Giá khoai tây nhập khẩu tháng 8/2026”\
+\
+### “Mua khoai tây số lượng lớn ở đâu?”\
+\
+### “Nguồn khoai tây cho nhà máy chế biến”\
+\
+### “Khoai tây size 55–65 giá bao nhiêu?”\
+\
+### “Nhập khẩu hành tây Ấn Độ”\
+\
+### “Nguồn tỏi Trung Quốc số lượng lớn”\
+\
+### “Nhà cung cấp nông sản cho bếp ăn công nghiệp”\
+\
+Đây mới là **SEO có khả năng kéo khách B2B**.\
+\
+---\
+\
+# 11. Tôi đặc biệt khuyên TGT làm “Sourcing B2B”\
+\
+Đây có thể trở thành **USP rất mạnh**.\
+\
+Không chỉ:\
+\
+> “TGT bán khoai tây.”\
+\
+Mà:\
+\
+> **“Bạn cần loại nông sản nào, quy cách nào, số lượng bao nhiêu – TGT tìm nguồn và cung ứng theo yêu cầu.”**\
+\
+Ví dụ khách nhập:\
+\
+> Cần 100 tấn khoai tây/tháng  \
+> Size 50–70mm  \
+> Giao Hà Nội  \
+> Hợp đồng 6 tháng\
+\
+TGT tìm nguồn → kiểm tra → lấy mẫu → báo giá → giao.\
+\
+Đây là mô hình **B2B Sourcing Partner**, khác hẳn một website thương mại nông sản thông thường.\
+\
+---\
+\
+# 12. Có một vấn đề về tên miền\
+\
+Hiện website đang chạy trên:\
+\
+**tgtcomvn.vercel.app**\
+\
+Về mặt kỹ thuật Vercel là nền tảng hosting hợp lệ, nhưng với một công ty XNK B2B, mình **không khuyến nghị dùng subdomain `.vercel.app` làm website chính thức lâu dài**. Vercel là nền tảng triển khai website chứ không phải thương hiệu của TGT. citeturn0search7\
+\
+Nên chuyển sang:\
+\
+**tgt.com.vn**\
+\
+hoặc nếu tên này không phù hợp/không còn khả dụng thì chọn một domain thương hiệu ngắn, dễ đọc.\
+\
+Website hiện đã dùng email:\
+\
+**info@tgt.com.vn**\
+\
+nên việc đưa domain chính thức lên website sẽ tạo cảm giác đồng bộ hơn.\
+\
+---\
+\
+# 13. Tôi sẽ thay cấu trúc website thành\
+\
+### MENU\
+\
+**Trang chủ**\
+\
+**Về TGT**\
+\
+→ Giới thiệu  \
+→ Năng lực  \
+→ Hệ thống cung ứng  \
+→ Đối tác\
+\
+**Sản phẩm**\
+\
+→ Khoai tây  \
+→ Hành tây  \
+→ Tỏi  \
+→ Gừng  \
+→ Cà rốt  \
+→ Trái cây  \
+→ Nông sản khô  \
+→ Nông sản chế biến\
+\
+**Sourcing B2B**\
+\
+→ Tìm nguồn theo yêu cầu  \
+→ Đặt hàng số lượng lớn  \
+→ Nguồn hàng nhập khẩu  \
+→ Nguồn hàng xuất khẩu\
+\
+**Thị trường**\
+\
+→ Đại lý  \
+→ Nhà máy  \
+→ HORECA  \
+→ Bếp ăn  \
+→ Chợ đầu mối  \
+→ Siêu thị  \
+→ XNK\
+\
+**Dự án & Case Study**\
+\
+**Tin tức thị trường**\
+\
+**Liên hệ**\
+\
+### Nút nổi bật:\
+\
+**📞 NHẬN BÁO GIÁ B2B**\
+\
+---\
+\
+# 14. Homepage nên đánh thẳng vào khách hàng\
+\
+Thay vì quá nhiều câu giới thiệu, phần đầu nên rất rõ:\
+\
+> ## TGT TIMEX – ĐỐI TÁC CUNG ỨNG NÔNG SẢN B2B\
+> **Nguồn hàng trong nước & quốc tế – Số lượng lớn – Theo quy cách – Giao hàng toàn quốc**\
+\
+Ngay dưới:\
+\
+**Khoai tây | Hành tây | Tỏi | Gừng | Cà rốt | Trái cây | Nông sản khô | Nông sản chế biến**\
+\
+### Và 3 nút:\
+\
+**[NHẬN BÁO GIÁ]**\
+\
+**[TÌM NGUỒN HÀNG]**\
+\
+**[ZALO B2B]**\
+\
+---\
+\
+# 15. Một điểm rất quan trọng: Đừng biến TGT thành “siêu thị nông sản”\
+\
+Đây là điều mình sẽ chỉnh nếu làm website chính thức cho TGT.\
+\
+Hiện website đang có khá nhiều sản phẩm:\
+\
+> khoai tây → hành tỏi gừng → trái cây → khoai tây đông lạnh → nông sản khô → xuất khẩu... citeturn1view0\
+\
+Trong giai đoạn đầu, mình nghĩ **TGT nên lấy 3 nhóm làm mũi nhọn**:\
+\
+### 🥔 1. KHOAI TÂY\
+**Sản phẩm chủ lực**\
+\
+### 🧄 2. HÀNH – TỎI – GỪNG\
+**Nhóm hàng thương mại**\
+\
+### 🚢 3. SOURCING & XNK NÔNG SẢN\
+**Năng lực khác biệt**\
+\
+Các sản phẩm khác để ở nhóm:\
+\
+> **Sản phẩm khác / Theo yêu cầu**\
+\
+Như vậy khách sẽ nhớ:\
+\
+> **TGT = Khoai tây + Nông sản B2B + Sourcing**\
+\
+thay vì:\
+\
+> “TGT bán đủ thứ nông sản.”\
+\
+---\
+\
+# 16. Những thông tin tôi cho rằng TGT bắt buộc phải có\
+\
+### Thông tin doanh nghiệp\
+\
+- Tên pháp lý đầy đủ\
+- MST\
+- Địa chỉ\
+- Người đại diện\
+- Năm thành lập\
+- Email công ty\
+- Điện thoại\
+- Website\
+- Zalo\
+- Mã QR\
+\
+### Năng lực\
+\
+- Sản lượng/tháng\
+- Sản lượng/container\
+- Năng lực sourcing\
+- Kho\
+- Logistics\
+- XNK\
+- Khu vực giao hàng\
+\
+### Sản phẩm\
+\
+- Xuất xứ\
+- Mùa vụ\
+- Size\
+- Quy cách\
+- Đóng gói\
+- MOQ\
+- Lead time\
+- Điều kiện bảo quản\
+- Tiêu chuẩn\
+- Chứng từ\
+\
+### Chất lượng\
+\
+- Quy trình kiểm hàng\
+- Kiểm nghiệm\
+- ATTP\
+- Truy xuất\
+- Chứng thư\
+- Phytosanitary\
+- CO/CQ nếu có\
+\
+### Thương mại\
+\
+- MOQ\
+- Điều kiện thanh toán\
+- Điều kiện giao hàng\
+- FOB/CIF/CFR/DDP\
+- Hợp đồng\
+- Hóa đơn VAT\
+\
+### Chuyển đổi\
+\
+- Nhận báo giá\
+- Gửi yêu cầu sourcing\
+- Đặt mẫu\
+- Zalo\
+- Hotline\
+- Form B2B\
+\
+---\
+\
+## Kết luận của mình\
+\
+**Website hiện tại khoảng 7/10 về hình thức và 6/10 về khả năng xây dựng niềm tin B2B.**\
+\
+Điểm mạnh là **định vị đúng hướng B2B + sourcing + số lượng lớn**, và cấu trúc CTA khá tốt. citeturn1view0\
+\
+Nhưng để website thực sự trở thành **“bộ mặt thương mại” của TGT**, mình sẽ ưu tiên 5 việc:\
+\
+**1. Chuyển sang domain chính thức `tgt.com.vn`.**\
+\
+**2. Giảm các tuyên bố chung chung, tăng bằng chứng năng lực thực tế.**\
+\
+**3. Làm Product Data Sheet cho từng sản phẩm chủ lực.**\
+\
+**4. Xây riêng hệ thống Sourcing B2B + form yêu cầu báo giá.**\
+\
+**5. Xây Case Study + năng lực + khách hàng/đối tác để tạo niềm tin.**\
+\
+Nếu làm tốt 5 phần này, website sẽ không còn đơn thuần là **“website giới thiệu TGT”**, mà có thể trở thành **một kênh tìm khách B2B và nhận đơn hàng trực tiếp**.","role","assistant","name",{"_407":408},"real_author","tool:web","dacf088d-ee78-4f2e-a334-e3a8e4058251",{"_403":432,"_405":433,"_99":434},1786203340.8949873,{"_399":49,"_400":431},{"_414":415,"_416":417,"_418":419,"_420":421,"_422":423,"_424":425,"_120":121,"_122":123,"_124":125,"_126":127,"_128":127,"_129":119,"_130":131,"_133":426},"search_model_queries",{"_141":414,"_428":429},"reasoning_titles",[419],"reasoning_title","Đang tìm kiếm tgtcomvn.vercel.app website content tgtcomvn.vercel.app","reasoning_status","is_reasoning","tool_icons",[427],"reasoning_start_time",1786203340.5786061,"dffc4a22-2cf8-40da-b9de-981dad316283","globe","queries",[430],"tgtcomvn.vercel.app website content tgtcomvn.vercel.app",[257],"tool","web.run",{"_407":435},"tool:web.run","22e40ea1-a556-485f-aa1b-4894eada9926",{"_403":404,"_405":-5,"_99":453},1786203340.5853548,{"_399":448,"_449":450,"_451":-5,"_49":452},{"_116":442,"_108":443,"_118":119,"_416":444,"_418":445,"_420":421,"_422":446,"_424":425,"_120":121,"_122":123,"_124":125,"_126":127,"_128":127,"_129":119,"_130":131,"_133":447},"web",[],[],[445],"Đang tìm kiếm trên web",[427],"74a87079-04ff-4a7b-9e1e-8ba5ae5d1f45","code","language","unknown","response_format_name","search(\"C\\u00e1c th\\u00f4ng tin c\\u1ea9n th\\u1ec3 hi\\u1ec7n tr\\u00ean website b2b n\\u00f4ng s\\u1ea3n. \\u0110\\u00e1nh gi\\u00e1 website [https://tgtcomvn.vercel.app/?zarsrc=30&utm\\\\_source=zalo&utm\\\\_medium=zalo&utm\\\\_campaign=zalo](https://tgtcomvn.vercel.app/?zarsrc=30\\\\&utm_source=zalo\\\\&utm_medium=zalo\\\\&utm_campaign=zalo)\")",{},"dd",{"_467":468,"_469":470},"disablePrefetch","shouldPrefetchAccount","shouldPrefetchUser","shouldPrefetchSystemHints","manageRootRouteStylesheet","promoteCss","disableSSR","stripModulepreloadImports","paidCampaignAppRedirect","statsigGateEvaluationsPromise",["P",466],"traceId","13619236024587633074","traceTime",1786681482035]

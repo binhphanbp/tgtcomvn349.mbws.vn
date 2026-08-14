@@ -115,83 +115,94 @@ function initProductFilter() {
     });
 }
 
-/* 5. Product Quick View Modal */
+/* 5. Product Quick View Modal & B2B Data Sheet */
 const productDatabase = {
     'potato-fresh': {
-        title: 'Khoai Tây Tươi Nhập Khẩu & Nội Địa',
-        category: 'Nông Sản Tươi',
-        origin: 'Đà Lạt / Hà Lan / Úc',
-        desc: 'Khoai tây củ to, vàng ươm, ruột đặc, độ ẩm tiêu chuẩn. Cung ứng số lượng lớn theo container lạnh cho nhà máy chiên, HORECA & siêu thị.',
+        title: 'Khoai Tây Tươi Hà Lan / Úc / Đà Lạt (Product Data Sheet)',
+        category: 'Sản Phẩm Mũi Nhọn #1',
+        origin: 'Hà Lan / Úc / Việt Nam',
+        desc: 'Khoai tây củ to, vỏ mỏng vàng ươm, ruột đặc, độ khô tiêu chuẩn cao. Chuyên cung ứng số lượng lớn theo container lạnh cho nhà máy chip/snack, bếp ăn công nghiệp, chợ đầu mối & chuỗi siêu thị.',
         specs: [
-            { label: 'Quy cách củ', val: 'Size 100g - 250g/củ' },
-            { label: 'Quy cách đóng gói', val: 'Bao lưới 10kg, 20kg hoặc Jumbo 1 tấn' },
-            { label: 'Nhiệt độ bảo quản', val: '4°C - 8°C (Chuỗi lạnh tiêu chuẩn)' },
-            { label: 'Khả năng cung ứng', val: 'Lên đến 5,000 Tấn/Tháng' }
+            { label: 'Quy cách Size củ', val: '45–55mm / 55–65mm / 65–75mm' },
+            { label: 'Mục đích sử dụng', val: 'Nhà máy chip/snack, HORECA, Bán lẻ' },
+            { label: 'Tỷ lệ củ lỗi / dập', val: '≤ 0.5% (Kiểm định LAS-NN)' },
+            { label: 'Độ khô (Dry Matter)', val: '≥ 20%' },
+            { label: 'Nhiệt độ bảo quản', val: '4°C - 8°C (Chuỗi kho lạnh 24/7)' },
+            { label: 'Quy cách đóng gói', val: 'Bao lưới 10kg, 20kg hoặc Jumbo Bag 1 Tấn' },
+            { label: 'MOQ (Tối thiểu)', val: '5 Tấn (Nội địa) / 1 Container 40ft (XNK)' },
+            { label: 'Năng lực cung ứng', val: '5,000 Tấn / Tháng' },
+            { label: 'Chứng từ kèm theo', val: 'Phytosanitary, VietGAP, CQ, Kiểm nghiệm' }
         ],
         img: 'assets/images/fresh_produce.png'
     },
     'onion-fresh': {
-        title: 'Hành Tây Vàng & Đỏ Thương Hạng',
-        category: 'Nông Sản Tươi',
+        title: 'Hành Tây Vàng & Đỏ Nhập Khẩu Thương Hạng',
+        category: 'Nhóm Củ Thương Mại #2',
         origin: 'Hà Lan / Ấn Độ / Việt Nam',
-        desc: 'Hành tây vỏ mỏng khô, củ chắc, không dập nát, kháng thối hỏng cao. Thích hợp cho chế biến công nghiệp và chế biến thực phẩm.',
+        desc: 'Hành tây vỏ khô mỏng, củ chắc đét, không dập thối, độ cay nồng chuẩn. Cung ứng hợp đồng định kỳ cho các nhà máy gia vị, bếp ăn công nghiệp & đại lý sỉ.',
         specs: [
-            { label: 'Quy cách củ', val: 'Đường kính 6 - 9 cm' },
-            { label: 'Quy cách đóng gói', val: 'Túi lưới 10kg/20kg/25kg' },
-            { label: 'Nhiệt độ bảo quản', val: '0°C - 4°C, độ ẩm 65%' },
-            { label: 'Khả năng cung ứng', val: 'Lên đến 3,000 Tấn/Tháng' }
+            { label: 'Đường kính củ', val: 'Size 6cm – 9cm' },
+            { label: 'Độ ẩm vỏ', val: '≤ 12% (Vỏ khô giòn)' },
+            { label: 'Đóng gói', val: 'Bao túi lưới 10kg / 20kg / 25kg' },
+            { label: 'Bảo quản', val: '0°C – 4°C, Độ ẩm 65%' },
+            { label: 'MOQ', val: '3 Tấn / 1 Container' },
+            { label: 'Năng lực cung ứng', val: '3,000 Tấn / Tháng' },
+            { label: 'Chứng từ', val: 'Phytosanitary, Hóa đơn VAT, CO' }
         ],
         img: 'assets/images/fresh_produce.png'
     },
-    'cantaloupe-fruit': {
-        title: 'Dưa Vàng Hoàng Kim Chuẩn VietGAP',
-        category: 'Trái Cây',
-        origin: 'Nông trại TGT / Bình Thuận',
-        desc: 'Dưa vàng vỏ lưới đẹp mắt, vị ngọt thanh tự nhiên (Brix > 13°), giòn ngọt rụm. Chuyên cung cấp cho chuỗi siêu thị, cửa hàng trái cây & XNK.',
+    'garlic-fresh': {
+        title: 'Tỏi Trắng & Tỏi Tím Nhập Khẩu Số Lượng Lớn',
+        category: 'Nhóm Củ Thương Mại #2',
+        origin: 'Trung Quốc / Việt Nam',
+        desc: 'Tỏi tép to đều, tép mẩy mặn mòi, vỏ sạch đẹp không nấm mốc. Nguồn cung ứng sỉ theo container cho nhà máy chế biến gia vị, chợ đầu mối toàn quốc.',
         specs: [
-            { label: 'Trọng lượng củ/quả', val: '1.2kg - 2.2kg/quả' },
-            { label: 'Độ ngọt (Brix)', val: '≥ 13° Brix' },
-            { label: 'Đóng gói', val: 'Thùng carton 10kg có mút xốp chống dập' },
-            { label: 'Chứng nhận', val: 'VietGAP, GlobalGAP' }
+            { label: 'Size tép tỏi', val: '4.5cm – 6.0cm' },
+            { label: 'Đóng gói', val: 'Bao lưới 10kg, Thùng 10kg, Túi lưới 1kg' },
+            { label: 'Điều kiện bảo quản', val: '-1°C – 1°C kho lạnh khô' },
+            { label: 'MOQ', val: '2 Tấn' },
+            { label: 'Năng lực cung ứng', val: '2,000 Tấn / Tháng' },
+            { label: 'Hóa đơn & Chứng từ', val: 'Hóa đơn VAT đầy đủ, Phytosanitary' }
         ],
-        img: 'assets/images/fresh_fruits.png'
+        img: 'assets/images/fresh_produce.png'
     },
     'french-fries': {
-        title: 'Khoai Tây Chiên Đông Lạnh Cắt Thẳng/Sóng',
+        title: 'Khoai Tây Chiên Đông Lạnh Cắt Thẳng / Sóng',
         category: 'Nông Sản Chế Biến',
         origin: 'Bỉ / Hà Lan / Mỹ',
-        desc: 'Khoai tây đông lạnh chiên giòn lâu, vàng đều, không ngấm dầu. Sản phẩm chủ lực cung ứng chuỗi nhà hàng, fastfood & HORECA toàn quốc.',
+        desc: 'Khoai tây chiên đông lạnh nhập khẩu chuẩn Châu Âu, sợi giòn lâu, vàng ruộm, không ngấm dầu. Chủ lực cho các nhà hàng, khách sạn, chuỗi Fastfood & HORECA.',
         specs: [
-            { label: 'Quy cách cắt', val: '7mm / 9mm / 10mm (Straight Cut & Crinkle Cut)' },
-            { label: 'Đóng gói', val: 'Túi 2.5kg x 4 túi/Thùng (10kg)' },
-            { label: 'Bảo quản', val: '-18°C đông lạnh sâu' },
-            { label: 'Hạn sử dụng', val: '24 tháng kể từ ngày sản xuất' }
+            { label: 'Quy cách cắt', val: '7mm / 9mm / 10mm (Thẳng & Sóng)' },
+            { label: 'Quy cách đóng gói', val: 'Túi 2.5kg x 4 túi/Thùng (10kg)' },
+            { label: 'Nhiệt độ bảo quản', val: '-18°C đông lạnh sâu' },
+            { label: 'Hạn sử dụng', val: '24 tháng kể từ ngày sản xuất' },
+            { label: 'MOQ', val: '50 Thùng (Giao xe lạnh tận nơi)' }
         ],
         img: 'assets/images/processed_potatoes.png'
     },
-    'peanuts-dried': {
-        title: 'Lạc Nhân & Vừng Trắng/Đen Hạt Đều',
-        category: 'Nông Sản Khô',
-        origin: 'Việt Nam / Ấn Độ',
-        desc: 'Lạc nhân hạt đều, khô kiệt, độ ẩm dưới 8%, không nấm mốc aflatoxin. Chuyên cung cấp cho nhà máy ép dầu và chế biến bánh kẹo.',
+    'cantaloupe-fruit': {
+        title: 'Dưa Vàng Hoàng Kim VietGAP Chuyên Siêu Thị',
+        category: 'Trái Cây Nhập & Nội Địa',
+        origin: 'Nông trại TGT / Bình Thuận',
+        desc: 'Dưa vàng vỏ lưới nổi đẹp mắt, thịt giòn ngọt rụm, độ ngọt Brix > 13°. Đạt tiêu chuẩn vào các chuỗi siêu thị lớn, F&B cao cấp và xuất khẩu.',
         specs: [
-            { label: 'Tỷ lệ hạt lép/hỏng', val: '< 0.5%' },
-            { label: 'Độ ẩm', val: '≤ 8%' },
-            { label: 'Đóng gói', val: 'Bao PP/Jumbo 25kg/50kg/1000kg' },
-            { label: 'Khả năng cung ứng', val: '1,500 Tấn/Tháng' }
+            { label: 'Trọng lượng quả', val: '1.2kg – 2.2kg / quả' },
+            { label: 'Độ ngọt (Brix)', val: '≥ 13° Brix' },
+            { label: 'Đóng gói', val: 'Thùng carton 10kg có mút xốp định hình' },
+            { label: 'Chứng nhận', val: 'VietGAP, GlobalGAP, Truy xuất QR' }
         ],
-        img: 'assets/images/fresh_produce.png'
+        img: 'assets/images/fresh_fruits.png'
     },
-    'export-dragonfruit': {
-        title: 'Nông Sản Việt Nam Xuất Khẩu (Thanh Long, Mango, Coffee)',
-        category: 'Xuất Khẩu',
-        origin: 'Việt Nam',
-        desc: 'TGT kết nối nguồn hàng nông sản Việt Nam chất lượng cao đạt chuẩn xuất khẩu đi Trung Quốc, EU, Mỹ, Đông Nam Á.',
+    'sourcing-b2b': {
+        title: 'Dịch Vụ Sourcing B2B & XNK Nông Sản Theo Yêu Cầu',
+        category: 'Năng Lực Khác Biệt #3',
+        origin: 'Toàn Cầu (EU, Úc, Ấn Độ, TQ...)',
+        desc: 'TGT TIMEX nhận săn tìm, thẩm định vùng trồng & nhập khẩu/xuất khẩu mọi loại nông sản theo đúng quy cách, tiêu chuẩn kỹ thuật & tiến độ của doanh nghiệp.',
         specs: [
-            { label: 'Tiêu chuẩn XNK', val: 'SPS, HACCP, ISO 22000, Phytosanitary' },
-            { label: 'Phương thức giao hàng', val: 'FOB, CIF, CFR theo yêu cầu khách B2B' },
-            { label: 'Quy cách', val: 'Thùng lạnh Reefer Container 20ft/40ft' },
-            { label: 'Thanh toán', val: 'L/C, T/T linh hoạt' }
+            { label: 'Phạm vi tìm kiếm', val: 'Nông sản củ, trái cây, gia vị, đông lạnh' },
+            { label: 'Tiêu chuẩn đáp ứng', val: 'HACCP, ISO 22000, GlobalGAP, Organic' },
+            { label: 'Quy trình hợp tác', val: 'Báo giá → Gửi mẫu → Kiểm định → Hợp đồng' },
+            { label: 'Điều kiện giao hàng', val: 'FOB, CIF, CFR, DDP tận kho khách' }
         ],
         img: 'assets/images/cold_storage_warehouse.png'
     }
@@ -221,9 +232,9 @@ function initProductModal() {
                 specsContainer.innerHTML = '';
                 data.specs.forEach(spec => {
                     specsContainer.innerHTML += `
-                        <div class="product-spec-item">
-                            <label>${spec.label}:</label>
-                            <span>${spec.val}</span>
+                        <div class="product-spec-item" style="border-bottom:1px dashed #E2E8F0; padding:0.4rem 0;">
+                            <label style="color:#64748B; font-weight:500;">${spec.label}:</label>
+                            <span style="color:#0F233D; font-weight:700;">${spec.val}</span>
                         </div>
                     `;
                 });
@@ -246,7 +257,7 @@ function initProductModal() {
     });
 }
 
-/* 6. RFQ Quote Modal System */
+/* 6. RFQ Quote Modal System with Smart B2B Segmentation */
 function initRfqModal() {
     const rfqModal = document.getElementById('rfqModal');
     if (!rfqModal) return;
@@ -257,6 +268,13 @@ function initRfqModal() {
     rfqBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
+            const prodName = btn.getAttribute('data-product-name');
+            if (prodName) {
+                const noteTextarea = rfqModal.querySelector('textarea');
+                if (noteTextarea) {
+                    noteTextarea.value = `Yêu cầu báo giá cho sản phẩm: ${prodName}. `;
+                }
+            }
             rfqModal.classList.add('active');
         });
     });
@@ -310,7 +328,7 @@ function initStatsCounter() {
     checkScroll();
 }
 
-/* 8. Form Handlers & Notifications */
+/* 8. Form Handlers & Smart Lead Notification */
 function initFormHandlers() {
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {
@@ -324,12 +342,12 @@ function initFormHandlers() {
                     valid = false;
                     input.style.borderColor = '#EF4444';
                 } else {
-                    input.style.borderColor = '#E2E8F0';
+                    input.style.borderColor = '#CBD5E1';
                 }
             });
 
             if (valid) {
-                showToast('Gửi yêu cầu báo giá thành công! Đội ngũ TGT TIMEX sẽ liên hệ lại với Quý khách trong vòng 15 phút.');
+                showToast('Gửi yêu cầu báo giá B2B thành công! Chuyên viên TGT TIMEX sẽ liên hệ lại với Quý khách trong vòng 15 phút.');
                 form.reset();
                 
                 const rfqModal = document.getElementById('rfqModal');
@@ -367,15 +385,15 @@ function showToast(message, type = 'success') {
         color: white;
         padding: 14px 20px;
         border-radius: 8px;
-        font-family: 'Lexend', sans-serif;
-        font-size: 0.875rem;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 0.9rem;
         font-weight: 600;
         box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         display: flex;
         align-items: center;
         gap: 10px;
         min-width: 280px;
-        max-width: 420px;
+        max-width: 440px;
     `;
 
     toast.innerHTML = `
