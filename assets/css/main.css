@@ -212,17 +212,19 @@ img {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.6rem;
-    padding: 0.85rem 1.75rem;
+    gap: 0.5rem;
+    padding: 0.85rem 1.6rem;
     border-radius: var(--radius-md);
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.925rem;
     cursor: pointer;
     border: 2px solid transparent;
     transition: var(--transition-smooth);
     white-space: nowrap;
     box-sizing: border-box;
+    text-transform: uppercase !important;
+    letter-spacing: 0.02em;
 }
 
 .btn-primary {
@@ -1000,6 +1002,8 @@ img {
     font-size: 0.925rem;
     cursor: pointer;
     transition: var(--transition-smooth);
+    text-transform: uppercase !important;
+    letter-spacing: 0.02em;
 }
 
 .filter-btn:hover, .filter-btn.active {
@@ -1124,7 +1128,17 @@ img {
 
 .product-actions {
     display: flex;
-    gap: 0.65rem;
+    gap: 0.5rem;
+}
+
+.product-actions .btn {
+    flex: 1;
+    padding: 0.65rem 0.35rem !important;
+    font-size: 0.775rem !important;
+    white-space: nowrap !important;
+    text-transform: uppercase !important;
+    justify-content: center;
+    letter-spacing: 0.01em;
 }
 
 /* --- Workflow Section --- */
