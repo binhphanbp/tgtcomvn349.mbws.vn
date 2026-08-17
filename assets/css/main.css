@@ -62,10 +62,15 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--primary-navy);
-    font-weight: 700;
+    font-weight: 800 !important;
     line-height: 1.25;
     word-wrap: break-word;
     letter-spacing: -0.02em;
+}
+
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 *,
+.section-title *, .hero-text-box h1 *, .product-title *, .case-study-title *, .service-card h3 *, .news-title *, .modal-title * {
+    font-weight: 800 !important;
 }
 
 a {
