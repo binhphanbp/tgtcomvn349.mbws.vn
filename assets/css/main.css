@@ -1414,9 +1414,11 @@ textarea.form-control {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     padding: 1.4rem 0;
     text-align: center;
-    font-size: 0.875rem;
+    font-size: 0.825rem;
     color: #94A3B8 !important;
     background-color: #030810;
+    text-transform: uppercase !important;
+    letter-spacing: 0.02em;
 }
 
 /* Hide Mobile Bottom Bar on Desktop by default */
