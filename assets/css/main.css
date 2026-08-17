@@ -59,18 +59,20 @@ body {
     font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+.section-title, .hero-text-box h1, .product-title, .case-study-title, .service-card h3, .news-title, .modal-title, .rfq-title {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--primary-navy);
-    font-weight: 800 !important;
+    font-weight: 700;
     line-height: 1.25;
     word-wrap: break-word;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
 }
 
 h1 *, h2 *, h3 *, h4 *, h5 *, h6 *,
 .section-title *, .hero-text-box h1 *, .product-title *, .case-study-title *, .service-card h3 *, .news-title *, .modal-title * {
-    font-weight: 800 !important;
+    text-transform: uppercase;
 }
 
 a {
