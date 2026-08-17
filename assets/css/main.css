@@ -427,12 +427,14 @@ img {
 .nav-link {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #1E293B;
     padding: 0.5rem 0;
     position: relative;
     white-space: nowrap;
     flex-shrink: 0;
+    text-transform: uppercase !important;
+    letter-spacing: 0.02em;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -758,15 +760,18 @@ img {
     line-height: 1.1;
     margin-bottom: 0.4rem;
     letter-spacing: -0.03em;
+    text-transform: uppercase !important;
 }
 
 .stat-number span { color: var(--accent-green); }
 
 .stat-label {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
     color: var(--text-muted);
     line-height: 1.4;
+    text-transform: uppercase !important;
+    letter-spacing: 0.02em;
 }
 
 /* --- USP / Vision Card Grid --- */
