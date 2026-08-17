@@ -1341,6 +1341,8 @@ textarea.form-control {
     margin-bottom: 1.4rem;
     position: relative;
     padding-bottom: 0.55rem;
+    text-transform: uppercase !important;
+    letter-spacing: 0.01em;
 }
 
 .footer-col h4::after {
