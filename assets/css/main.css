@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6,
 .section-title, .hero-text-box h1, .product-title, .case-study-title, .service-card h3, .news-title, .modal-title, .rfq-title {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--primary-navy);
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25;
     word-wrap: break-word;
     letter-spacing: -0.01em;
@@ -72,6 +72,7 @@ h1, h2, h3, h4, h5, h6,
 
 h1 *, h2 *, h3 *, h4 *, h5 *, h6 *,
 .section-title *, .hero-text-box h1 *, .product-title *, .case-study-title *, .service-card h3 *, .news-title *, .modal-title * {
+    font-weight: 600 !important;
     text-transform: uppercase;
 }
 
@@ -161,7 +162,7 @@ img {
     gap: 0.5rem;
     color: var(--accent-green);
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.06em;
@@ -181,7 +182,7 @@ img {
     border-radius: var(--radius-sm);
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 0.8rem;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.04em;
 }
@@ -192,7 +193,7 @@ img {
 
 .section-title {
     font-size: clamp(1.85rem, 4vw, 2.65rem);
-    font-weight: 800;
+    font-weight: 600;
     color: var(--primary-navy);
     line-height: 1.25;
     margin-bottom: 0.9rem;
@@ -215,7 +216,7 @@ img {
     padding: 0.85rem 1.75rem;
     border-radius: var(--radius-md);
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 0.95rem;
     cursor: pointer;
     border: 2px solid transparent;
@@ -318,7 +319,7 @@ img {
 
 .top-bar-rfq-link {
     color: var(--accent-orange);
-    font-weight: 700;
+    font-weight: 600;
     font-family: 'Plus Jakarta Sans', sans-serif;
     display: flex;
     align-items: center;
@@ -382,7 +383,7 @@ img {
     align-items: center;
     justify-content: center;
     color: #FFFFFF;
-    font-weight: 800;
+    font-weight: 600;
     font-size: 1.2rem;
     font-family: 'Plus Jakarta Sans', sans-serif;
     position: relative;
@@ -394,7 +395,7 @@ img {
 
 .logo-title {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 800;
+    font-weight: 600;
     font-size: 1.35rem;
     color: var(--primary-navy);
     line-height: 1;
@@ -405,7 +406,7 @@ img {
 
 .logo-subtitle {
     font-size: 0.65rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--text-muted);
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -434,7 +435,7 @@ img {
 
 .nav-link:hover, .nav-link.active {
     color: var(--accent-green);
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .nav-link.active::after {
@@ -495,7 +496,7 @@ img {
 
 .hero-text-box h1 {
     font-size: clamp(2.1rem, 4.8vw, 3.2rem);
-    font-weight: 800;
+    font-weight: 600;
     color: #FFFFFF !important;
     margin-bottom: 1.35rem;
     line-height: 1.18;
@@ -566,7 +567,7 @@ img {
 .hero-feature-info h4 {
     color: #FFFFFF !important;
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 0.2rem;
 }
 
@@ -623,7 +624,7 @@ img {
 
 .segment-card h3 {
     font-size: 1.15rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--primary-navy);
 }
 
@@ -643,7 +644,7 @@ img {
 
 .segment-tag-item {
     font-size: 0.775rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--primary-navy);
     background-color: var(--bg-light);
     border: 1px solid var(--border-color);
@@ -680,7 +681,7 @@ img {
     background-color: var(--primary-navy);
     color: var(--emerald-bright);
     font-size: 0.775rem;
-    font-weight: 800;
+    font-weight: 600;
     padding: 0.3rem 0.75rem;
     border-radius: var(--radius-sm);
     margin-bottom: 0.75rem;
@@ -696,7 +697,7 @@ img {
 
 .case-study-title {
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--primary-navy);
     margin-bottom: 0.85rem;
     line-height: 1.4;
@@ -722,7 +723,7 @@ img {
 
 .case-study-spec-row:last-child { border-bottom: none; }
 .case-study-spec-row label { color: var(--text-muted); font-weight: 600; white-space: nowrap; flex-shrink: 0; }
-.case-study-spec-row span { color: var(--primary-navy); font-weight: 700; text-align: right; word-break: break-word; }
+.case-study-spec-row span { color: var(--primary-navy); font-weight: 600; text-align: right; word-break: break-word; }
 
 /* --- Stats Banner --- */
 .stats-banner {
@@ -750,7 +751,7 @@ img {
 .stat-number {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: clamp(1.75rem, 3vw, 2.5rem);
-    font-weight: 800;
+    font-weight: 600;
     color: var(--primary-navy);
     line-height: 1.1;
     margin-bottom: 0.4rem;
@@ -831,7 +832,7 @@ img {
 
 .usp-card h3 {
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--primary-navy);
     margin-bottom: 0.75rem;
     line-height: 1.35;
@@ -891,7 +892,7 @@ img {
 
 .service-card h3 {
     font-size: 1.15rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 0.65rem;
     color: var(--primary-navy);
 }
@@ -906,7 +907,7 @@ img {
 .service-link {
     margin-top: auto;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 0.9rem;
     color: var(--accent-green);
     display: inline-flex;
@@ -947,7 +948,7 @@ img {
 .about-badge-overlay h4 {
     color: var(--emerald-bright) !important;
     font-size: 1.6rem;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 1;
 }
 
@@ -995,7 +996,7 @@ img {
     background-color: #FFFFFF;
     color: #334155;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 0.925rem;
     cursor: pointer;
     transition: var(--transition-smooth);
@@ -1057,7 +1058,7 @@ img {
     color: #FFFFFF !important;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 0.75rem;
-    font-weight: 700;
+    font-weight: 600;
     padding: 0.3rem 0.75rem;
     border-radius: var(--radius-sm);
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
@@ -1071,7 +1072,7 @@ img {
     color: #FFFFFF !important;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 0.75rem;
-    font-weight: 700;
+    font-weight: 600;
     padding: 0.3rem 0.75rem;
     border-radius: var(--radius-sm);
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
@@ -1086,7 +1087,7 @@ img {
 
 .product-title {
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 0.55rem;
     color: var(--primary-navy);
 }
@@ -1119,7 +1120,7 @@ img {
 
 .product-spec-item:last-child { border-bottom: none; }
 .product-spec-item label { color: var(--text-muted); font-weight: 600; white-space: nowrap; flex-shrink: 0; }
-.product-spec-item span { color: var(--primary-navy); font-weight: 700; text-align: right; word-break: break-word; }
+.product-spec-item span { color: var(--primary-navy); font-weight: 600; text-align: right; word-break: break-word; }
 
 .product-actions {
     display: flex;
@@ -1163,7 +1164,7 @@ img {
     align-items: center;
     justify-content: center;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 800;
+    font-weight: 600;
     font-size: 1.1rem;
     margin: 0 auto 1rem auto;
     box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
@@ -1172,7 +1173,7 @@ img {
 .workflow-step h4 {
     color: #FFFFFF !important;
     font-size: 1.05rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 0.45rem;
 }
 
@@ -1231,7 +1232,7 @@ img {
 
 .news-title {
     font-size: 1.15rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--primary-navy);
     margin-bottom: 0.65rem;
     line-height: 1.4;
@@ -1269,7 +1270,7 @@ img {
 .form-group label {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 0.9rem;
-    font-weight: 700;
+    font-weight: 600;
     color: #334155;
 }
 
@@ -1322,7 +1323,7 @@ textarea.form-control {
 .footer-col h4 {
     color: #FFFFFF !important;
     font-size: 1.18rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 1.4rem;
     position: relative;
     padding-bottom: 0.55rem;
@@ -1601,7 +1602,7 @@ textarea.form-control {
     
     .nav-link.active {
         color: var(--accent-green);
-        font-weight: 700;
+        font-weight: 600;
     }
     
     .nav-link.active::after { display: none; }
@@ -1741,7 +1742,7 @@ textarea.form-control {
         align-items: center;
         justify-content: center;
         gap: 0.4rem;
-        font-weight: 700;
+        font-weight: 600;
         font-size: 0.825rem;
         border-radius: var(--radius-md);
         color: #FFFFFF !important;
