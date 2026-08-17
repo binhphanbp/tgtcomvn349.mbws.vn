@@ -118,8 +118,8 @@ function initProductFilter() {
 /* 5. Product Quick View Modal & B2B Data Sheet */
 const productDatabase = {
     'potato-fresh': {
-        title: 'Khoai Tây Tươi Hà Lan / Úc / Đà Lạt (Product Data Sheet)',
-        category: 'Sản Phẩm Mũi Nhọn #1',
+        title: 'Khoai tây tươi Hà Lan / Úc / Đà Lạt (Product Data Sheet)',
+        category: 'Sản phẩm mũi nhọn #1',
         origin: 'Hà Lan / Úc / Việt Nam',
         desc: 'Khoai tây củ to, vỏ mỏng vàng ươm, ruột đặc, độ khô tiêu chuẩn cao. Chuyên cung ứng số lượng lớn theo container lạnh cho nhà máy chip/snack, bếp ăn công nghiệp, chợ đầu mối & chuỗi siêu thị.',
         specs: [
@@ -136,8 +136,8 @@ const productDatabase = {
         img: 'assets/images/fresh_produce.png'
     },
     'onion-fresh': {
-        title: 'Hành Tây Vàng & Đỏ Nhập Khẩu Thương Hạng',
-        category: 'Nhóm Củ Thương Mại #2',
+        title: 'Hành tây vàng & đỏ nhập khẩu thương hạng',
+        category: 'Nhóm củ thương mại #2',
         origin: 'Hà Lan / Ấn Độ / Việt Nam',
         desc: 'Hành tây vỏ khô mỏng, củ chắc đét, không dập thối, độ cay nồng chuẩn. Cung ứng hợp đồng định kỳ cho các nhà máy gia vị, bếp ăn công nghiệp & đại lý sỉ.',
         specs: [
@@ -152,8 +152,8 @@ const productDatabase = {
         img: 'assets/images/fresh_produce.png'
     },
     'garlic-fresh': {
-        title: 'Tỏi Trắng & Tỏi Tím Nhập Khẩu Số Lượng Lớn',
-        category: 'Nhóm Củ Thương Mại #2',
+        title: 'Tỏi trắng & tỏi tím nhập khẩu số lượng lớn',
+        category: 'Nhóm củ thương mại #2',
         origin: 'Trung Quốc / Việt Nam',
         desc: 'Tỏi tép to đều, tép mẩy mặn mòi, vỏ sạch đẹp không nấm mốc. Nguồn cung ứng sỉ theo container cho nhà máy chế biến gia vị, chợ đầu mối toàn quốc.',
         specs: [
@@ -167,8 +167,8 @@ const productDatabase = {
         img: 'assets/images/fresh_produce.png'
     },
     'french-fries': {
-        title: 'Khoai Tây Chiên Đông Lạnh Cắt Thẳng / Sóng',
-        category: 'Nông Sản Chế Biến',
+        title: 'Khoai tây chiên đông lạnh cắt thẳng / sóng',
+        category: 'Nông sản chế biến',
         origin: 'Bỉ / Hà Lan / Mỹ',
         desc: 'Khoai tây chiên đông lạnh nhập khẩu chuẩn Châu Âu, sợi giòn lâu, vàng ruộm, không ngấm dầu. Chủ lực cho các nhà hàng, khách sạn, chuỗi Fastfood & HORECA.',
         specs: [
@@ -181,8 +181,8 @@ const productDatabase = {
         img: 'assets/images/processed_potatoes.png'
     },
     'cantaloupe-fruit': {
-        title: 'Dưa Vàng Hoàng Kim VietGAP Chuyên Siêu Thị',
-        category: 'Trái Cây Nhập & Nội Địa',
+        title: 'Dưa vàng Hoàng Kim VietGAP chuyên siêu thị',
+        category: 'Trái cây nhập & nội địa',
         origin: 'Nông trại TGT / Bình Thuận',
         desc: 'Dưa vàng vỏ lưới nổi đẹp mắt, thịt giòn ngọt rụm, độ ngọt Brix > 13°. Đạt tiêu chuẩn vào các chuỗi siêu thị lớn, F&B cao cấp và xuất khẩu.',
         specs: [
@@ -194,8 +194,8 @@ const productDatabase = {
         img: 'assets/images/fresh_fruits.png'
     },
     'sourcing-b2b': {
-        title: 'Dịch Vụ Sourcing B2B & XNK Nông Sản Theo Yêu Cầu',
-        category: 'Năng Lực Khác Biệt #3',
+        title: 'Dịch vụ sourcing B2B & XNK nông sản theo yêu cầu',
+        category: 'Năng lực khác biệt #3',
         origin: 'Toàn Cầu (EU, Úc, Ấn Độ, TQ...)',
         desc: 'TGT TIMEX nhận săn tìm, thẩm định vùng trồng & nhập khẩu/xuất khẩu mọi loại nông sản theo đúng quy cách, tiêu chuẩn kỹ thuật & tiến độ của doanh nghiệp.',
         specs: [
