@@ -1129,16 +1129,20 @@ img {
 .product-actions {
     display: flex;
     gap: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .product-actions .btn {
-    flex: 1;
+    flex: 1 1 0%;
+    min-width: 0;
     padding: 0.65rem 0.35rem !important;
-    font-size: 0.775rem !important;
+    font-size: 0.8rem !important;
     white-space: nowrap !important;
     text-transform: uppercase !important;
     justify-content: center;
     letter-spacing: 0.01em;
+    box-sizing: border-box;
 }
 
 /* --- Workflow Section --- */
