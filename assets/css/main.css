@@ -1393,6 +1393,11 @@ textarea.form-control {
     background-color: #030810;
 }
 
+/* Hide Mobile Bottom Bar on Desktop by default */
+.mobile-bottom-bar {
+    display: none !important;
+}
+
 /* --- Floating Call, Zalo & Back-to-Top Widget --- */
 .floating-contact {
     position: fixed;
