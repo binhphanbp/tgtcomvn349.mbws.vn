@@ -369,11 +369,11 @@ img {
 }
 
 .footer-logo-img {
-    height: 58px;
-    background-color: #FFFFFF;
-    padding: 6px 12px;
-    border-radius: var(--radius-md);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    height: 50px;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .logo-icon-box {
@@ -1334,27 +1334,27 @@ textarea.form-control {
     min-height: 115px;
 }
 
-/* --- FOOTER ARCHITECTURE --- */
+/* --- FOOTER ARCHITECTURE (LIGHT THEME) --- */
 .footer {
-    background-color: var(--dark-navy) !important;
-    color: #CBD5E1 !important;
+    background-color: #F8FAFC !important;
+    color: #475569 !important;
     padding-top: 4.5rem;
     font-size: 0.925rem;
-    border-top: 4px solid var(--accent-green);
+    border-top: 3px solid var(--accent-green);
 }
 
 .footer-grid {
     display: grid;
     grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
     gap: 2.5rem;
-    padding-bottom: 4rem;
+    padding-bottom: 3.5rem;
 }
 
 .footer-col h4 {
-    color: #FFFFFF !important;
-    font-size: 1.18rem;
-    font-weight: 600;
-    margin-bottom: 1.4rem;
+    color: #0B192C !important;
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 1.35rem;
     position: relative;
     padding-bottom: 0.55rem;
     text-transform: uppercase !important;
@@ -1373,26 +1373,35 @@ textarea.form-control {
 }
 
 .footer-col p {
-    color: #CBD5E1 !important;
+    color: #475569 !important;
     font-size: 0.925rem;
     line-height: 1.7;
+}
+
+.footer-col p strong {
+    color: #0B192C;
 }
 
 .footer-links {
     display: flex;
     flex-direction: column;
-    gap: 0.7rem;
+    gap: 0.75rem;
 }
 
 .footer-links a {
-    color: #CBD5E1 !important;
+    color: #475569 !important;
     font-size: 0.925rem;
     font-weight: 500;
+    transition: var(--transition-smooth);
 }
 
 .footer-links a:hover {
-    color: var(--emerald-bright) !important;
+    color: var(--accent-green) !important;
     padding-left: 6px;
+}
+
+.footer-links a i {
+    color: var(--accent-green) !important;
 }
 
 .footer-info-list {
@@ -1405,27 +1414,36 @@ textarea.form-control {
     display: flex;
     align-items: flex-start;
     gap: 0.75rem;
-    color: #E2E8F0 !important;
+    color: #334155 !important;
     font-size: 0.925rem;
 }
 
 .footer-info-item i {
-    color: var(--emerald-bright) !important;
+    color: var(--accent-green) !important;
     margin-top: 4px;
     font-size: 1rem;
 }
 
-.footer-info-item span { color: #E2E8F0 !important; }
+.footer-info-item span {
+    color: #334155 !important;
+    font-weight: 500;
+}
 
 .copyright-bar {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 1.4rem 0;
+    border-top: 1px solid #E2E8F0;
+    padding: 1.35rem 0;
     text-align: center;
     font-size: 0.825rem;
-    color: #94A3B8 !important;
-    background-color: #030810;
+    color: #64748B !important;
+    background-color: #EDF2F7;
     text-transform: uppercase !important;
     letter-spacing: 0.02em;
+    font-weight: 600;
+}
+
+.copyright-bar p {
+    color: #64748B !important;
+    margin: 0;
 }
 
 /* Hide Mobile Bottom Bar on Desktop by default */
