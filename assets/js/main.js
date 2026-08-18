@@ -118,18 +118,18 @@ function initProductFilter() {
 /* 5. Product Quick View Modal & B2B Data Sheet */
 const productDatabase = {
     'potato-fresh': {
-        title: 'Khoai tây tươi Hà Lan / Úc / Đà Lạt (Product Data Sheet)',
+        title: 'Khoai tây tươi Hà Lan / Úc / Đà Lạt (Tiêu Chuẩn Kỹ Thuật)',
         category: 'Sản phẩm mũi nhọn #1',
         origin: 'Hà Lan / Úc / Việt Nam',
-        desc: 'Khoai tây củ to, vỏ mỏng vàng ươm, ruột đặc, độ khô tiêu chuẩn cao. Chuyên cung ứng số lượng lớn theo container lạnh cho nhà máy chip/snack, bếp ăn công nghiệp, chợ đầu mối & chuỗi siêu thị.',
+        desc: 'Khoai tây củ to, vỏ mỏng vàng ươm, ruột đặc, độ khô tiêu chuẩn cao. Chuyên cung ứng số lượng lớn theo container lạnh cho nhà máy chế biến snack, bếp ăn công nghiệp, chợ đầu mối & chuỗi siêu thị.',
         specs: [
-            { label: 'Quy cách Size củ', val: '45–55mm / 55–65mm / 65–75mm' },
-            { label: 'Mục đích sử dụng', val: 'Nhà máy chip/snack, HORECA, Bán lẻ' },
+            { label: 'Quy cách kích cỡ', val: '45–55mm / 55–65mm / 65–75mm' },
+            { label: 'Mục đích sử dụng', val: 'Nhà máy chế biến, Nhà hàng Khách sạn, Bán lẻ' },
             { label: 'Tỷ lệ củ lỗi / dập', val: '≤ 0.5% (Kiểm định LAS-NN)' },
-            { label: 'Độ khô (Dry Matter)', val: '≥ 20%' },
+            { label: 'Độ khô tiêu chuẩn', val: '≥ 20%' },
             { label: 'Nhiệt độ bảo quản', val: '4°C - 8°C (Chuỗi kho lạnh 24/7)' },
-            { label: 'Quy cách đóng gói', val: 'Bao lưới 10kg, 20kg hoặc Jumbo Bag 1 Tấn' },
-            { label: 'MOQ (Tối thiểu)', val: '5 Tấn (Nội địa) / 1 Container 40ft (XNK)' },
+            { label: 'Quy cách đóng gói', val: 'Bao lưới 10kg, 20kg hoặc Bao Jumbo 1 Tấn' },
+            { label: 'Đặt hàng tối thiểu', val: '5 Tấn (Nội địa) / 1 Container 40ft (XNK)' },
             { label: 'Năng lực cung ứng', val: '5,000 Tấn / Tháng' },
             { label: 'Chứng từ kèm theo', val: 'Phytosanitary, VietGAP, CQ, Kiểm nghiệm' }
         ],
@@ -145,7 +145,7 @@ const productDatabase = {
             { label: 'Độ ẩm vỏ', val: '≤ 12% (Vỏ khô giòn)' },
             { label: 'Đóng gói', val: 'Bao túi lưới 10kg / 20kg / 25kg' },
             { label: 'Bảo quản', val: '0°C – 4°C, Độ ẩm 65%' },
-            { label: 'MOQ', val: '3 Tấn / 1 Container' },
+            { label: 'Đặt hàng tối thiểu', val: '3 Tấn / 1 Container' },
             { label: 'Năng lực cung ứng', val: '3,000 Tấn / Tháng' },
             { label: 'Chứng từ', val: 'Phytosanitary, Hóa đơn VAT, CO' }
         ],
@@ -157,10 +157,10 @@ const productDatabase = {
         origin: 'Trung Quốc / Việt Nam',
         desc: 'Tỏi tép to đều, tép mẩy mặn mòi, vỏ sạch đẹp không nấm mốc. Nguồn cung ứng sỉ theo container cho nhà máy chế biến gia vị, chợ đầu mối toàn quốc.',
         specs: [
-            { label: 'Size tép tỏi', val: '4.5cm – 6.0cm' },
+            { label: 'Kích cỡ tép tỏi', val: '4.5cm – 6.0cm' },
             { label: 'Đóng gói', val: 'Bao lưới 10kg, Thùng 10kg, Túi lưới 1kg' },
             { label: 'Điều kiện bảo quản', val: '-1°C – 1°C kho lạnh khô' },
-            { label: 'MOQ', val: '2 Tấn' },
+            { label: 'Đặt hàng tối thiểu', val: '2 Tấn' },
             { label: 'Năng lực cung ứng', val: '2,000 Tấn / Tháng' },
             { label: 'Hóa đơn & Chứng từ', val: 'Hóa đơn VAT đầy đủ, Phytosanitary' }
         ],
@@ -170,13 +170,13 @@ const productDatabase = {
         title: 'Khoai tây chiên đông lạnh cắt thẳng / sóng',
         category: 'Nông sản chế biến',
         origin: 'Bỉ / Hà Lan / Mỹ',
-        desc: 'Khoai tây chiên đông lạnh nhập khẩu chuẩn Châu Âu, sợi giòn lâu, vàng ruộm, không ngấm dầu. Chủ lực cho các nhà hàng, khách sạn, chuỗi Fastfood & HORECA.',
+        desc: 'Khoai tây chiên đông lạnh nhập khẩu chuẩn Châu Âu, sợi giòn lâu, vàng ruộm, không ngấm dầu. Chủ lực cho các nhà hàng, khách sạn, chuỗi đồ ăn nhanh & dịch vụ ẩm thực.',
         specs: [
             { label: 'Quy cách cắt', val: '7mm / 9mm / 10mm (Thẳng & Sóng)' },
             { label: 'Quy cách đóng gói', val: 'Túi 2.5kg x 4 túi/Thùng (10kg)' },
             { label: 'Nhiệt độ bảo quản', val: '-18°C đông lạnh sâu' },
             { label: 'Hạn sử dụng', val: '24 tháng kể từ ngày sản xuất' },
-            { label: 'MOQ', val: '50 Thùng (Giao xe lạnh tận nơi)' }
+            { label: 'Đặt hàng tối thiểu', val: '50 Thùng (Giao xe lạnh tận nơi)' }
         ],
         img: 'assets/images/processed_potatoes.png'
     },
@@ -184,7 +184,7 @@ const productDatabase = {
         title: 'Dưa vàng Hoàng Kim VietGAP chuyên siêu thị',
         category: 'Trái cây nhập & nội địa',
         origin: 'Nông trại TGT / Bình Thuận',
-        desc: 'Dưa vàng vỏ lưới nổi đẹp mắt, thịt giòn ngọt rụm, độ ngọt Brix > 13°. Đạt tiêu chuẩn vào các chuỗi siêu thị lớn, F&B cao cấp và xuất khẩu.',
+        desc: 'Dưa vàng vỏ lưới nổi đẹp mắt, thịt giòn ngọt rụm, độ ngọt Brix > 13°. Đạt tiêu chuẩn vào các chuỗi siêu thị lớn, nhà hàng cao cấp và xuất khẩu.',
         specs: [
             { label: 'Trọng lượng quả', val: '1.2kg – 2.2kg / quả' },
             { label: 'Độ ngọt (Brix)', val: '≥ 13° Brix' },
@@ -194,7 +194,7 @@ const productDatabase = {
         img: 'assets/images/fresh_fruits.png'
     },
     'sourcing-b2b': {
-        title: 'Dịch vụ sourcing B2B & XNK nông sản theo yêu cầu',
+        title: 'Dịch vụ tìm nguồn hàng & XNK nông sản theo yêu cầu',
         category: 'Năng lực khác biệt #3',
         origin: 'Toàn Cầu (EU, Úc, Ấn Độ, TQ...)',
         desc: 'TGT TIMEX nhận săn tìm, thẩm định vùng trồng & nhập khẩu/xuất khẩu mọi loại nông sản theo đúng quy cách, tiêu chuẩn kỹ thuật & tiến độ của doanh nghiệp.',
@@ -202,7 +202,7 @@ const productDatabase = {
             { label: 'Phạm vi tìm kiếm', val: 'Nông sản củ, trái cây, gia vị, đông lạnh' },
             { label: 'Tiêu chuẩn đáp ứng', val: 'HACCP, ISO 22000, GlobalGAP, Organic' },
             { label: 'Quy trình hợp tác', val: 'Báo giá → Gửi mẫu → Kiểm định → Hợp đồng' },
-            { label: 'Điều kiện giao hàng', val: 'FOB, CIF, CFR, DDP tận kho khách' }
+            { label: 'Điều kiện giao nhận', val: 'FOB, CIF, CFR, DDP tận kho khách' }
         ],
         img: 'assets/images/cold_storage_warehouse.png'
     }
