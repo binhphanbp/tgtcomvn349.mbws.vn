@@ -1982,7 +1982,177 @@ textarea.form-control {
     font-weight: 700;
 }
 
+/* --- Recruitment Process Steps (4-Step Flow) --- */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.process-card {
+    background-color: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2.25rem 1.35rem 1.75rem 1.35rem;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition-smooth);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.process-card:hover {
+    border-color: var(--accent-green);
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-4px);
+}
+
+.process-step-num {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #CBD5E1;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.5px;
+}
+
+.process-icon-box {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+    color: var(--accent-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.45rem;
+    margin-bottom: 1.25rem;
+    border: 2px solid #A7F3D0;
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.12);
+}
+
+.process-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: 0.65rem;
+    line-height: 1.4;
+}
+
+.process-card p {
+    font-size: 0.875rem;
+    color: #64748B;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- Recruitment CTA Box --- */
+.recruit-cta-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    box-shadow: var(--card-shadow);
+}
+
+.recruit-info-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.recruit-info-side h3 {
+    font-size: 1.45rem;
+    color: var(--primary-navy);
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 0.85rem;
+}
+
+.recruit-info-side p {
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+}
+
+.recruit-contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.recruit-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.925rem;
+    color: #334155;
+    line-height: 1.5;
+}
+
+.recruit-contact-item i {
+    color: var(--accent-green);
+    font-size: 1.05rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+.recruit-action-side {
+    background: #F8FAFC;
+    border: 1px dashed #CBD5E1;
+    border-radius: var(--radius-md);
+    padding: 2.25rem 1.75rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.recruit-action-icon {
+    width: 64px;
+    height: 64px;
+    background: #ECFDF5;
+    color: var(--accent-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 14px rgba(5, 150, 105, 0.15);
+}
+
+.recruit-action-side h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: 0.5rem;
+}
+
+.recruit-action-side p {
+    font-size: 0.875rem;
+    color: #64748B;
+    line-height: 1.6;
+    margin-bottom: 1.35rem;
+}
+
+@media (max-width: 992px) {
+    .process-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+    .recruit-cta-card { grid-template-columns: 1fr; padding: 1.75rem 1.25rem; gap: 1.75rem; }
+}
+
 @media (max-width: 768px) {
     .job-grid { grid-template-columns: 1fr; gap: 1.25rem; }
     .job-actions-row { grid-template-columns: 1fr; gap: 0.5rem; }
+    .process-grid { grid-template-columns: 1fr; gap: 1rem; }
 }
