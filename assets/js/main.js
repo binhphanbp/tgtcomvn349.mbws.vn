@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initRfqModal();
     initStatsCounter();
     initFormHandlers();
+    initJobModals();
 });
 
 /* 1. Header Sticky Effect */
@@ -347,15 +348,234 @@ function initFormHandlers() {
             });
 
             if (valid) {
-                showToast('Gửi yêu cầu báo giá B2B thành công! Chuyên viên TGT TIMEX sẽ liên hệ lại với Quý khách trong vòng 15 phút.');
-                form.reset();
-                
-                const rfqModal = document.getElementById('rfqModal');
-                const prodModal = document.getElementById('productDetailModal');
-                if (rfqModal) rfqModal.classList.remove('active');
-                if (prodModal) prodModal.classList.remove('active');
-            } else {
-                showToast('Vui lòng điền đầy đủ các thông tin bắt buộc!', 'error');
+                if (valid) {
+                    showToast('Gửi thông tin thành công! Chuyên viên TGT TIMEX sẽ liên hệ lại với Quý khách trong thời gian sớm nhất.');
+                    form.reset();
+                    
+                    const rfqModal = document.getElementById('rfqModal');
+                    const prodModal = document.getElementById('productDetailModal');
+                    const jdModal = document.getElementById('jobDetailModal');
+                    const applyModal = document.getElementById('jobApplyModal');
+                    
+                    if (rfqModal) rfqModal.classList.remove('active');
+                    if (prodModal) prodModal.classList.remove('active');
+                    if (jdModal) jdModal.classList.remove('active');
+                    if (applyModal) applyModal.classList.remove('active');
+                } else {
+                    showToast('Vui lòng điền đầy đủ các thông tin bắt buộc!', 'error');
+                }
+            }
+        });
+    });
+}
+
+/* 9. RECRUITMENT SYSTEM & 4 DETAILED JOB MODALS */
+const jobDatabase = {
+    'purchasing-staff': {
+        title: 'CHUYÊN VIÊN MUA HÀNG & TÌM NGUỒN NÔNG SẢN',
+        dept: 'Phòng Mua Hàng & Xuất Nhập Khẩu',
+        badge: 'Toàn Thời Gian',
+        salary: '10 – 15 Triệu + Thưởng 10-20% Tiết Kiệm Giá + KPI (Thu nhập 15 – 25 Triệu+)',
+        workLocation: 'D49-04 KĐT Geleximco Lê Trọng Tấn, Dương Nội, Hà Đông, Hà Nội',
+        workTime: '8:30 – 17:30, từ Thứ 2 đến Thứ 7',
+        purpose: 'Tìm kiếm, đánh giá và đàm phán với các nhà cung cấp nông sản (khoai tây, hành tây, tỏi, gừng, trái cây...) trong nước & quốc tế, tối ưu giá vốn và đảm bảo nguồn hàng đạt chuẩn chất lượng.',
+        duties: [
+            'Tìm kiếm và phát triển mạng lưới nhà cung cấp nông sản uy tín (Hà Lan, Úc, Ấn Độ, Trung Quốc và vùng trồng lớn nội địa).',
+            'Khảo sát giá thị trường hàng ngày, so sánh báo giá, đàm phán hợp đồng thương mại & điều khoản thanh toán (FOB, CIF, CFR, DDP).',
+            'Phối hợp kiểm định mẫu nông sản thực tế, kiểm soát hồ sơ kiểm dịch thực vật (Phytosanitary), CO/CQ và tiêu chuẩn kỹ thuật.',
+            'Theo dõi tiến độ giao hàng, đối soát kho và giải quyết các khiếu nại phát sinh về chất lượng/hao hụt hàng hóa.',
+            'Đề xuất chiến lược thu mua đón đầu mùa vụ và kế hoạch dự trữ kho lạnh tối ưu.'
+        ],
+        requirements: [
+            'Tốt nghiệp Cao đẳng/Đại học chuyên ngành Kinh tế, Ngoại thương, Thương mại, Xuất nhập khẩu hoặc Nông nghiệp.',
+            'Ưu tiên ứng viên có kinh nghiệm thu mua nông sản, thực phẩm tươi sống hoặc đàm phán quốc tế.',
+            'Kỹ năng đàm phán, giao tiếp tốt; tiếng Anh hoặc tiếng Trung là lợi thế lớn.',
+            'Trung thực, nhạy bén với giá cả thị trường, chịu được áp lực tiến độ mùa vụ.'
+        ],
+        benefits: [
+            'Lương cứng: 10.000.000 – 15.000.000 VNĐ/tháng.',
+            'Thưởng theo lợi nhuận đầu vào: 10 – 20% trên số tiền tiết kiệm được so với kế hoạch.',
+            'Thưởng nhà cung cấp mới: 500.000 – 1.000.000 VNĐ/NCC phát sinh đơn/chiến lược.',
+            'Thưởng KPI tháng: 2 – 10 triệu đồng/tháng theo mức độ hoàn thành chỉ tiêu.',
+            'Đầy đủ chế độ BHXH, BHYT, phép năm, thưởng lễ tết và du lịch công ty hàng năm.'
+        ]
+    },
+    'sales-executive': {
+        title: 'NHÂN VIÊN KINH DOANH NÔNG SẢN B2B',
+        dept: 'Phòng Kinh Doanh',
+        badge: 'Toàn Thời Gian',
+        salary: '7 – 15 Triệu + Hoa Hồng 10% Lợi Nhuận Gộp + Thưởng KH Mới (Thu nhập 15 – 30+ Triệu)',
+        workLocation: 'D49-04 KĐT Geleximco Lê Trọng Tấn, Dương Nội, Hà Đông, Hà Nội',
+        workTime: '8:30 – 17:30, từ Thứ 2 đến Thứ 7',
+        purpose: 'Khai thác, mở rộng thị trường và phát triển sản lượng bán sỉ nông sản (khoai tây tươi/đông lạnh, hành, tỏi, củ quả) cho các nhà máy chế biến, bếp ăn công nghiệp, chợ đầu mối, đại lý và chuỗi siêu thị/HORECA.',
+        duties: [
+            'Tìm kiếm, tiếp cận và tư vấn báo giá cho khách hàng doanh nghiệp, đại lý sỉ, nhà máy chế biến toàn quốc.',
+            'Gửi mẫu test thực tế, đàm phán và chốt hợp đồng cung ứng định kỳ theo container / xe tải lạnh.',
+            'Theo dõi tiến độ giao hàng, chăm sóc khách hàng và thúc đẩy tỷ lệ tái mua hàng định kỳ.',
+            'Cập nhật thông tin thị trường hàng ngày (giá cả, chất lượng, đối thủ cạnh tranh) trong khu vực được phân công.',
+            'Phối hợp với Kế toán theo dõi và đôn đốc thu hồi công nợ khách hàng an toàn.'
+        ],
+        requirements: [
+            'Tốt nghiệp Trung cấp trở lên, đam mê kinh doanh và giao tiếp khách hàng B2B.',
+            'Không yêu cầu kinh nghiệm sâu — ưu tiên ứng viên từng làm sales B2B, telesales hoặc thị trường thực phẩm, nông sản, F&B.',
+            'Kỹ năng giao tiếp, đàm phán và thuyết phục tốt; có phương tiện cá nhân đi thị trường khi cần.',
+            'Trung thực trong báo cáo số liệu, chủ động, chịu khó và có tinh thần đồng đội cao.'
+        ],
+        benefits: [
+            'Lương cứng: 7.000.000 – 15.000.000 VNĐ/tháng (xét theo năng lực).',
+            'Hoa hồng: 10% theo lợi nhuận gộp đơn hàng.',
+            'Thưởng nóng khi phát triển được khách hàng doanh nghiệp / đại lý mới.',
+            'Lộ trình Onboarding 7 ngày đào tạo chuyên sâu về kiến thức nông sản và kỹ năng chốt sales B2B.',
+            'Cơ hội thăng tiến lên Trưởng phòng Kinh doanh hoặc Trưởng kênh phân phối mới.'
+        ]
+    },
+    'sales-admin': {
+        title: 'CHUYÊN VIÊN HỖ TRỢ KINH DOANH (SALES ADMIN)',
+        dept: 'Phòng Kinh Doanh',
+        badge: 'Toàn Thời Gian (Nữ 25-35 tuổi)',
+        salary: '10 – 12 Triệu + Thưởng 2% Lợi Nhuận Gộp (Thu nhập 15 – 20 Triệu)',
+        workLocation: 'D49-04 KĐT Geleximco Lê Trọng Tấn, Dương Nội, Hà Nội',
+        workTime: '8:30 – 17:30, từ Thứ 2 đến Thứ 7',
+        purpose: 'Quản trị hệ thống CRM, theo dõi pipeline bán hàng, hỗ trợ đội ngũ sales soạn báo giá/hợp đồng và quản lý quy trình đơn hàng chính xác, kịp thời.',
+        duties: [
+            'Quản lý dữ liệu CRM: tạo mới, cập nhật và phân loại khách hàng (Đại lý, Chợ đầu mối, Nhà máy, Bếp ăn, Siêu thị).',
+            'Theo dõi Pipeline kinh doanh: Khảo sát → Báo giá → Gửi mẫu → Hợp đồng → Giao hàng → Tái mua; phát hiện và nhắc nhở khách hàng tồn đọng.',
+            'Soạn thảo báo giá, hợp đồng đầu ra/đầu vào, đơn đặt hàng và biên bản giao nhận hàng hóa.',
+            'Quản lý đơn hàng xuyên suốt từ xuất kho, điều phối vận tải đến thanh toán và cập nhật trạng thái đơn hàng.',
+            'Thu thập và tổng hợp dữ liệu giá thị trường nông sản hàng ngày báo cáo Ban Giám đốc.',
+            'Theo dõi doanh số theo nhân viên/mặt hàng và phối hợp theo dõi công nợ đến hạn.'
+        ],
+        requirements: [
+            'Giới tính Nữ, độ tuổi từ 25 – 35. Tốt nghiệp Cao đẳng/Đại học các ngành QTKD, Kinh tế, Kế toán, Thương mại, Logistics...',
+            'Bắt buộc thành thạo Word, Excel, Google Sheet. Ưu tiên có kinh nghiệm dùng phần mềm CRM, Canva, ChatGPT/AI.',
+            'Cẩn thận, tỉ mỉ, tư duy logic, yêu thích làm việc với số liệu, chủ động và ham học hỏi.'
+        ],
+        benefits: [
+            'Lương cứng: 10.000.000 – 12.000.000 VNĐ/tháng.',
+            'Thưởng: 2% lợi nhuận gộp toàn phòng kinh doanh.',
+            'Thu nhập mục tiêu: 15.000.000 – 20.000.000 VNĐ/tháng.',
+            'Môi trường làm việc văn minh, đồng nghiệp thân thiện, đầy đủ BHXH và phúc lợi.'
+        ]
+    },
+    'accountant': {
+        title: 'NHÂN VIÊN KẾ TOÁN DOANH NGHIỆP XUẤT NHẬP KHẨU',
+        dept: 'Phòng Kế Toán',
+        badge: 'Toàn Thời Gian',
+        salary: '8 – 12 Triệu + Thưởng 0.5% Lợi Nhuận Gộp + Thưởng Thành Tích (Thu nhập 12 – 18 Triệu)',
+        workLocation: 'D49-04 KĐT Geleximco Lê Trọng Tấn, Dương Nội, Hà Nội',
+        workTime: '8:30 – 17:30, từ Thứ 2 đến Thứ 7',
+        purpose: 'Quản trị dòng tiền an toàn, ghi nhận và kiểm soát thu chi, công nợ khách hàng & nhà cung cấp, kiểm soát hóa đơn chứng từ thuế và hỗ trợ Ban Giám đốc bằng số liệu tài chính thực tế.',
+        duties: [
+            'Theo dõi, ghi nhận thu - chi, kiểm soát tồn quỹ tiền mặt và số dư tài khoản ngân hàng hàng ngày.',
+            'Quản lý công nợ khách hàng (phối hợp Sales) và công nợ nhà cung cấp (phối hợp Thu mua), kiểm soát nợ quá hạn dưới 3%.',
+            'Kiểm tra tính hợp lệ và lưu trữ đầy đủ hóa đơn VAT, chứng từ kế toán, tờ khai hải quan nhập/xuất.',
+            'Kê khai thuế GTGT, thuế nhập khẩu và các nghĩa vụ thuế xuất nhập khẩu đúng quy định.',
+            'Đối soát số liệu kho trung chuyển, tính toán giá vốn hàng bán chính xác theo từng lô hàng nông sản.',
+            'Lập báo cáo tài chính, báo cáo dòng tiền và tổng hợp số liệu lợi nhuận gộp định kỳ cho Ban Giám đốc.'
+        ],
+        requirements: [
+            'Tốt nghiệp Cao đẳng/Đại học chuyên ngành Kế toán, Tài chính, Kiểm toán.',
+            'Ưu tiên có kinh nghiệm kế toán trong doanh nghiệp thương mại hoặc xuất nhập khẩu nông sản.',
+            'Thành thạo Excel, phần mềm kế toán (MISA, Fast Accounting hoặc tương đương).',
+            'Cẩn thận, tỉ mỉ, trung thực, nắm vững chuẩn mực kế toán và quy định thuế hiện hành.'
+        ],
+        benefits: [
+            'Lương cứng: 8.000.000 – 12.000.000 VNĐ/tháng.',
+            'Thưởng: 0.5% lợi nhuận gộp công ty + Thưởng thu hồi công nợ xuất sắc.',
+            'Thu nhập mục tiêu: 12.000.000 – 18.000.000 VNĐ/tháng.',
+            'Chế độ BHXH, BHYT, lương tháng 13 và thưởng lễ tết đầy đủ theo quy định.'
+        ]
+    }
+};
+
+function initJobModals() {
+    const jdModal = document.getElementById('jobDetailModal');
+    const applyModal = document.getElementById('jobApplyModal');
+    
+    // View JD Buttons
+    const viewJdBtns = document.querySelectorAll('.btn-view-jd');
+    viewJdBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const jobId = btn.getAttribute('data-job-id');
+            const job = jobDatabase[jobId];
+            if (job && jdModal) {
+                document.getElementById('modalJdTitle').innerText = job.title;
+                document.getElementById('modalJdDept').innerText = job.dept;
+                document.getElementById('modalJdBadge').innerText = job.badge;
+                document.getElementById('modalJdSalary').innerText = job.salary;
+                document.getElementById('modalJdLocation').innerText = job.workLocation;
+                document.getElementById('modalJdTime').innerText = job.workTime;
+                document.getElementById('modalJdPurpose').innerText = job.purpose;
+
+                // Duties list
+                const dutiesContainer = document.getElementById('modalJdDuties');
+                dutiesContainer.innerHTML = '';
+                job.duties.forEach(item => {
+                    dutiesContainer.innerHTML += `<li>${item}</li>`;
+                });
+
+                // Requirements list
+                const reqContainer = document.getElementById('modalJdRequirements');
+                reqContainer.innerHTML = '';
+                job.requirements.forEach(item => {
+                    reqContainer.innerHTML += `<li>${item}</li>`;
+                });
+
+                // Benefits list
+                const benContainer = document.getElementById('modalJdBenefits');
+                benContainer.innerHTML = '';
+                job.benefits.forEach(item => {
+                    benContainer.innerHTML += `<li>${item}</li>`;
+                });
+
+                // Set job-id on the Apply Button inside the modal
+                const modalApplyBtn = jdModal.querySelector('.btn-apply-from-modal');
+                if (modalApplyBtn) {
+                    modalApplyBtn.setAttribute('data-job-id', jobId);
+                    modalApplyBtn.setAttribute('data-job-title', job.title);
+                }
+
+                jdModal.classList.add('active');
+            }
+        });
+    });
+
+    // Apply Job Buttons
+    const applyBtns = document.querySelectorAll('.btn-apply-job, .btn-apply-from-modal');
+    applyBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const jobId = btn.getAttribute('data-job-id');
+            const jobTitle = btn.getAttribute('data-job-title');
+
+            if (jdModal) jdModal.classList.remove('active');
+
+            if (applyModal) {
+                const selectPos = applyModal.querySelector('#applyJobPosition');
+                if (selectPos && jobId) {
+                    selectPos.value = jobId;
+                }
+                const titleHeader = applyModal.querySelector('#applyModalTitle');
+                if (titleHeader && jobTitle) {
+                    titleHeader.innerText = `ỨNG TUYỂN: ${jobTitle}`;
+                }
+                applyModal.classList.add('active');
+            }
+        });
+    });
+
+    // Close Modals
+    document.querySelectorAll('.modal-overlay').forEach(modal => {
+        const closeBtn = modal.querySelector('.modal-close');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                modal.classList.remove('active');
+            });
+        }
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
             }
         });
     });
