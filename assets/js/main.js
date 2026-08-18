@@ -122,7 +122,7 @@ const productDatabase = {
         title: 'Khoai tây tươi Hà Lan / Úc / Đà Lạt (Tiêu Chuẩn Kỹ Thuật)',
         category: 'Sản phẩm mũi nhọn #1',
         origin: 'Hà Lan / Úc / Việt Nam',
-        desc: 'Khoai tây củ to, vỏ mỏng vàng ươm, ruột đặc, độ khô tiêu chuẩn cao. Chuyên cung ứng số lượng lớn theo container lạnh cho nhà máy chế biến snack, bếp ăn công nghiệp, chợ đầu mối & chuỗi siêu thị.',
+        desc: 'Khoai tây củ to, vỏ mỏng vàng ươm, ruột đặc, độ khô tiêu chuẩn cao. Chuyên cung ứng số lượng lớn theo container lạnh cho nhà máy chế biến thực phẩm & khoai tây sấy, bếp ăn công nghiệp, chợ đầu mối & chuỗi siêu thị.',
         specs: [
             { label: 'Quy cách kích cỡ', val: '45–55mm / 55–65mm / 65–75mm' },
             { label: 'Mục đích sử dụng', val: 'Nhà máy chế biến, Nhà hàng Khách sạn, Bán lẻ' },
