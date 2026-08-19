@@ -651,10 +651,9 @@ img {
 }
 
 .segment-card h3 {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     font-weight: 600;
     color: var(--primary-navy);
-    line-height: 1.35;
 }
 
 .segment-desc {
