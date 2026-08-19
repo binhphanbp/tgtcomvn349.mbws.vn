@@ -120,9 +120,9 @@ function initProductFilter() {
 const productDatabase = {
     'potato-fresh': {
         title: 'Khoai tây tươi Hà Lan / Trung Quốc / Đà Lạt (Tiêu Chuẩn Kỹ Thuật)',
-        category: 'Sản phẩm mũi nhọn #1',
+        category: 'Nông sản tươi',
         origin: 'Hà Lan / Trung Quốc / Việt Nam',
-        desc: 'Khoai tây củ to, vỏ mỏng vàng ươm, ruột đặc, độ khô tiêu chuẩn cao. Chuyên cung ứng số lượng lớn theo container lạnh cho nhà máy chế biến thực phẩm & khoai tây sấy, bếp ăn công nghiệp, chợ đầu mối & chuỗi siêu thị.',
+        desc: 'Khoai tây củ to, vỏ mỏng vàng ươm, ruột đặc, độ khô tiêu chuẩn cao (≥ 20%). Chuyên cung ứng số lượng lớn theo container lạnh cho nhà máy chế biến thực phẩm & khoai tây sấy, bếp ăn công nghiệp, chợ đầu mối & chuỗi siêu thị.',
         specs: [
             { label: 'Quy cách kích cỡ', val: '45–55mm / 55–65mm / 65–75mm' },
             { label: 'Mục đích sử dụng', val: 'Nhà máy chế biến, Nhà hàng Khách sạn, Bán lẻ' },
@@ -138,7 +138,7 @@ const productDatabase = {
     },
     'onion-fresh': {
         title: 'Hành tây vàng & đỏ nhập khẩu thương hạng',
-        category: 'Nhóm củ thương mại #2',
+        category: 'Nông sản tươi',
         origin: 'Hà Lan / Ấn Độ / Việt Nam',
         desc: 'Hành tây vỏ khô mỏng, củ chắc đét, không dập thối, độ cay nồng chuẩn. Cung ứng hợp đồng định kỳ cho các nhà máy gia vị, bếp ăn công nghiệp & đại lý sỉ.',
         specs: [
@@ -154,7 +154,7 @@ const productDatabase = {
     },
     'garlic-fresh': {
         title: 'Tỏi trắng & Gừng già Trung Quốc / Myanmar / Việt Nam',
-        category: 'Nhóm củ thương mại #2',
+        category: 'Nông sản tươi',
         origin: 'Trung Quốc / Myanmar / Việt Nam',
         desc: 'Tỏi tép to đều, tép mẩy đanh, gừng già cay nồng, nhập khẩu chính ngạch từ Trung Quốc, Myanmar & nguồn hàng chất lượng tại Việt Nam. Cung ứng sỉ theo container cho nhà máy chế biến gia vị, bếp ăn & chợ đầu mối toàn quốc.',
         specs: [
@@ -167,8 +167,100 @@ const productDatabase = {
         ],
         img: 'assets/images/fresh_produce.png'
     },
+    'cantaloupe-fruit': {
+        title: 'Dưa vàng Hoàng Kim VietGAP & Trái cây theo mùa',
+        category: 'Nông sản tươi',
+        origin: 'Nông trại TGT / Bình Thuận / Nhập khẩu',
+        desc: 'Dưa vàng vỏ lưới nổi đẹp mắt, thịt giòn ngọt rụm, độ ngọt Brix > 13°. Ngoài ra TGT cung cấp táo, lê, nho & trái cây nhập khẩu theo mùa phục vụ chuỗi siêu thị, nhà hàng cao cấp và xuất khẩu.',
+        specs: [
+            { label: 'Trọng lượng quả', val: '1.2kg – 2.2kg / quả' },
+            { label: 'Độ ngọt (Brix)', val: '≥ 13° Brix' },
+            { label: 'Đóng gói', val: 'Thùng carton 10kg có mút xốp định hình' },
+            { label: 'Chứng nhận', val: 'VietGAP, GlobalGAP, Truy xuất QR' }
+        ],
+        img: 'assets/images/fresh_fruits.png'
+    },
+    'sesame-seeds': {
+        title: 'Vừng đen, Vừng trắng & Vừng vàng nguyên chất B2B',
+        category: 'Nông sản khô',
+        origin: 'Myanmar / Ấn Độ / Việt Nam',
+        desc: 'Hạt vừng đều màu, mẩy đanh, hàm lượng dầu cao, được làm sạch tạp chất và khử khuẩn theo tiêu chuẩn an toàn thực phẩm. Cung cấp nguyên liệu cho nhà máy dầu ăn, bánh kẹo, gia vị & xuất khẩu.',
+        specs: [
+            { label: 'Chủng loại', val: 'Vừng đen, vừng trắng, vừng vàng' },
+            { label: 'Độ tinh khiết', val: '≥ 99.0% (Lọc sạch cát bụi)' },
+            { label: 'Độ ẩm', val: '≤ 8.0%' },
+            { label: 'Tạp chất', val: '≤ 0.5%' },
+            { label: 'Hàm lượng dầu', val: '≥ 48 - 52%' },
+            { label: 'Quy cách đóng gói', val: 'Bao PP / Kraft 25kg, 50kg' },
+            { label: 'Đặt hàng tối thiểu', val: '1 Tấn' },
+            { label: 'Năng lực cung ứng', val: '1,000 Tấn / Tháng' }
+        ],
+        img: 'assets/images/dried_produce.png'
+    },
+    'mung-beans': {
+        title: 'Đậu xanh nguyên hạt còn vỏ / Tách đôi bỏ vỏ / Tách đôi nguyên vỏ',
+        category: 'Nông sản khô',
+        origin: 'Myanmar / Việt Nam',
+        desc: 'Đậu xanh hạt mẩy tròn, không mọt, không nấm mốc, màu sắc tươi sáng. Phân loại theo 3 quy cách: Đậu xanh nguyên hạt có vỏ, Đậu xanh tách đôi bỏ vỏ (xát vỏ làm nhân bánh, chè) và Đậu xanh tách đôi còn vỏ.',
+        specs: [
+            { label: 'Quy cách phân loại', val: 'Nguyên hạt có vỏ / Tách vỏ / Tách đôi còn vỏ' },
+            { label: 'Độ ẩm tiêu chuẩn', val: '≤ 12.5%' },
+            { label: 'Tỷ lệ hạt lép / sâu', val: '≤ 0.5%' },
+            { label: 'Tạp chất', val: '≤ 0.2%' },
+            { label: 'Mục đích sử dụng', val: 'Xưởng bánh kẹo, làm giá đỗ, bột dinh dưỡng, bếp ăn' },
+            { label: 'Quy cách đóng gói', val: 'Bao PP dệt 25kg, 50kg có lót PE chống ẩm' },
+            { label: 'Đặt hàng tối thiểu', val: '2 Tấn' },
+            { label: 'Năng lực cung ứng', val: '1,500 Tấn / Tháng' }
+        ],
+        img: 'assets/images/dried_produce.png'
+    },
+    'soybeans': {
+        title: 'Đậu tương (Đậu nành hạt chất lượng cao)',
+        category: 'Nông sản khô',
+        origin: 'Việt Nam / Nhập khẩu',
+        desc: 'Đậu tương hạt vàng sáng, đồng đều, hàm lượng protein và chất béo tự nhiên cao. Chuyên cung cấp sỉ cho các nhà máy sữa hạt, sản xuất đậu phụ, thực phẩm chay và chế biến thức ăn chăn nuôi.',
+        specs: [
+            { label: 'Hàm lượng Protein', val: '≥ 36.0% - 38.0%' },
+            { label: 'Hàm lượng dầu', val: '≥ 18.0%' },
+            { label: 'Độ ẩm', val: '≤ 13.0%' },
+            { label: 'Tỷ lệ hạt vỡ / hỏng', val: '≤ 2.0%' },
+            { label: 'Đóng gói', val: 'Bao 25kg, 50kg hoặc Bao Jumbo 1 Tấn' },
+            { label: 'Đặt hàng tối thiểu', val: '3 Tấn / 1 Container' },
+            { label: 'Năng lực cung ứng', val: '2,000 Tấn / Tháng' }
+        ],
+        img: 'assets/images/dried_produce.png'
+    },
+    'dried-mushrooms': {
+        title: 'Mộc nhĩ & Nấm hương khô chọn lọc',
+        category: 'Nông sản khô',
+        origin: 'Việt Nam / Nhập khẩu',
+        desc: 'Mộc nhĩ cánh dày nở giòn sần sật, nấm hương cánh tròn đều, thơm nồng đặc trưng, sấy khô tiệt trùng tiêu chuẩn xuất khẩu. Cung cấp cho chuỗi nhà hàng, bếp ăn công nghiệp và xưởng chế biến nem, chả, giò.',
+        specs: [
+            { label: 'Chủng loại', val: 'Mộc nhĩ đen cánh dày / Nấm hương khô chọn lọc' },
+            { label: 'Độ ẩm', val: '≤ 12.0%' },
+            { label: 'Quy cách', val: 'Cắt chân sạch sẽ, không vụn nát, không chất bảo quản' },
+            { label: 'Đóng gói', val: 'Thùng carton 10kg, 20kg hoặc túi hút chân không' },
+            { label: 'Hạn dùng', val: '24 tháng' }
+        ],
+        img: 'assets/images/dried_produce.png'
+    },
+    'refined-sugar': {
+        title: 'Đường tinh luyện thương mại B2B',
+        category: 'Nông sản khô',
+        origin: 'Việt Nam / Nhập khẩu',
+        desc: 'Đường cát trắng tinh luyện tiêu chuẩn công nghiệp, độ tinh khiết Pol ≥ 99.8%, hạt mịn tan nhanh. Cung ứng sỉ số lượng lớn cho nhà máy chế biến thực phẩm, nước giải khát, bánh kẹo và gia vị.',
+        specs: [
+            { label: 'Độ Pol (Tinh khiết)', val: '≥ 99.80°Z' },
+            { label: 'Độ ẩm', val: '≤ 0.05%' },
+            { label: 'Hàm lượng tro', val: '≤ 0.03%' },
+            { label: 'Màu sắc', val: 'Trắng tinh khiết (≤ 30 ICUMSA)' },
+            { label: 'Đóng gói', val: 'Bao PP/PE 50kg có tem nhãn ATTP' },
+            { label: 'Đặt hàng tối thiểu', val: '5 Tấn' }
+        ],
+        img: 'assets/images/dried_produce.png'
+    },
     'french-fries': {
-        title: 'Khoai tây chiên đông lạnh cắt thẳng / sóng',
+        title: 'Khoai tây chiên đông lạnh cắt thẳng & cắt sóng',
         category: 'Nông sản chế biến',
         origin: 'Bỉ / Hà Lan',
         desc: 'Khoai tây chiên đông lạnh nhập khẩu chuẩn Châu Âu (Bỉ, Hà Lan), sợi giòn lâu, vàng ruộm, không ngấm dầu. Chủ lực cho các nhà hàng, khách sạn, chuỗi đồ ăn nhanh & dịch vụ ẩm thực.',
@@ -181,26 +273,39 @@ const productDatabase = {
         ],
         img: 'assets/images/processed_potatoes.png'
     },
-    'cantaloupe-fruit': {
-        title: 'Dưa vàng Hoàng Kim VietGAP chuyên siêu thị',
-        category: 'Trái cây nhập & nội địa',
-        origin: 'Nông trại TGT / Bình Thuận',
-        desc: 'Dưa vàng vỏ lưới nổi đẹp mắt, thịt giòn ngọt rụm, độ ngọt Brix > 13°. Đạt tiêu chuẩn vào các chuỗi siêu thị lớn, nhà hàng cao cấp và xuất khẩu.',
+    'potato-wedges': {
+        title: 'Khoai tây múi cau (Potato Wedges) & Khoai tây nghiền',
+        category: 'Nông sản chế biến',
+        origin: 'Bỉ / Hà Lan',
+        desc: 'Khoai tây múi cau tẩm gia vị / không gia vị và khoai tây nghiền nhập khẩu, cấp đông IQF giữ trọn hương vị tươi ngon. Chuyên dùng cho chuỗi nhà hàng Steakhouse, BBQ, Fastfood.',
         specs: [
-            { label: 'Trọng lượng quả', val: '1.2kg – 2.2kg / quả' },
-            { label: 'Độ ngọt (Brix)', val: '≥ 13° Brix' },
-            { label: 'Đóng gói', val: 'Thùng carton 10kg có mút xốp định hình' },
-            { label: 'Chứng nhận', val: 'VietGAP, GlobalGAP, Truy xuất QR' }
+            { label: 'Quy cách', val: 'Khoai tây cắt múi cau có vỏ / Khoai tây nghiền' },
+            { label: 'Đóng gói', val: 'Túi 2.5kg x 4 túi/Thùng (10kg)' },
+            { label: 'Bảo quản', val: '-18°C đông lạnh' },
+            { label: 'Chứng nhận', val: 'HACCP, ISO, BRC Food' }
+        ],
+        img: 'assets/images/processed_potatoes.png'
+    },
+    'vn-export-produce': {
+        title: 'Nông sản Việt Nam xuất khẩu (Tỏi, Gừng, Dưa vàng, Nông sản khô)',
+        category: 'Nông sản xuất khẩu',
+        origin: 'Vùng trồng Việt Nam (VietGAP / GlobalGAP)',
+        desc: 'TGT TIMEX đóng gói và xuất khẩu nông sản Việt Nam đạt chuẩn sang các thị trường quốc tế: Tỏi củ, gừng tươi củ già, dưa lưới VietGAP, các loại đậu hạt & vừng mè chọn lọc.',
+        specs: [
+            { label: 'Thị trường mục tiêu', val: 'Châu Á, Trung Đông, Châu Âu, Mỹ' },
+            { label: 'Chứng từ xuất khẩu', val: 'Phytosanitary, CO Form E/AK/AJ/EUR1, Test Report' },
+            { label: 'Đóng gói xuất khẩu', val: 'Thùng carton in ấn theo thương hiệu / Bao lưới trên pallet' },
+            { label: 'Điều kiện giao hàng', val: 'FOB Hải Phòng/Cát Lái, CIF cảng đến' }
         ],
         img: 'assets/images/fresh_fruits.png'
     },
     'sourcing-b2b': {
-        title: 'Dịch vụ tìm nguồn hàng & XNK nông sản theo yêu cầu',
-        category: 'Năng lực khác biệt #3',
+        title: 'Hàng hóa XNK & Dịch vụ tìm nguồn theo yêu cầu',
+        category: 'Hàng hóa xuất nhập khẩu',
         origin: 'Toàn Cầu (Bỉ, Hà Lan, Ấn Độ, Trung Quốc, Myanmar & Quốc tế)',
         desc: 'TGT TIMEX nhận săn tìm, thẩm định vùng trồng & nhập khẩu/xuất khẩu nông sản trực tiếp từ Bỉ, Hà Lan, Ấn Độ, Trung Quốc, Myanmar & các thị trường quốc tế theo đúng quy cách, tiêu chuẩn kỹ thuật & tiến độ của doanh nghiệp.',
         specs: [
-            { label: 'Phạm vi tìm kiếm', val: 'Bỉ, Hà Lan, Ấn Độ, TQ, Myanmar & Quốc tế' },
+            { label: 'Phạm vi tìm kiếm', val: 'Nông sản tươi, nông sản khô, củ quả, đông lạnh' },
             { label: 'Tiêu chuẩn đáp ứng', val: 'HACCP, ISO 22000, GlobalGAP, Organic' },
             { label: 'Quy trình hợp tác', val: 'Báo giá → Gửi mẫu → Kiểm định → Hợp đồng' },
             { label: 'Điều kiện giao nhận', val: 'FOB, CIF, CFR, DDP tận kho khách' }
