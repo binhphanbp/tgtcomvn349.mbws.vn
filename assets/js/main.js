@@ -119,9 +119,9 @@ function initProductFilter() {
 /* 5. Product Quick View Modal & B2B Data Sheet */
 const productDatabase = {
     'potato-fresh': {
-        title: 'Khoai tây tươi Hà Lan / Úc / Đà Lạt (Tiêu Chuẩn Kỹ Thuật)',
+        title: 'Khoai tây tươi Hà Lan / Trung Quốc / Đà Lạt (Tiêu Chuẩn Kỹ Thuật)',
         category: 'Sản phẩm mũi nhọn #1',
-        origin: 'Hà Lan / Úc / Việt Nam',
+        origin: 'Hà Lan / Trung Quốc / Việt Nam',
         desc: 'Khoai tây củ to, vỏ mỏng vàng ươm, ruột đặc, độ khô tiêu chuẩn cao. Chuyên cung ứng số lượng lớn theo container lạnh cho nhà máy chế biến thực phẩm & khoai tây sấy, bếp ăn công nghiệp, chợ đầu mối & chuỗi siêu thị.',
         specs: [
             { label: 'Quy cách kích cỡ', val: '45–55mm / 55–65mm / 65–75mm' },
@@ -153,10 +153,10 @@ const productDatabase = {
         img: 'assets/images/fresh_produce.png'
     },
     'garlic-fresh': {
-        title: 'Tỏi trắng & tỏi tím nhập khẩu số lượng lớn',
+        title: 'Tỏi trắng & Gừng già Trung Quốc / Myanmar / Việt Nam',
         category: 'Nhóm củ thương mại #2',
-        origin: 'Trung Quốc / Việt Nam',
-        desc: 'Tỏi tép to đều, tép mẩy mặn mòi, vỏ sạch đẹp không nấm mốc. Nguồn cung ứng sỉ theo container cho nhà máy chế biến gia vị, chợ đầu mối toàn quốc.',
+        origin: 'Trung Quốc / Myanmar / Việt Nam',
+        desc: 'Tỏi tép to đều, tép mẩy đanh, gừng già cay nồng, nhập khẩu chính ngạch từ Trung Quốc, Myanmar & nguồn hàng chất lượng tại Việt Nam. Cung ứng sỉ theo container cho nhà máy chế biến gia vị, bếp ăn & chợ đầu mối toàn quốc.',
         specs: [
             { label: 'Kích cỡ tép tỏi', val: '4.5cm – 6.0cm' },
             { label: 'Đóng gói', val: 'Bao lưới 10kg, Thùng 10kg, Túi lưới 1kg' },
@@ -170,8 +170,8 @@ const productDatabase = {
     'french-fries': {
         title: 'Khoai tây chiên đông lạnh cắt thẳng / sóng',
         category: 'Nông sản chế biến',
-        origin: 'Bỉ / Hà Lan / Mỹ',
-        desc: 'Khoai tây chiên đông lạnh nhập khẩu chuẩn Châu Âu, sợi giòn lâu, vàng ruộm, không ngấm dầu. Chủ lực cho các nhà hàng, khách sạn, chuỗi đồ ăn nhanh & dịch vụ ẩm thực.',
+        origin: 'Bỉ / Hà Lan',
+        desc: 'Khoai tây chiên đông lạnh nhập khẩu chuẩn Châu Âu (Bỉ, Hà Lan), sợi giòn lâu, vàng ruộm, không ngấm dầu. Chủ lực cho các nhà hàng, khách sạn, chuỗi đồ ăn nhanh & dịch vụ ẩm thực.',
         specs: [
             { label: 'Quy cách cắt', val: '7mm / 9mm / 10mm (Thẳng & Sóng)' },
             { label: 'Quy cách đóng gói', val: 'Túi 2.5kg x 4 túi/Thùng (10kg)' },
@@ -197,10 +197,10 @@ const productDatabase = {
     'sourcing-b2b': {
         title: 'Dịch vụ tìm nguồn hàng & XNK nông sản theo yêu cầu',
         category: 'Năng lực khác biệt #3',
-        origin: 'Toàn Cầu (EU, Úc, Ấn Độ, TQ...)',
-        desc: 'TGT TIMEX nhận săn tìm, thẩm định vùng trồng & nhập khẩu/xuất khẩu mọi loại nông sản theo đúng quy cách, tiêu chuẩn kỹ thuật & tiến độ của doanh nghiệp.',
+        origin: 'Toàn Cầu (Bỉ, Hà Lan, Ấn Độ, Trung Quốc, Myanmar & Quốc tế)',
+        desc: 'TGT TIMEX nhận săn tìm, thẩm định vùng trồng & nhập khẩu/xuất khẩu nông sản trực tiếp từ Bỉ, Hà Lan, Ấn Độ, Trung Quốc, Myanmar & các thị trường quốc tế theo đúng quy cách, tiêu chuẩn kỹ thuật & tiến độ của doanh nghiệp.',
         specs: [
-            { label: 'Phạm vi tìm kiếm', val: 'Nông sản củ, trái cây, gia vị, đông lạnh' },
+            { label: 'Phạm vi tìm kiếm', val: 'Bỉ, Hà Lan, Ấn Độ, TQ, Myanmar & Quốc tế' },
             { label: 'Tiêu chuẩn đáp ứng', val: 'HACCP, ISO 22000, GlobalGAP, Organic' },
             { label: 'Quy trình hợp tác', val: 'Báo giá → Gửi mẫu → Kiểm định → Hợp đồng' },
             { label: 'Điều kiện giao nhận', val: 'FOB, CIF, CFR, DDP tận kho khách' }
@@ -380,7 +380,7 @@ const jobDatabase = {
         workTime: '8:30 – 17:30, từ Thứ 2 đến Thứ 7',
         purpose: 'Tìm kiếm, đánh giá và đàm phán với các nhà cung cấp nông sản (khoai tây, hành tây, tỏi, gừng, trái cây...) trong nước & quốc tế, tối ưu giá vốn và đảm bảo nguồn hàng đạt chuẩn chất lượng.',
         duties: [
-            'Tìm kiếm và phát triển mạng lưới nhà cung cấp nông sản uy tín (Hà Lan, Úc, Ấn Độ, Trung Quốc và vùng trồng lớn nội địa).',
+            'Tìm kiếm và phát triển mạng lưới nhà cung cấp nông sản uy tín (Bỉ, Hà Lan, Ấn Độ, Trung Quốc, Myanmar & các thị trường quốc tế).',
             'Khảo sát giá thị trường hàng ngày, so sánh báo giá, đàm phán hợp đồng thương mại & điều khoản thanh toán (FOB, CIF, CFR, DDP).',
             'Phối hợp kiểm định mẫu nông sản thực tế, kiểm soát hồ sơ kiểm dịch thực vật (Phytosanitary), CO/CQ và tiêu chuẩn kỹ thuật.',
             'Theo dõi tiến độ giao hàng, đối soát kho và giải quyết các khiếu nại phát sinh về chất lượng/hao hụt hàng hóa.',
