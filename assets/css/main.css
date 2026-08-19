@@ -1027,31 +1027,43 @@ img {
 .filter-tabs {
     display: flex;
     justify-content: center;
-    gap: 0.65rem;
-    flex-wrap: wrap;
-    margin-bottom: 2.5rem;
+    align-items: center;
+    gap: 0.45rem;
+    flex-wrap: nowrap;
+    margin: 0 auto 2.5rem auto;
+    max-width: 100%;
 }
 
 .filter-btn {
-    padding: 0.65rem 1.35rem;
-    border-radius: var(--radius-md);
-    border: 1px solid var(--border-color);
-    background-color: #FFFFFF;
-    color: #334155;
+    padding: 0.52rem 0.95rem;
+    border-radius: 9999px;
+    border: 1px solid #E2E8F0;
+    background-color: #F8FAFC;
+    color: #475569;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 600;
-    font-size: 0.925rem;
+    font-weight: 700;
+    font-size: 0.815rem;
     cursor: pointer;
-    transition: var(--transition-smooth);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     text-transform: uppercase !important;
     letter-spacing: 0.02em;
+    white-space: nowrap;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
 }
 
-.filter-btn:hover, .filter-btn.active {
+.filter-btn:hover {
+    background-color: #FFFFFF;
+    color: var(--primary-navy);
+    border-color: var(--primary-navy);
+    box-shadow: 0 3px 8px rgba(11, 25, 44, 0.08);
+    transform: translateY(-1px);
+}
+
+.filter-btn.active {
     background-color: var(--primary-navy);
     color: #FFFFFF;
     border-color: var(--primary-navy);
-    box-shadow: 0 4px 14px rgba(11, 25, 44, 0.2);
+    box-shadow: 0 4px 12px rgba(11, 25, 44, 0.22);
 }
 
 .product-grid {
@@ -1746,6 +1758,7 @@ textarea.form-control {
     }
 
     /* Product Filter Horizontal Scroll Bar */
+    .filter-tabs,
     .product-filter-bar {
         display: flex !important;
         flex-wrap: nowrap !important;
@@ -1758,6 +1771,7 @@ textarea.form-control {
         scrollbar-width: none;
     }
 
+    .filter-tabs::-webkit-scrollbar,
     .product-filter-bar::-webkit-scrollbar {
         display: none;
     }
