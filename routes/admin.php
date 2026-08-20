@@ -237,6 +237,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
         Route::post('orders/{order}/refund', [OrderController::class, 'refund'])->middleware('can:orders.update')->name('orders.refund');
         Route::resource('orders', OrderController::class)->only(['create', 'store'])->middleware('can:orders.create');
         Route::resource('orders', OrderController::class)->only(['index', 'show'])->middleware('can:orders.view');
+        Route::get('catalog/products', fn () => redirect()->route('admin.products.index'));
+        Route::get('catalog/categories', fn () => redirect()->route('admin.categories.index'));
+        Route::get('catalog/brands', fn () => redirect()->route('admin.brands.index'));
 
         Route::patch('categories/bulk', [CategoryController::class, 'bulk'])->middleware('can:products.update')->name('categories.bulk');
         Route::post('categories/sort', [CategoryController::class, 'sort'])->middleware('can:products.update')->name('categories.sort');
