@@ -244,217 +244,79 @@
 
             <div class="filter-tabs">
                 <button class="filter-btn active" data-filter="all">Tất cả sản phẩm</button>
-                <button class="filter-btn" data-filter="nong-san-tuoi">Nông sản tươi</button>
-                <button class="filter-btn" data-filter="nong-san-kho">Nông sản khô</button>
-                <button class="filter-btn" data-filter="nong-san-che-bien">Nông sản chế biến</button>
-                <button class="filter-btn" data-filter="nong-san-xuat-khau">Nông sản xuất khẩu</button>
-                <button class="filter-btn" data-filter="hang-hoa-xnk">Hàng hóa XNK</button>
+                @if(isset($categories) && $categories->isNotEmpty())
+                    @foreach($categories as $cat)
+                        <button class="filter-btn" data-filter="{{ $cat->slug }}">{{ $cat->name }}</button>
+                    @endforeach
+                @else
+                    <button class="filter-btn" data-filter="nong-san-tuoi">Nông sản tươi</button>
+                    <button class="filter-btn" data-filter="nong-san-kho">Nông sản khô</button>
+                    <button class="filter-btn" data-filter="nong-san-che-bien">Nông sản chế biến</button>
+                    <button class="filter-btn" data-filter="nong-san-xuat-khau">Nông sản xuất khẩu</button>
+                    <button class="filter-btn" data-filter="hang-hoa-xnk">Hàng hóa XNK</button>
+                @endif
             </div>
 
             <div class="product-grid">
-                <!-- Product 1: Khoai tây tươi -->
-                <div class="product-card" data-category="nong-san-tuoi">
-                    <div class="product-img-wrapper">
-                        <img src="{{ asset('client-assets/images/fresh_produce.png') }}" alt="Khoai tây tươi">
-                        <span class="product-category-tag">Nông Sản Tươi</span>
-                        <span class="product-origin-badge">Hà Lan / TQ</span>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">KHOAI TÂY TƯƠI NHẬP KHẨU HÀ LAN / TRUNG QUỐC</h3>
-                        <p class="product-desc">Khoai củ to vàng, ruột đặc, độ khô cao. Cung ứng số lượng lớn theo container lạnh cho nhà máy chip & chợ đầu mối.</p>
-                        
-                        <div class="product-specs-list">
-                            <div class="product-spec-item"><label>KÍCH CỠ CỦ:</label> <span>45-55 / 55-65 / 65-75mm</span></div>
-                            <div class="product-spec-item"><label>ĐÓNG GÓI:</label> <span>Bao lưới 10kg/20kg/Jumbo 1T</span></div>
-                            <div class="product-spec-item"><label>BẢO QUẢN:</label> <span>4°C - 8°C (Kho lạnh 24/7)</span></div>
-                            <div class="product-spec-item"><label>ĐẶT HÀNG TỐI THIỂU:</label> <span>5 Tấn / 1 Container</span></div>
-                        </div>
+                @if(isset($products) && $products->isNotEmpty())
+                    @foreach($products as $product)
+                        @php
+                            $catSlug = $product->category?->slug ?? 'nong-san-tuoi';
+                            $catName = $product->category?->name ?? 'Nông Sản B2B';
+                            $imgUrl = $product->image_url ? asset($product->image_url) : asset('client-assets/images/fresh_produce.png');
+                            $descLines = array_filter(array_map('trim', explode("\n", (string)$product->description)));
+                        @endphp
+                        <div class="product-card" data-category="{{ $catSlug }}">
+                            <div class="product-img-wrapper">
+                                <img src="{{ $imgUrl }}" alt="{{ $product->name }}">
+                                <span class="product-category-tag">{{ $catName }}</span>
+                                @if($product->brand)
+                                    <span class="product-origin-badge">{{ $product->brand->name }}</span>
+                                @endif
+                            </div>
+                            <div class="product-content">
+                                <h3 class="product-title">{{ $product->name }}</h3>
+                                <p class="product-desc">{{ $product->short_description }}</p>
+                                
+                                @if(!empty($descLines))
+                                    <div class="product-specs-list">
+                                        @foreach(array_slice($descLines, 0, 4) as $line)
+                                            @if(str_contains($line, ':'))
+                                                @php [$k, $v] = explode(':', $line, 2); @endphp
+                                                <div class="product-spec-item"><label>{{ mb_strtoupper(trim($k)) }}:</label> <span>{{ trim($v) }}</span></div>
+                                            @else
+                                                <div class="product-spec-item"><span>{{ $line }}</span></div>
+                                            @endif
+                                        @endforeach
+                                    </div>
+                                @endif
 
-                        <div class="product-actions">
-                            <button class="btn btn-outline-navy btn-sm btn-quickview" data-product="potato-fresh" style="flex:1;">
-                                <i class="fas fa-file-lines"></i> Xem Thông Số
-                            </button>
-                            <button class="btn btn-primary btn-sm trigger-rfq-modal" data-product-name="Khoai Tây Tươi Nhập Khẩu" style="flex:1;">
-                                <i class="fas fa-paper-plane"></i> Báo Giá
-                            </button>
+                                <div class="product-actions">
+                                    <button class="btn btn-outline-navy btn-sm btn-quickview" 
+                                        data-product-sku="{{ $product->sku }}"
+                                        data-product-name="{{ $product->name }}"
+                                        data-product-desc="{{ $product->short_description }}"
+                                        data-product-specs="{{ $product->description }}"
+                                        data-product-img="{{ $imgUrl }}"
+                                        data-category-name="{{ $catName }}"
+                                        style="flex:1;">
+                                        <i class="fas fa-file-lines"></i> Xem Thông Số
+                                    </button>
+                                    <button class="btn btn-primary btn-sm trigger-rfq-modal" data-product-name="{{ $product->name }}" style="flex:1;">
+                                        <i class="fas fa-paper-plane"></i> Báo Giá
+                                    </button>
+                                </div>
+                            </div>
                         </div>
+                    @endforeach
+                @else
+                    <div class="text-center py-5" style="grid-column: 1 / -1;">
+                        <i class="fas fa-boxes-stacked fa-3x text-muted mb-3"></i>
+                        <p class="text-muted">Đang cập nhật danh mục sản phẩm. Vui lòng liên hệ hotline để nhận báo giá chi tiết.</p>
                     </div>
-                </div>
-
-                <!-- Product 2: Hành tây -->
-                <div class="product-card" data-category="nong-san-tuoi">
-                    <div class="product-img-wrapper">
-                        <img src="{{ asset('client-assets/images/fresh_produce.png') }}" alt="Hành tây vàng">
-                        <span class="product-category-tag">Nông Sản Tươi</span>
-                        <span class="product-origin-badge">Hà Lan / Ấn Độ</span>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">HÀNH TÂY VÀNG NHẬP KHẨU HÀ LAN / ẤN ĐỘ</h3>
-                        <p class="product-desc">Củ chắc đét, vỏ mỏng khô giòn, kháng thối hỏng tốt. Thích hợp cho bếp ăn công nghiệp & nhà máy gia vị.</p>
-                        
-                        <div class="product-specs-list">
-                            <div class="product-spec-item"><label>ĐƯỜNG KÍNH:</label> <span>Size 6cm - 9cm</span></div>
-                            <div class="product-spec-item"><label>ĐÓNG GÓI:</label> <span>Túi lưới 10kg/20kg/25kg</span></div>
-                            <div class="product-spec-item"><label>BẢO QUẢN:</label> <span>0°C - 4°C, Độ ẩm 65%</span></div>
-                            <div class="product-spec-item"><label>ĐẶT HÀNG TỐI THIỂU:</label> <span>3 Tấn / 1 Container</span></div>
-                        </div>
-
-                        <div class="product-actions">
-                            <button class="btn btn-outline-navy btn-sm btn-quickview" data-product="onion-fresh" style="flex:1;">
-                                <i class="fas fa-file-lines"></i> Xem Thông Số
-                            </button>
-                            <button class="btn btn-primary btn-sm trigger-rfq-modal" data-product-name="Hành Tây Vàng Nhập Khẩu" style="flex:1;">
-                                <i class="fas fa-paper-plane"></i> Báo Giá
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 3: Vừng mè khô -->
-                <div class="product-card" data-category="nong-san-kho">
-                    <div class="product-img-wrapper">
-                        <img src="{{ asset('client-assets/images/dried_produce.png') }}" alt="Vừng mè khô">
-                        <span class="product-category-tag">Nông Sản Khô</span>
-                        <span class="product-origin-badge">Myanmar / VN</span>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">VỪNG ĐEN, VỪNG TRẮNG & VỪNG VÀNG NGUYÊN CHẤT</h3>
-                        <p class="product-desc">Hạt vừng mẩy đanh, hàm lượng dầu cao (≥ 48-52%), lọc sạch bụi cát và tạp chất. Cung ứng cho nhà máy dầu, bánh kẹo & gia vị.</p>
-                        
-                        <div class="product-specs-list">
-                            <div class="product-spec-item"><label>CHỦNG LOẠI:</label> <span>Vừng đen / Vừng trắng / Vừng vàng</span></div>
-                            <div class="product-spec-item"><label>ĐỘ TINH KHIẾT:</label> <span>≥ 99.0% (Lọc sạch cát)</span></div>
-                            <div class="product-spec-item"><label>ĐỘ ẨM:</label> <span>≤ 8.0%</span></div>
-                            <div class="product-spec-item"><label>ĐÓNG GÓI:</label> <span>Bao PP / Kraft 25kg, 50kg</span></div>
-                        </div>
-
-                        <div class="product-actions">
-                            <button class="btn btn-outline-navy btn-sm btn-quickview" data-product="sesame-seeds" style="flex:1;">
-                                <i class="fas fa-file-lines"></i> Xem Thông Số
-                            </button>
-                            <button class="btn btn-primary btn-sm trigger-rfq-modal" data-product-name="Vừng Đen, Vừng Trắng & Vừng Vàng" style="flex:1;">
-                                <i class="fas fa-paper-plane"></i> Báo Giá
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 4: Đậu xanh -->
-                <div class="product-card" data-category="nong-san-kho">
-                    <div class="product-img-wrapper">
-                        <img src="{{ asset('client-assets/images/dried_produce.png') }}" alt="Đậu xanh nguyên hạt và tách vỏ">
-                        <span class="product-category-tag">Nông Sản Khô</span>
-                        <span class="product-origin-badge">Myanmar / VN</span>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">ĐẬU XANH NGUYÊN HẠT / TÁCH ĐÔI BỎ VỎ / VỠ ĐÔI</h3>
-                        <p class="product-desc">Đậu xanh hạt mẩy bóng tròn, không mọt mốc. Đầy đủ 3 quy cách: nguyên vỏ, tách đôi bỏ vỏ làm bánh chè & tách đôi nguyên vỏ.</p>
-                        
-                        <div class="product-specs-list">
-                            <div class="product-spec-item"><label>QUY CÁCH:</label> <span>Nguyên hạt / Tách vỏ / Vỡ đôi</span></div>
-                            <div class="product-spec-item"><label>ĐỘ ẨM:</label> <span>≤ 12.5%</span></div>
-                            <div class="product-spec-item"><label>TẠP CHẤT:</label> <span>≤ 0.2%</span></div>
-                            <div class="product-spec-item"><label>ĐÓNG GÓI:</label> <span>Bao PP 25kg, 50kg có lót PE</span></div>
-                        </div>
-
-                        <div class="product-actions">
-                            <button class="btn btn-outline-navy btn-sm btn-quickview" data-product="mung-beans" style="flex:1;">
-                                <i class="fas fa-file-lines"></i> Xem Thông Số
-                            </button>
-                            <button class="btn btn-primary btn-sm trigger-rfq-modal" data-product-name="Đậu Xanh Nguyên Hạt & Tách Vỏ" style="flex:1;">
-                                <i class="fas fa-paper-plane"></i> Báo Giá
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 5: Khoai tây chiên đông lạnh -->
-                <div class="product-card" data-category="nong-san-che-bien">
-                    <div class="product-img-wrapper">
-                        <img src="{{ asset('client-assets/images/processed_potatoes.png') }}" alt="Khoai tây đông lạnh">
-                        <span class="product-category-tag">Nông Sản Chế Biến</span>
-                        <span class="product-origin-badge">Bỉ / Hà Lan</span>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">KHOAI TÂY CHIÊN ĐÔNG LẠNH CẮT THẲNG/SÓNG</h3>
-                        <p class="product-desc">Khoai tây chiên đông lạnh nhập khẩu Bỉ/Hà Lan, sợi giòn lâu, không ngấm dầu. Chủ lực cho chuỗi nhà hàng khách sạn & đồ ăn nhanh.</p>
-                        
-                        <div class="product-specs-list">
-                            <div class="product-spec-item"><label>CẮT SỢI:</label> <span>7mm / 9mm / 10mm</span></div>
-                            <div class="product-spec-item"><label>ĐÓNG GÓI:</label> <span>Túi 2.5kg x 4 túi/Thùng</span></div>
-                            <div class="product-spec-item"><label>BẢO QUẢN:</label> <span>-18°C đông lạnh sâu</span></div>
-                            <div class="product-spec-item"><label>HẠN DÙNG:</label> <span>24 tháng</span></div>
-                        </div>
-
-                        <div class="product-actions">
-                            <button class="btn btn-outline-navy btn-sm btn-quickview" data-product="french-fries" style="flex:1;">
-                                <i class="fas fa-file-lines"></i> Xem Thông Số
-                            </button>
-                            <button class="btn btn-primary btn-sm trigger-rfq-modal" data-product-name="Khoai Tây Chiên Đông Lạnh" style="flex:1;">
-                                <i class="fas fa-paper-plane"></i> Báo Giá
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 6: Nông sản xuất khẩu -->
-                <div class="product-card" data-category="nong-san-xuat-khau">
-                    <div class="product-img-wrapper">
-                        <img src="{{ asset('client-assets/images/fresh_fruits.png') }}" alt="Nông sản xuất khẩu Việt Nam">
-                        <span class="product-category-tag">Nông Sản Xuất Khẩu</span>
-                        <span class="product-origin-badge">Việt Nam</span>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">NÔNG SẢN VIỆT NAM XUẤT KHẨU (TỎI, GỪNG, DƯA LƯỚI, NÔNG SẢN KHÔ)</h3>
-                        <p class="product-desc">Đóng gói và xuất khẩu nông sản Việt Nam đạt chuẩn VietGAP/GlobalGAP: Tỏi, gừng già, dưa vàng, đậu hạt & vừng mè chọn lọc theo container.</p>
-                        
-                        <div class="product-specs-list">
-                            <div class="product-spec-item"><label>THỊ TRƯỜNG:</label> <span>Châu Á, Trung Đông, EU, Mỹ</span></div>
-                            <div class="product-spec-item"><label>CHỨNG TỪ:</label> <span>Phytosanitary, CO Form E/AK/EUR1</span></div>
-                            <div class="product-spec-item"><label>QUY CÁCH:</label> <span>Thùng carton / Pallet xuất khẩu</span></div>
-                            <div class="product-spec-item"><label>ĐIỀU KIỆN:</label> <span>FOB Cảng VN, CIF Cảng đến</span></div>
-                        </div>
-
-                        <div class="product-actions">
-                            <button class="btn btn-outline-navy btn-sm btn-quickview" data-product="vn-export-produce" style="flex:1;">
-                                <i class="fas fa-file-lines"></i> Xem Thông Số
-                            </button>
-                            <button class="btn btn-primary btn-sm trigger-rfq-modal" data-product-name="Nông Sản Việt Nam Xuất Khẩu" style="flex:1;">
-                                <i class="fas fa-paper-plane"></i> Báo Giá
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 7: Sourcing B2B -->
-                <div class="product-card" data-category="hang-hoa-xnk">
-                    <div class="product-img-wrapper">
-                        <img src="{{ asset('client-assets/images/cold_storage_warehouse.png') }}" alt="Tìm Nguồn Hàng B2B">
-                        <span class="product-category-tag">Hàng Hóa XNK</span>
-                        <span class="product-origin-badge">Toàn Cầu</span>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">HÀNG HÓA XNK & DỊCH VỤ TÌM NGUỒN THEO YÊU CẦU</h3>
-                        <p class="product-desc">TGT tìm kiếm nguồn hàng, thẩm định mẫu, kiểm định chỉ tiêu vi sinh & giao hàng tận kho theo quy cách riêng của bạn.</p>
-                        
-                        <div class="product-specs-list">
-                            <div class="product-spec-item"><label>NGUỒN TÌM KIẾM:</label> <span>Bỉ, Hà Lan, Ấn Độ, TQ, Myanmar...</span></div>
-                            <div class="product-spec-item"><label>TIÊU CHUẨN:</label> <span>HACCP, ISO 22000, VietGAP</span></div>
-                            <div class="product-spec-item"><label>QUY TRÌNH:</label> <span>Mẫu test → Hợp đồng → Giao</span></div>
-                            <div class="product-spec-item"><label>ĐIỀU KIỆN:</label> <span>FOB, CIF, CFR, DDP</span></div>
-                        </div>
-
-                        <div class="product-actions">
-                            <button class="btn btn-outline-navy btn-sm btn-quickview" data-product="sourcing-b2b" style="flex:1;">
-                                <i class="fas fa-file-lines"></i> XEM QUY TRÌNH
-                            </button>
-                            <button class="btn btn-primary btn-sm trigger-rfq-modal" data-product-name="Tìm Nguồn Nông Sản Theo Yêu Cầu" style="flex:1;">
-                                <i class="fas fa-paper-plane"></i> NHẬN BÁO GIÁ
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                @endif
             </div>
+
         </div>
     </section>
 

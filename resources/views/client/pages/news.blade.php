@@ -24,50 +24,36 @@
             </div>
 
             <div class="news-grid">
-                <!-- Article 1 -->
-                <div class="news-card">
-                    <div class="news-img">
-                        <img src="{{ asset('client-assets/images/fresh_produce.png') }}" alt="Bảng giá khoai tây Hà Lan">
-                    </div>
-                    <div class="news-content">
-                        <span class="news-date"><i class="far fa-calendar-alt"></i> 14/08/2026</span>
-                        <h3 class="news-title">BẢNG GIÁ KHOAI TÂY NHẬP KHẨU HÀ LAN & TRUNG QUỐC THÁNG 8/2026</h3>
-                        <p class="news-snippet">Cập nhật biến động giá khoai tây tươi nhập khẩu theo container lạnh cho nhà máy chip, bếp ăn công nghiệp & đại lý miền Bắc...</p>
-                        <div style="margin-top:1rem;">
-                            <a href="javascript:void(0);" class="service-link trigger-rfq-modal">Nhận Bảng Giá Chi Tiết <i class="fas fa-arrow-right"></i></a>
+                @if(isset($posts) && $posts->isNotEmpty())
+                    @foreach($posts as $post)
+                        <div class="news-card">
+                            <div class="news-img">
+                                <img src="{{ $post->image_url ? asset($post->image_url) : asset('client-assets/images/fresh_produce.png') }}" alt="{{ $post->title }}">
+                            </div>
+                            <div class="news-content">
+                                <span class="news-date">
+                                    <i class="far fa-calendar-alt"></i> 
+                                    {{ $post->published_at ? $post->published_at->format('d/m/Y') : $post->created_at->format('d/m/Y') }}
+                                    @if($post->category)
+                                        <span class="badge badge-green ms-2" style="font-size:0.75rem;">{{ $post->category->name }}</span>
+                                    @endif
+                                </span>
+                                <h3 class="news-title">{{ $post->title }}</h3>
+                                <p class="news-snippet">{{ $post->summary }}</p>
+                                <div style="margin-top:1rem;">
+                                    <a href="javascript:void(0);" class="service-link trigger-rfq-modal" data-product-name="{{ $post->title }}">
+                                        Nhận Bảng Giá Chi Tiết <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
+                    @endforeach
+                @else
+                    <div class="text-center py-5" style="grid-column: 1 / -1;">
+                        <i class="far fa-newspaper fa-3x text-muted mb-3"></i>
+                        <p class="text-muted">Đang cập nhật bài viết mới. Vui lòng quay lại sau!</p>
                     </div>
-                </div>
-
-                <!-- Article 2 -->
-                <div class="news-card">
-                    <div class="news-img">
-                        <img src="{{ asset('client-assets/images/cold_storage_warehouse.png') }}" alt="Nguồn khoai tây cho nhà máy">
-                    </div>
-                    <div class="news-content">
-                        <span class="news-date"><i class="far fa-calendar-alt"></i> 10/08/2026</span>
-                        <h3 class="news-title">TIÊU CHUẨN KHOAI TÂY CUNG ỨNG CHO NHÀ MÁY SẢN XUẤT KHOAI TÂY SẤY & SNACK</h3>
-                        <p class="news-snippet">Phân tích các chỉ tiêu kỹ thuật bắt buộc: Độ khô tiêu chuẩn ≥ 20%, hàm lượng đường khử thấp, Kích cỡ củ đồng đều 55-65mm...</p>
-                        <div style="margin-top:1rem;">
-                            <a href="javascript:void(0);" class="service-link trigger-rfq-modal">Tư Vấn Quy Cách <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 3 -->
-                <div class="news-card">
-                    <div class="news-img">
-                        <img src="{{ asset('client-assets/images/fresh_produce.png') }}" alt="Báo giá tỏi hành tây">
-                    </div>
-                    <div class="news-content">
-                        <span class="news-date"><i class="far fa-calendar-alt"></i> 05/08/2026</span>
-                        <h3 class="news-title">NGUỒN CUNG HÀNH TÂY & TỎI SỈ SỐ LƯỢNG LỚN TỚI KHO DOANH NGHIỆP</h3>
-                        <p class="news-snippet">Giải pháp cung ứng hợp đồng dài hạn hành tây Hà Lan, tỏi tép to cho chuỗi bếp ăn KCN & nhà máy gia vị thực phẩm toàn quốc...</p>
-                        <div style="margin-top:1rem;">
-                            <a href="javascript:void(0);" class="service-link trigger-rfq-modal">Nhận Báo Giá Sỉ <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
+                @endif
             </div>
         </div>
     </section>

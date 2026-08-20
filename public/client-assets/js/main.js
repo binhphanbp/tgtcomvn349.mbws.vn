@@ -324,31 +324,81 @@ function initProductModal() {
     quickViewBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            const prodKey = btn.getAttribute('data-product');
-            const data = productDatabase[prodKey];
+            const card = btn.closest('.product-card');
+            const title = btn.getAttribute('data-product-name') || card?.querySelector('.product-title')?.innerText || '';
+            const category = btn.getAttribute('data-category-name') || card?.querySelector('.product-category-tag')?.innerText || 'Nông Sản B2B';
+            const origin = btn.getAttribute('data-product-origin') || card?.querySelector('.product-origin-badge')?.innerText || 'Nhập Khẩu Chính Ngạch';
+            const desc = btn.getAttribute('data-product-desc') || card?.querySelector('.product-desc')?.innerText || '';
+            const img = btn.getAttribute('data-product-img') || card?.querySelector('img')?.src || '/client-assets/images/fresh_produce.png';
+            const specsRaw = btn.getAttribute('data-product-specs') || '';
 
-            if (data) {
-                document.getElementById('modalProdTitle').innerText = data.title;
-                document.getElementById('modalProdCategory').innerText = data.category;
-                document.getElementById('modalProdOrigin').innerText = data.origin;
-                document.getElementById('modalProdDesc').innerText = data.desc;
-                document.getElementById('modalProdImg').src = data.img;
+            const prodKey = btn.getAttribute('data-product');
+            const legacyData = prodKey && typeof productDatabase !== 'undefined' ? productDatabase[prodKey] : null;
+
+            if (title || legacyData) {
+                const finalTitle = title || legacyData.title;
+                document.getElementById('modalProdTitle').innerText = finalTitle;
+                document.getElementById('modalProdCategory').innerText = category || legacyData.category;
+                document.getElementById('modalProdOrigin').innerText = origin || legacyData.origin;
+                document.getElementById('modalProdDesc').innerText = desc || legacyData.desc;
+                document.getElementById('modalProdImg').src = img || legacyData.img;
+
+                // Sync product name to modal RFQ trigger button
+                const modalRfqBtn = modal.querySelector('.trigger-rfq-modal');
+                if (modalRfqBtn) {
+                    modalRfqBtn.setAttribute('data-product-name', finalTitle);
+                }
 
                 const specsContainer = document.getElementById('modalProdSpecs');
                 specsContainer.innerHTML = '';
-                data.specs.forEach(spec => {
-                    specsContainer.innerHTML += `
-                        <div class="product-spec-item" style="border-bottom:1px dashed #E2E8F0; padding:0.4rem 0;">
-                            <label style="color:#64748B; font-weight:500;">${spec.label}:</label>
-                            <span style="color:#0F233D; font-weight:700;">${spec.val}</span>
-                        </div>
-                    `;
-                });
+
+                // Extract specs from card items or raw string or legacy database
+                const cardSpecs = card?.querySelectorAll('.product-spec-item');
+                if (cardSpecs && cardSpecs.length > 0) {
+                    cardSpecs.forEach(spec => {
+                        const label = spec.querySelector('label')?.innerText || '';
+                        const val = spec.querySelector('span')?.innerText || spec.innerText;
+                        specsContainer.innerHTML += `
+                            <div class="product-spec-item" style="border-bottom:1px dashed #E2E8F0; padding:0.4rem 0;">
+                                <label style="color:#64748B; font-weight:500;">${label}</label>
+                                <span style="color:#0F233D; font-weight:700;">${val}</span>
+                            </div>
+                        `;
+                    });
+                } else if (specsRaw) {
+                    specsRaw.split('\n').forEach(line => {
+                        line = line.trim();
+                        if (!line) return;
+                        let label = 'Thông số:';
+                        let val = line;
+                        if (line.includes(':')) {
+                            const parts = line.split(':');
+                            label = parts[0].trim() + ':';
+                            val = parts.slice(1).join(':').trim();
+                        }
+                        specsContainer.innerHTML += `
+                            <div class="product-spec-item" style="border-bottom:1px dashed #E2E8F0; padding:0.4rem 0;">
+                                <label style="color:#64748B; font-weight:500;">${label}</label>
+                                <span style="color:#0F233D; font-weight:700;">${val}</span>
+                            </div>
+                        `;
+                    });
+                } else if (legacyData && legacyData.specs) {
+                    legacyData.specs.forEach(spec => {
+                        specsContainer.innerHTML += `
+                            <div class="product-spec-item" style="border-bottom:1px dashed #E2E8F0; padding:0.4rem 0;">
+                                <label style="color:#64748B; font-weight:500;">${spec.label}:</label>
+                                <span style="color:#0F233D; font-weight:700;">${spec.val}</span>
+                            </div>
+                        `;
+                    });
+                }
 
                 modal.classList.add('active');
             }
         });
     });
+
 
     if (closeBtn) {
         closeBtn.addEventListener('click', () => {
