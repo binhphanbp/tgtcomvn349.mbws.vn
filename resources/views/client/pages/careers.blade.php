@@ -5,12 +5,12 @@
 
 @section('content')
 <!-- PAGE TITLE BANNER -->
-    <section class="hero-section" style="padding:3.5rem 0; background-color:#0A192F;">
-        <div class="hero-bg-overlay" style="opacity:0.4;"></div>
+    <section class="hero-section" style="padding:3.5rem 0;">
+        <div class="hero-bg-overlay" style="opacity:0.6;"></div>
         <div class="container" style="position:relative; z-index:2; text-align:center;">
-            <span class="badge badge-orange mb-2">Cơ Hội Nghề Nghiệp & Văn Hóa Doanh Nghiệp</span>
-            <h1 style="font-size:2.25rem; color:white;">TUYỂN DỤNG NHÂN SỰ & CƠ HỘI NGHỀ NGHIỆP</h1>
-            <p style="color:#E2E8F0; max-width:700px; margin:0.5rem auto 0 auto;">Chung tay phát triển thương mại & xuất nhập khẩu nông sản Việt Nam vươn tầm quốc tế cùng TGT TIMEX. Thu nhập cạnh tranh, thưởng minh bạch theo kết quả kinh doanh.</p>
+            <span class="badge badge-orange mb-2">Cơ Hội Nghề Nghiệp & Tuyển Dụng</span>
+            <h1 style="font-size:2.25rem; color:#0F233D; font-weight:700;">GIA NHẬP ĐỘI NGŨ PHÁT TRIỂN NÔNG SẢN TGT TIMEX</h1>
+            <p style="color:#475569; max-width:700px; margin:0.5rem auto 0 auto;">Cơ hội làm việc chuyên nghiệp trong lĩnh vực thương mại & chuỗi cung ứng nông sản hàng đầu.</p>
         </div>
     </section>
 

@@ -5,14 +5,15 @@
 
 @section('content')
 <!-- PAGE TITLE BANNER -->
-    <section class="hero-section" style="padding:3.5rem 0; background-color:#0A192F;">
-        <div class="hero-bg-overlay" style="opacity:0.4;"></div>
+    <section class="hero-section" style="padding:3.5rem 0;">
+        <div class="hero-bg-overlay" style="opacity:0.6;"></div>
         <div class="container" style="position:relative; z-index:2; text-align:center;">
             <span class="badge badge-orange mb-2">Hồ Sơ Doanh Nghiệp & Năng Lực</span>
-            <h1 style="font-size:2.25rem; color:white;">CÔNG TY CỔ PHẦN XUẤT NHẬP KHẨU THƯƠNG MẠI TGT</h1>
-            <p style="color:#E2E8F0; max-width:700px; margin:0.5rem auto 0 auto;">TGT TIMEX - Đối tác thương mại & nhập khẩu nông sản B2B có đầy đủ năng lực pháp lý, kho vận & kiểm định chất lượng.</p>
+            <h1 style="font-size:2.25rem; color:#0F233D; font-weight:700;">CÔNG TY CỔ PHẦN XUẤT NHẬP KHẨU THƯƠNG MẠI TGT</h1>
+            <p style="color:#475569; max-width:700px; margin:0.5rem auto 0 auto;">TGT TIMEX - Đối tác thương mại & nhập khẩu nông sản B2B có đầy đủ năng lực pháp lý, kho vận & kiểm định chất lượng.</p>
         </div>
     </section>
+
 
     <!-- LEGAL BUSINESS INFO & OVERVIEW -->
     <section class="section-padding bg-white">

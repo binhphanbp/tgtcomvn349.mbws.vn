@@ -5,14 +5,15 @@
 
 @section('content')
 <!-- PAGE TITLE BANNER -->
-    <section class="hero-section" style="padding:3.5rem 0; background-color:#0A192F;">
-        <div class="hero-bg-overlay" style="opacity:0.4;"></div>
+    <section class="hero-section" style="padding:3.5rem 0;">
+        <div class="hero-bg-overlay" style="opacity:0.6;"></div>
         <div class="container" style="position:relative; z-index:2; text-align:center;">
             <span class="badge badge-orange mb-2">Bảng Tiêu Chuẩn Kỹ Thuật Nông Sản</span>
-            <h1 style="font-size:2.25rem; color:white;">DANH MỤC NÔNG SẢN & THÔNG TIN CUNG ỨNG</h1>
-            <p style="color:#E2E8F0; max-width:720px; margin:0.5rem auto 0 auto;">Đầy đủ thông tin về nông sản tươi, nông sản khô, nông sản chế biến, xuất khẩu & hàng hóa xuất nhập khẩu theo quy cách B2B.</p>
+            <h1 style="font-size:2.25rem; color:#0F233D; font-weight:700;">DANH MỤC NÔNG SẢN & THÔNG TIN CUNG ỨNG</h1>
+            <p style="color:#475569; max-width:720px; margin:0.5rem auto 0 auto;">Đầy đủ thông tin về nông sản tươi, nông sản khô, nông sản chế biến, xuất khẩu & hàng hóa xuất nhập khẩu theo quy cách B2B.</p>
         </div>
     </section>
+
 
     <!-- PRODUCT CATALOG WITH DATA SHEETS -->
     <section class="section-padding bg-white">

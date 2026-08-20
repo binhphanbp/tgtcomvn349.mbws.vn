@@ -120,11 +120,6 @@ img {
 .workflow-section h3,
 .workflow-section h4,
 .workflow-section .section-title,
-.hero-section h1,
-.hero-section h2,
-.hero-section h3,
-.hero-section h4,
-.hero-section .section-title,
 #b2b-cta h1,
 #b2b-cta h2,
 #b2b-cta h3,
@@ -137,12 +132,11 @@ img {
 .bg-navy-dark .section-subtitle,
 .workflow-section p,
 .workflow-section .section-subtitle,
-.hero-section p,
-.hero-section .section-subtitle,
 #b2b-cta p,
 #b2b-cta .section-subtitle {
     color: #CBD5E1 !important;
 }
+
 
 .section-header {
     text-align: center;
@@ -496,19 +490,20 @@ img {
 
 .mobile-only-btn { display: none; }
 
-/* --- Hero Banner Section --- */
+/* --- Hero Banner Section (Modern Light Theme) --- */
 .hero-section {
     position: relative;
-    background-color: var(--dark-navy);
-    color: #FFFFFF;
-    padding: 5rem 0 6.5rem 0;
+    background: linear-gradient(135deg, #F0FDF4 0%, #F8FAFC 50%, #ECFDF5 100%);
+    color: var(--text-dark);
+    padding: 4.5rem 0 5.5rem 0;
     overflow: hidden;
+    border-bottom: 1px solid #E2E8F0;
 }
 
 .hero-bg-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(5, 14, 26, 0.96) 0%, rgba(11, 25, 44, 0.9) 65%, rgba(5, 150, 105, 0.32) 100%),
+    background: linear-gradient(135deg, rgba(240, 253, 244, 0.88) 0%, rgba(248, 250, 252, 0.94) 60%, rgba(236, 253, 245, 0.9) 100%),
                 url('../images/hero_banner.png') center/cover no-repeat;
     z-index: 1;
 }
@@ -522,23 +517,33 @@ img {
     align-items: center;
 }
 
-.hero-text-box h1 {
-    font-size: clamp(2.1rem, 4.8vw, 3.2rem);
-    font-weight: 600;
-    color: #FFFFFF !important;
-    margin-bottom: 1.35rem;
-    line-height: 1.18;
-    letter-spacing: -0.03em;
+.hero-text-box .sub-tag {
+    background-color: #ECFDF5 !important;
+    color: #047857 !important;
+    border: 1px solid rgba(5, 150, 105, 0.25) !important;
 }
 
-.hero-text-box h1 span { color: var(--emerald-bright) !important; }
+.hero-text-box h1 {
+    font-size: clamp(2.1rem, 4.8vw, 3.2rem);
+    font-weight: 700;
+    color: #0F233D !important;
+    margin-bottom: 1.35rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.hero-text-box h1 span { color: #059669 !important; }
 
 .hero-text-box p {
-    font-size: 1.1rem;
-    color: #E2E8F0 !important;
+    font-size: 1.075rem;
+    color: #475569 !important;
     margin-bottom: 2.25rem;
     max-width: 650px;
-    line-height: 1.7;
+    line-height: 1.75;
+}
+
+.hero-text-box p strong {
+    color: #0F233D !important;
 }
 
 .hero-actions {
@@ -549,21 +554,21 @@ img {
 }
 
 .hero-feature-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
     border-radius: var(--radius-lg);
     padding: 2rem;
-    backdrop-filter: blur(12px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
     box-sizing: border-box;
 }
 
 .hero-feature-card h3 {
-    color: #FFFFFF !important;
-    font-size: 1.25rem;
+    color: #0F233D !important;
+    font-size: 1.15rem;
+    font-weight: 700;
     margin-bottom: 1.25rem;
     padding-bottom: 0.75rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid #F1F5F9;
 }
 
 .hero-feature-list {
@@ -581,8 +586,8 @@ img {
 .hero-feature-icon {
     width: 36px;
     height: 36px;
-    background-color: rgba(16, 185, 129, 0.25);
-    color: var(--emerald-bright);
+    background-color: #ECFDF5;
+    color: #059669;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -593,17 +598,18 @@ img {
 }
 
 .hero-feature-info h4 {
-    color: #FFFFFF !important;
-    font-size: 1rem;
-    font-weight: 600;
+    color: #0F233D !important;
+    font-size: 0.975rem;
+    font-weight: 700;
     margin-bottom: 0.2rem;
 }
 
 .hero-feature-info p {
-    color: #CBD5E1 !important;
+    color: #64748B !important;
     font-size: 0.875rem;
     line-height: 1.5;
 }
+
 
 /* --- Target Customer Segment Cards --- */
 .segments-grid {
@@ -1914,41 +1920,59 @@ textarea.form-control {
     .modal-header { padding: 1rem; }
     .modal-body { padding: 1rem; }
 
-    /* Sticky Bottom Contact Bar */
+    /* Sticky Bottom Contact Bar (Refined Ergonomic Mobile UI) */
     .mobile-bottom-bar {
         position: fixed !important;
         bottom: 0 !important;
         left: 0 !important;
         right: 0 !important;
-        height: 52px !important;
         background-color: #FFFFFF !important;
         border-top: 1px solid #E2E8F0 !important;
-        box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.12) !important;
+        box-shadow: 0 -4px 20px rgba(15, 23, 42, 0.12) !important;
         display: flex !important;
         align-items: center !important;
         justify-content: space-between !important;
-        padding: 0.35rem 0.65rem !important;
-        gap: 0.5rem !important;
+        padding: 0.45rem 0.75rem !important;
+        padding-bottom: calc(0.45rem + env(safe-area-inset-bottom, 0px)) !important;
+        gap: 0.6rem !important;
         z-index: 9995 !important;
     }
 
     .mobile-bottom-btn {
         flex: 1;
-        height: 40px;
+        height: 42px;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 0.4rem;
-        font-weight: 600;
+        gap: 0.45rem;
+        font-weight: 700;
         font-size: 0.825rem;
-        border-radius: var(--radius-md);
+        border-radius: 8px;
         color: #FFFFFF !important;
         text-decoration: none;
         font-family: 'Plus Jakarta Sans', sans-serif;
+        white-space: nowrap;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.15s ease, opacity 0.15s ease;
     }
 
-    .mobile-btn-call { background-color: var(--accent-green); }
-    .mobile-btn-zalo { background-color: #0068FF; }
+    .mobile-bottom-btn:active {
+        transform: scale(0.97);
+        opacity: 0.92;
+    }
+
+    .mobile-bottom-btn i {
+        font-size: 0.95rem;
+        flex-shrink: 0;
+    }
+
+    .mobile-btn-call { 
+        background: linear-gradient(135deg, #059669 0%, #10B981 100%) !important; 
+    }
+    .mobile-btn-zalo { 
+        background: linear-gradient(135deg, #0068FF 0%, #0084FF 100%) !important; 
+    }
+
 
     /* Hide floating Call & Zalo bubbles on mobile (since sticky bar handles it cleanly) */
     .float-zalo, .float-phone { display: none !important; }

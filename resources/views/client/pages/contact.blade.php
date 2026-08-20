@@ -5,14 +5,15 @@
 
 @section('content')
 <!-- PAGE TITLE BANNER -->
-    <section class="hero-section" style="padding:3.5rem 0; background-color:#0A192F;">
-        <div class="hero-bg-overlay" style="opacity:0.4;"></div>
+    <section class="hero-section" style="padding:3.5rem 0;">
+        <div class="hero-bg-overlay" style="opacity:0.6;"></div>
         <div class="container" style="position:relative; z-index:2; text-align:center;">
-            <span class="badge badge-orange mb-2">Liên Hệ & Hỗ Trợ Doanh Nghiệp</span>
-            <h1 style="font-size:2.25rem; color:white;">LIÊN HỆ & YÊU CẦU BÁO GIÁ B2B</h1>
-            <p style="color:#E2E8F0; max-width:700px; margin:0.5rem auto 0 auto;">Kết nối trực tiếp với phòng kinh doanh B2B TGT TIMEX để nhận báo giá sỉ, mẫu sản phẩm & hợp đồng cung ứng.</p>
+            <span class="badge badge-orange mb-2">Trung Tâm Liên Hệ & Tư Vấn B2B</span>
+            <h1 style="font-size:2.25rem; color:#0F233D; font-weight:700;">LIÊN HỆ PHÒNG KINH DOANH & XUẤT NHẬP KHẨU TGT</h1>
+            <p style="color:#475569; max-width:700px; margin:0.5rem auto 0 auto;">Nhận báo giá nông sản sỉ số lượng lớn, hợp đồng định kỳ & tư vấn kỹ thuật đóng gói theo yêu cầu.</p>
         </div>
     </section>
+
 
     <!-- CONTACT DETAILS & FORM -->
     <section class="section-padding bg-white">

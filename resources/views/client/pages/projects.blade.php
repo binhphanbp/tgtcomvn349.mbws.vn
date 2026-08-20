@@ -5,14 +5,15 @@
 
 @section('content')
 <!-- PAGE TITLE BANNER -->
-    <section class="hero-section" style="padding:3.5rem 0; background-color:#0A192F;">
-        <div class="hero-bg-overlay" style="opacity:0.4;"></div>
+    <section class="hero-section" style="padding:3.5rem 0;">
+        <div class="hero-bg-overlay" style="opacity:0.6;"></div>
         <div class="container" style="position:relative; z-index:2; text-align:center;">
             <span class="badge badge-orange mb-2">Hồ Sơ Năng Lực & Dự Án Thực Tế</span>
-            <h1 style="font-size:2.25rem; color:white;">DỰ ÁN & HỢP ĐỒNG CUNG ỨNG B2B THỰC TẾ</h1>
-            <p style="color:#E2E8F0; max-width:700px; margin:0.5rem auto 0 auto;">Bằng chứng thực tế về sản lượng tấn/tháng, hợp đồng cung ứng định kỳ & khả năng tìm nguồn hàng theo quy cách của TGT TIMEX.</p>
+            <h1 style="font-size:2.25rem; color:#0F233D; font-weight:700;">DỰ ÁN & HỢP ĐỒNG CUNG ỨNG B2B THỰC TẾ</h1>
+            <p style="color:#475569; max-width:700px; margin:0.5rem auto 0 auto;">Bằng chứng thực tế về sản lượng tấn/tháng, hợp đồng cung ứng định kỳ & khả năng tìm nguồn hàng theo quy cách của TGT TIMEX.</p>
         </div>
     </section>
+
 
     <!-- CASE STUDIES SECTION -->
     <section class="section-padding bg-white">

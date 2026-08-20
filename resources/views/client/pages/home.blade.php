@@ -16,12 +16,13 @@
                     
                     <div class="hero-actions">
                         <button class="btn btn-primary btn-lg trigger-rfq-modal">
-                            <i class="fas fa-file-signature"></i> Nhận báo giá B2B ngay
+                            <i class="fas fa-file-signature"></i> Nhận Báo Giá B2B Ngay
                         </button>
-                        <a href="{{ route('client.products') }}" class="btn btn-outline-white btn-lg">
+                        <a href="{{ route('client.products') }}" class="btn btn-outline-navy btn-lg">
                             <i class="fas fa-boxes-stacked"></i> Xem Bảng Thông Số Kỹ Thuật
                         </a>
                     </div>
+
                 </div>
 
                 <div class="hero-feature-card">
