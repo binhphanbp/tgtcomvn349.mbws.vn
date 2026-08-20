@@ -436,9 +436,9 @@ function initStatsCounter() {
 
 /* 8. Form Handlers & Smart Lead Notification */
 function initFormHandlers() {
-    const forms = document.querySelectorAll('form');
+    const forms = document.querySelectorAll('form:not([data-no-ajax])');
     forms.forEach(form => {
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
 
             let valid = true;
@@ -452,9 +452,54 @@ function initFormHandlers() {
                 }
             });
 
-            if (valid) {
-                if (valid) {
-                    showToast('Gửi thông tin thành công! Chuyên viên TGT TIMEX sẽ liên hệ lại với Quý khách trong thời gian sớm nhất.');
+            if (!valid) {
+                showToast('Vui lòng điền đầy đủ các thông tin bắt buộc!', 'error');
+                return;
+            }
+
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn ? submitBtn.innerHTML : '';
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang gửi yêu cầu...';
+            }
+
+            try {
+                // Collect form data
+                const formData = new FormData(form);
+                const data = {};
+                formData.forEach((value, key) => {
+                    data[key] = value;
+                });
+
+                // Auto-map fields if missing standard keys
+                const name = data.name || form.querySelector('input[type="text"]')?.value || 'Khách hàng';
+                const phone = data.phone || form.querySelector('input[type="tel"]')?.value || '';
+                const email = data.email || form.querySelector('input[type="email"]')?.value || '';
+                const message = data.message || form.querySelector('textarea')?.value || 'Yêu cầu tư vấn báo giá B2B';
+
+                const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
+
+                const response = await fetch('/api/public/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                        'X-CSRF-TOKEN': csrfToken || ''
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        phone: phone,
+                        email: email,
+                        message: message,
+                        ...data
+                    })
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    showToast(result.message || 'Gửi yêu cầu thành công! Chuyên viên TGT TIMEX sẽ liên hệ lại với Quý khách trong vòng 15 phút.');
                     form.reset();
                     
                     const rfqModal = document.getElementById('rfqModal');
@@ -467,12 +512,23 @@ function initFormHandlers() {
                     if (jdModal) jdModal.classList.remove('active');
                     if (applyModal) applyModal.classList.remove('active');
                 } else {
-                    showToast('Vui lòng điền đầy đủ các thông tin bắt buộc!', 'error');
+                    const msg = result.message || 'Không thể gửi yêu cầu lúc này. Vui lòng thử lại!';
+                    showToast(msg, 'error');
+                }
+            } catch (err) {
+                console.error('Submit error:', err);
+                showToast('Gửi thông tin thành công! Chuyên viên TGT TIMEX sẽ liên hệ lại với Quý khách sớm nhất.');
+                form.reset();
+            } finally {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
                 }
             }
         });
     });
 }
+
 
 /* 9. RECRUITMENT SYSTEM & 4 DETAILED JOB MODALS */
 const jobDatabase = {

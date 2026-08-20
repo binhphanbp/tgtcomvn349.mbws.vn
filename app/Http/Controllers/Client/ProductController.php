@@ -3,12 +3,28 @@
 namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Contracts\View\View;
 
 class ProductController extends Controller
 {
     public function index(string $locale): View
     {
-        return view('client.pages.products');
+        $categories = Category::query()
+            ->where('is_active', true)
+            ->orderBy('sort_order')
+            ->get();
+
+        $products = Product::query()
+            ->where('is_active', true)
+            ->with('category')
+            ->orderBy('sort_order')
+            ->get();
+
+        return view('client.pages.products', [
+            'categories' => $categories,
+            'products' => $products,
+        ]);
     }
 }

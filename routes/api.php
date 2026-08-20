@@ -42,15 +42,12 @@ Route::prefix('public')->middleware('apiLocale')->group(function () {
             'meta' => $meta !== [] ? $meta : null,
         ]);
 
-        try {
-            Mail::to(config('mail.seller'))->send(new ContactInquiryMail($inquiry));
-        } catch (Exception $e) {
-            Log::error('Contact form email failed: '.$e->getMessage());
-
-            return response()->json([
-                'success' => false,
-                'message' => 'Không thể gửi yêu cầu vào lúc này. Vui lòng thử lại sau.',
-            ], 500);
+        if (filled(config('mail.seller'))) {
+            try {
+                Mail::to(config('mail.seller'))->send(new ContactInquiryMail($inquiry));
+            } catch (\Throwable $e) {
+                Log::warning('Contact form email failed: '.$e->getMessage());
+            }
         }
 
         return response()->json([
