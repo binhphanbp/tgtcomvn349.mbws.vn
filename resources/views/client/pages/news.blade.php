@@ -27,7 +27,7 @@
                 <!-- Article 1 -->
                 <div class="news-card">
                     <div class="news-img">
-                        <img src="{{ asset(\'client-assets/images/fresh_produce.png\') }}" alt="Bảng giá khoai tây Hà Lan">
+                        <img src="{{ asset('client-assets/images/fresh_produce.png') }}" alt="Bảng giá khoai tây Hà Lan">
                     </div>
                     <div class="news-content">
                         <span class="news-date"><i class="far fa-calendar-alt"></i> 14/08/2026</span>
@@ -42,7 +42,7 @@
                 <!-- Article 2 -->
                 <div class="news-card">
                     <div class="news-img">
-                        <img src="{{ asset(\'client-assets/images/cold_storage_warehouse.png\') }}" alt="Nguồn khoai tây cho nhà máy">
+                        <img src="{{ asset('client-assets/images/cold_storage_warehouse.png') }}" alt="Nguồn khoai tây cho nhà máy">
                     </div>
                     <div class="news-content">
                         <span class="news-date"><i class="far fa-calendar-alt"></i> 10/08/2026</span>
@@ -57,7 +57,7 @@
                 <!-- Article 3 -->
                 <div class="news-card">
                     <div class="news-img">
-                        <img src="{{ asset(\'client-assets/images/fresh_produce.png\') }}" alt="Báo giá tỏi hành tây">
+                        <img src="{{ asset('client-assets/images/fresh_produce.png') }}" alt="Báo giá tỏi hành tây">
                     </div>
                     <div class="news-content">
                         <span class="news-date"><i class="far fa-calendar-alt"></i> 05/08/2026</span>

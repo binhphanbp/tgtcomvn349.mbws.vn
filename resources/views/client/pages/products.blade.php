@@ -30,7 +30,7 @@
                 <!-- Product 1: Khoai tây tươi -->
                 <div class="product-card" data-category="nong-san-tuoi">
                     <div class="product-img-wrapper">
-                        <img src="{{ asset(\'client-assets/images/fresh_produce.png\') }}" alt="Khoai tây tươi Hà Lan">
+                        <img src="{{ asset('client-assets/images/fresh_produce.png') }}" alt="Khoai tây tươi Hà Lan">
                         <span class="product-category-tag">Nông Sản Tươi</span>
                         <span class="product-origin-badge">Hà Lan / TQ</span>
                     </div>
@@ -61,7 +61,7 @@
                 <!-- Product 2: Hành tây -->
                 <div class="product-card" data-category="nong-san-tuoi">
                     <div class="product-img-wrapper">
-                        <img src="{{ asset(\'client-assets/images/fresh_produce.png\') }}" alt="Hành tây vàng">
+                        <img src="{{ asset('client-assets/images/fresh_produce.png') }}" alt="Hành tây vàng">
                         <span class="product-category-tag">Nông Sản Tươi</span>
                         <span class="product-origin-badge">Hà Lan / Ấn Độ</span>
                     </div>
@@ -92,7 +92,7 @@
                 <!-- Product 3: Tỏi & Gừng -->
                 <div class="product-card" data-category="nong-san-tuoi">
                     <div class="product-img-wrapper">
-                        <img src="{{ asset(\'client-assets/images/fresh_produce.png\') }}" alt="Tỏi trắng nhập khẩu">
+                        <img src="{{ asset('client-assets/images/fresh_produce.png') }}" alt="Tỏi trắng nhập khẩu">
                         <span class="product-category-tag">Nông Sản Tươi</span>
                         <span class="product-origin-badge">TQ / Myanmar</span>
                     </div>
@@ -122,7 +122,7 @@
                 <!-- Product 4: Dưa vàng & Trái cây -->
                 <div class="product-card" data-category="nong-san-tuoi">
                     <div class="product-img-wrapper">
-                        <img src="{{ asset(\'client-assets/images/fresh_fruits.png\') }}" alt="Dưa vàng hoàng kim">
+                        <img src="{{ asset('client-assets/images/fresh_fruits.png') }}" alt="Dưa vàng hoàng kim">
                         <span class="product-category-tag">Nông Sản Tươi & Trái Cây</span>
                         <span class="product-origin-badge">VietGAP / NK</span>
                     </div>
@@ -151,7 +151,7 @@
                 <!-- Product 5: Vừng Mè Khô -->
                 <div class="product-card" data-category="nong-san-kho">
                     <div class="product-img-wrapper">
-                        <img src="{{ asset(\'client-assets/images/dried_produce.png\') }}" alt="Vừng đen vừng trắng vừng vàng">
+                        <img src="{{ asset('client-assets/images/dried_produce.png') }}" alt="Vừng đen vừng trắng vừng vàng">
                         <span class="product-category-tag">Nông Sản Khô</span>
                         <span class="product-origin-badge">Myanmar / VN</span>
                     </div>
@@ -182,7 +182,7 @@
                 <!-- Product 6: Đậu Xanh -->
                 <div class="product-card" data-category="nong-san-kho">
                     <div class="product-img-wrapper">
-                        <img src="{{ asset(\'client-assets/images/dried_produce.png\') }}" alt="Đậu xanh nguyên hạt và tách vỏ">
+                        <img src="{{ asset('client-assets/images/dried_produce.png') }}" alt="Đậu xanh nguyên hạt và tách vỏ">
                         <span class="product-category-tag">Nông Sản Khô</span>
                         <span class="product-origin-badge">Myanmar / VN</span>
                     </div>
@@ -213,7 +213,7 @@
                 <!-- Product 7: Đậu Tương -->
                 <div class="product-card" data-category="nong-san-kho">
                     <div class="product-img-wrapper">
-                        <img src="{{ asset(\'client-assets/images/dried_produce.png\') }}" alt="Đậu tương hạt chất lượng cao">
+                        <img src="{{ asset('client-assets/images/dried_produce.png') }}" alt="Đậu tương hạt chất lượng cao">
                         <span class="product-category-tag">Nông Sản Khô</span>
                         <span class="product-origin-badge">Việt Nam / NK</span>
                     </div>
@@ -244,7 +244,7 @@
                 <!-- Product 8: Mộc Nhĩ & Nấm Hương -->
                 <div class="product-card" data-category="nong-san-kho">
                     <div class="product-img-wrapper">
-                        <img src="{{ asset(\'client-assets/images/dried_produce.png\') }}" alt="Mộc nhĩ nấm hương khô">
+                        <img src="{{ asset('client-assets/images/dried_produce.png') }}" alt="Mộc nhĩ nấm hương khô">
                         <span class="product-category-tag">Nông Sản Khô</span>
                         <span class="product-origin-badge">Việt Nam / NK</span>
                     </div>
@@ -274,7 +274,7 @@
                 <!-- Product 9: Đường tinh luyện -->
                 <div class="product-card" data-category="nong-san-kho">
                     <div class="product-img-wrapper">
-                        <img src="{{ asset(\'client-assets/images/dried_produce.png\') }}" alt="Đường tinh luyện thương mại B2B">
+                        <img src="{{ asset('client-assets/images/dried_produce.png') }}" alt="Đường tinh luyện thương mại B2B">
                         <span class="product-category-tag">Nông Sản Khô & Gia Vị</span>
                         <span class="product-origin-badge">Việt Nam / NK</span>
                     </div>
@@ -304,7 +304,7 @@
                 <!-- Product 10: Khoai tây chiên đông lạnh -->
                 <div class="product-card" data-category="nong-san-che-bien">
                     <div class="product-img-wrapper">
-                        <img src="{{ asset(\'client-assets/images/processed_potatoes.png\') }}" alt="Khoai tây đông lạnh">
+                        <img src="{{ asset('client-assets/images/processed_potatoes.png') }}" alt="Khoai tây đông lạnh">
                         <span class="product-category-tag">Nông Sản Chế Biến</span>
                         <span class="product-origin-badge">Bỉ / Hà Lan</span>
                     </div>
@@ -333,7 +333,7 @@
                 <!-- Product 11: Khoai tây múi cau & nghiền -->
                 <div class="product-card" data-category="nong-san-che-bien">
                     <div class="product-img-wrapper">
-                        <img src="{{ asset(\'client-assets/images/processed_potatoes.png\') }}" alt="Khoai tây múi cau">
+                        <img src="{{ asset('client-assets/images/processed_potatoes.png') }}" alt="Khoai tây múi cau">
                         <span class="product-category-tag">Nông Sản Chế Biến</span>
                         <span class="product-origin-badge">Bỉ / Hà Lan</span>
                     </div>
@@ -362,7 +362,7 @@
                 <!-- Product 12: Nông sản xuất khẩu -->
                 <div class="product-card" data-category="nong-san-xuat-khau">
                     <div class="product-img-wrapper">
-                        <img src="{{ asset(\'client-assets/images/fresh_fruits.png\') }}" alt="Nông sản xuất khẩu Việt Nam">
+                        <img src="{{ asset('client-assets/images/fresh_fruits.png') }}" alt="Nông sản xuất khẩu Việt Nam">
                         <span class="product-category-tag">Nông Sản Xuất Khẩu</span>
                         <span class="product-origin-badge">Việt Nam</span>
                     </div>
@@ -391,7 +391,7 @@
                 <!-- Product 13: Hàng Hóa XNK & Tìm Nguồn -->
                 <div class="product-card" data-category="hang-hoa-xnk">
                     <div class="product-img-wrapper">
-                        <img src="{{ asset(\'client-assets/images/cold_storage_warehouse.png\') }}" alt="Tìm Nguồn Hàng Nông Sản">
+                        <img src="{{ asset('client-assets/images/cold_storage_warehouse.png') }}" alt="Tìm Nguồn Hàng Nông Sản">
                         <span class="product-category-tag">Hàng Hóa XNK</span>
                         <span class="product-origin-badge">Toàn Cầu</span>
                     </div>

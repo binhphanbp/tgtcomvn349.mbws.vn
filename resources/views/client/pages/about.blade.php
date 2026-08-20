@@ -49,7 +49,7 @@
                 </div>
 
                 <div>
-                    <img src="{{ asset(\'client-assets/images/cold_storage_warehouse.png\') }}" alt="Kho bãi nông sản TGT TIMEX" style="border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.08);">
+                    <img src="{{ asset('client-assets/images/cold_storage_warehouse.png') }}" alt="Kho bãi nông sản TGT TIMEX" style="border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.08);">
                 </div>
             </div>
         </div>
