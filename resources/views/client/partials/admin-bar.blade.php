@@ -39,7 +39,22 @@
             width: max-content !important;
             z-index: 2147483645 !important;
         }
+        @media (max-width: 768px) {
+            #client-admin-bar {
+                bottom: 64px !important;
+                padding: 4px 6px !important;
+                gap: 4px !important;
+                font-size: 12px !important;
+                max-width: calc(100vw - 16px) !important;
+            }
+            #client-admin-bar a,
+            #client-admin-bar button {
+                padding: 6px 8px !important;
+                font-size: 12px !important;
+            }
+        }
         #client-admin-bar a,
+
         #client-admin-bar button {
             align-items: center !important;
             background: transparent !important;

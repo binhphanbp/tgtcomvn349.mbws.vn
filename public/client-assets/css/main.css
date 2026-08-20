@@ -40,11 +40,15 @@ html {
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden !important;
+    width: 100%;
+    max-width: 100%;
 }
 
 body {
     width: 100%;
-    overflow-x: clip;
+    max-width: 100%;
+    overflow-x: hidden !important;
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     color: var(--text-primary);
     background-color: #FFFFFF;
@@ -52,6 +56,7 @@ body {
     line-height: 1.7;
     font-weight: 400;
 }
+
 
 body.menu-open {
     overflow: hidden !important;
@@ -503,10 +508,12 @@ img {
 .hero-bg-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(240, 253, 244, 0.88) 0%, rgba(248, 250, 252, 0.94) 60%, rgba(236, 253, 245, 0.9) 100%),
-                url('../images/hero_banner.png') center/cover no-repeat;
+    background: radial-gradient(circle at 85% 15%, rgba(16, 185, 129, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 15% 85%, rgba(5, 150, 105, 0.1) 0%, transparent 40%),
+                linear-gradient(135deg, #F0FDF4 0%, #F8FAFC 50%, #ECFDF5 100%);
     z-index: 1;
 }
+
 
 .hero-content-wrapper {
     position: relative;
@@ -1715,7 +1722,7 @@ textarea.form-control {
 
 /* --- Tablets & Medium Screens (< 1024px) --- */
 @media (max-width: 1024px) {
-    .container { max-width: 100%; padding: 0 1.25rem; }
+    .container { max-width: 100%; padding: 0 1rem !important; }
 
     .top-bar { display: none !important; }
 
@@ -1725,7 +1732,7 @@ textarea.form-control {
         left: 0 !important;
         right: 0 !important;
         width: 100% !important;
-        height: 66px !important;
+        height: 64px !important;
         z-index: 9999 !important;
         background-color: #FFFFFF !important;
         border-bottom: 1px solid var(--border-color) !important;
@@ -1733,14 +1740,28 @@ textarea.form-control {
     }
 
     body {
-        padding-top: 66px !important;
+        padding-top: 64px !important;
     }
     
     .nav-wrapper {
-        height: 66px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        height: 64px !important;
         padding: 0 !important;
     }
+
+    .brand-logo { margin-right: 0 !important; }
+    .brand-logo-img { height: 40px !important; max-width: 160px !important; }
     
+    .nav-right-actions {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+        margin-left: auto !important;
+    }
+
     .nav-right-actions .btn-primary { display: none !important; }
     .mobile-only-btn { display: block !important; }
     
@@ -1748,28 +1769,30 @@ textarea.form-control {
         display: flex !important;
         align-items: center;
         justify-content: center;
-        width: 42px;
-        height: 42px;
-        font-size: 1.35rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
         color: var(--primary-navy);
         background-color: var(--bg-light);
         border: 1px solid var(--border-color);
         border-radius: var(--radius-md);
         cursor: pointer;
+        padding: 0;
+        margin: 0;
     }
 
-    .logo-icon-box { width: 38px; height: 38px; font-size: 1.05rem; }
-    .logo-title { font-size: 1.2rem; }
-    .logo-subtitle { font-size: 0.6rem; }
+    .logo-icon-box { width: 36px; height: 36px; font-size: 1rem; }
+    .logo-title { font-size: 1.15rem; }
+    .logo-subtitle { font-size: 0.575rem; }
 
     .nav-menu {
         position: fixed !important;
-        top: 66px !important;
+        top: 64px !important;
         left: 0 !important;
         right: 0 !important;
         bottom: 0 !important;
         width: 100vw !important;
-        height: calc(100vh - 66px) !important;
+        height: calc(100vh - 64px) !important;
         background-color: #FFFFFF !important;
         flex-direction: column;
         align-items: flex-start;
@@ -1787,11 +1810,11 @@ textarea.form-control {
     }
     
     .nav-link {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         font-weight: 600;
         color: #1E293B;
         width: 100%;
-        padding: 0.95rem 0;
+        padding: 0.9rem 0;
         border-bottom: 1px solid #F1F5F9;
         display: flex;
         justify-content: space-between;
@@ -1805,8 +1828,8 @@ textarea.form-control {
     
     .nav-link.active::after { display: none; }
 
-    .hero-content-wrapper { grid-template-columns: 1fr; gap: 2.25rem; }
-    .about-section-grid { grid-template-columns: 1fr; gap: 2.25rem; }
+    .hero-content-wrapper { grid-template-columns: 1fr; gap: 2rem; }
+    .about-section-grid { grid-template-columns: 1fr; gap: 2rem; }
     .about-badge-overlay { bottom: 10px; right: 10px; }
     .services-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
     .product-grid, .news-grid, .case-study-grid { grid-template-columns: repeat(2, 1fr); gap: 1.35rem; }
@@ -1821,18 +1844,18 @@ textarea.form-control {
 /* --- Mobile Devices (< 768px) --- */
 @media (max-width: 768px) {
     body {
-        padding-bottom: 56px !important;
+        padding-bottom: 60px !important;
     }
 
-    .hero-section { padding: 2.25rem 0 3.5rem 0; }
-    .hero-text-box h1 { font-size: 1.45rem; line-height: 1.3; }
-    .hero-text-box p { font-size: 0.9rem; margin-bottom: 1.25rem; }
+    .hero-section { padding: 1.75rem 0 2.75rem 0 !important; }
+    .hero-text-box h1 { font-size: 1.35rem !important; line-height: 1.32 !important; margin-bottom: 0.85rem !important; }
+    .hero-text-box p { font-size: 0.875rem !important; line-height: 1.65 !important; margin-bottom: 1.25rem !important; }
     
-    .hero-actions { flex-direction: column; width: 100%; gap: 0.65rem; }
-    .hero-actions .btn { width: 100%; }
+    .hero-actions { flex-direction: column !important; width: 100% !important; gap: 0.6rem !important; }
+    .hero-actions .btn { width: 100% !important; justify-content: center !important; font-size: 0.875rem !important; padding: 0.75rem 1rem !important; }
 
-    .hero-feature-card { padding: 1.15rem; }
-    .hero-feature-card h3 { font-size: 1rem; }
+    .hero-feature-card { padding: 1.15rem !important; }
+    .hero-feature-card h3 { font-size: 1rem !important; }
 
     .stats-banner { margin-top: -1.75rem; padding: 0; }
     .stats-card-grid {
@@ -1841,6 +1864,7 @@ textarea.form-control {
         padding: 0.85rem 0.5rem;
         border-radius: var(--radius-md);
     }
+
     .stat-box { padding: 0.25rem; }
     .stat-number { font-size: 1.35rem; margin-bottom: 0.15rem; }
     .stat-label { font-size: 0.725rem; white-space: normal; text-wrap: balance; }
