@@ -239,4 +239,115 @@
             </div>
         </div>
     </section>
+
+    {{-- MODAL 1: JOB DETAIL POPUP (CHI TIẾT JD ĐẦY ĐỦ) --}}
+    <div class="modal-overlay" id="jobDetailModal">
+        <div class="modal-card jd-detail-modal-card">
+            <div class="modal-header">
+                <div>
+                    <span class="badge badge-green mb-1" id="modalJdBadge">Toàn Thời Gian</span>
+                    <h3 style="font-size:1.35rem; color:#0F233D;" id="modalJdTitle">CHI TIẾT VỊ TRÍ TUYỂN DỤNG</h3>
+                    <span style="font-size:0.875rem; color:#64748B;" id="modalJdDept">Phòng Ban</span>
+                </div>
+                <button class="modal-close"><i class="fas fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                {{-- Quick Info --}}
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:0.75rem; background:#F8FAFC; border:1px solid #E2E8F0; padding:1rem; border-radius:8px; margin-bottom:1.25rem;">
+                    <div><strong style="color:#0F233D;">💰 Thu nhập:</strong> <span id="modalJdSalary" style="color:#EA580C; font-weight:700;">--</span></div>
+                    <div><strong style="color:#0F233D;">⏰ Giờ làm việc:</strong> <span id="modalJdTime" style="color:#475569;">--</span></div>
+                    <div style="grid-column: 1 / -1;"><strong style="color:#0F233D;">📍 Địa điểm làm việc:</strong> <span id="modalJdLocation" style="color:#475569;">--</span></div>
+                </div>
+
+                {{-- Purpose Block --}}
+                <div class="jd-block">
+                    <div class="jd-block-title"><i class="fas fa-bullseye"></i> Mục Đích Công Việc</div>
+                    <p style="color:#334155; font-size:0.925rem; line-height:1.65; margin:0;" id="modalJdPurpose">--</p>
+                </div>
+
+                {{-- Duties Block --}}
+                <div class="jd-block">
+                    <div class="jd-block-title"><i class="fas fa-list-check"></i> Nhiệm Vụ & Trách Nhiệm Chính</div>
+                    <ul class="jd-bullet-list" id="modalJdDuties"></ul>
+                </div>
+
+                {{-- Requirements Block --}}
+                <div class="jd-block">
+                    <div class="jd-block-title"><i class="fas fa-user-check"></i> Yêu Cầu Ứng Viên</div>
+                    <ul class="jd-bullet-list" id="modalJdRequirements"></ul>
+                </div>
+
+                {{-- Benefits Block --}}
+                <div class="jd-block">
+                    <div class="jd-block-title"><i class="fas fa-gift"></i> Quyền Lợi & Cơ Chế Lương Thưởng</div>
+                    <ul class="jd-bullet-list" id="modalJdBenefits"></ul>
+                </div>
+
+                <div style="margin-top:1.5rem; display:flex; gap:1rem; justify-content:flex-end;">
+                    <button class="btn btn-outline-navy modal-close">Đóng Lại</button>
+                    <button class="btn btn-primary btn-apply-from-modal" data-job-id="" data-job-title="">
+                        <i class="fas fa-paper-plane"></i> Ứng Tuyển Vị Trí Này
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- MODAL 2: DEDICATED JOB APPLICATION FORM (FORM ỨNG TUYỂN) --}}
+    <div class="modal-overlay" id="jobApplyModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div>
+                    <span class="badge badge-orange mb-1">Hồ Sơ Ứng Tuyển Trực Tuyến</span>
+                    <h3 style="font-size:1.35rem; color:#0F233D;" id="applyModalTitle">ỨNG TUYỂN VỊ TRÍ</h3>
+                </div>
+                <button class="modal-close"><i class="fas fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label>VỊ TRÍ BẠN MUỐN ỨNG TUYỂN *</label>
+                            <select class="form-control" id="applyJobPosition" required>
+                                <option value="purchasing-staff">Chuyên viên Mua Hàng & Tìm Nguồn Nông Sản</option>
+                                <option value="sales-executive">Nhân viên Kinh Doanh Nông Sản B2B</option>
+                                <option value="sales-admin">Chuyên viên Hỗ Trợ Kinh Doanh (Sales Admin)</option>
+                                <option value="accountant">Nhân viên Kế Toán Doanh Nghiệp XNK</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>HỌ VÀ TÊN CỦA BẠN *</label>
+                            <input type="text" class="form-control" placeholder="Nguyễn Văn A" required>
+                        </div>
+                        <div class="form-group">
+                            <label>SỐ ĐIỆN THOẠI / ZALO *</label>
+                            <input type="tel" class="form-control" placeholder="09xxxxxxx" required>
+                        </div>
+                        <div class="form-group">
+                            <label>THƯ ĐIỆN TỬ (EMAIL) LIÊN HỆ NHẬN PHẢN HỒI *</label>
+                            <input type="email" class="form-control" placeholder="email@domain.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>NĂM SINH / ĐỘ TUỔI</label>
+                            <input type="text" class="form-control" placeholder="Ví dụ: 1998 / 28 tuổi">
+                        </div>
+                        <div class="form-group full-width">
+                            <label>ĐƯỜNG DẪN LINK CV (GOOGLE DRIVE, DROPBOX, TOPCV...) *</label>
+                            <input type="url" class="form-control" placeholder="https://drive.google.com/file/d/... hoặc link CV của bạn" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>TÓM TẮT KINH NGHIỆM LÀM VIỆC & KỸ NĂNG NỔI BẬT</label>
+                            <textarea class="form-control" placeholder="Ghi chú ngắn về số năm kinh nghiệm, các công việc tương tự đã từng làm..."></textarea>
+                        </div>
+                    </div>
+                    <div style="margin-top:1.35rem; text-align:center;">
+                        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">
+                            <i class="fas fa-paper-plane"></i> Gửi Hồ Sơ Ứng Tuyển Ngay
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 @endsection
+

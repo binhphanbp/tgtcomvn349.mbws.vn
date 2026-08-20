@@ -7,7 +7,7 @@ use Illuminate\Contracts\View\View;
 
 class ProductController extends Controller
 {
-    public function index(): View
+    public function index(string $locale): View
     {
         return view('client.pages.products');
     }

@@ -134,7 +134,7 @@ const productDatabase = {
             { label: 'Năng lực cung ứng', val: '5,000 Tấn / Tháng' },
             { label: 'Chứng từ kèm theo', val: 'Phytosanitary, VietGAP, CQ, Kiểm nghiệm' }
         ],
-        img: 'assets/images/fresh_produce.png'
+        img: '/client-assets/images/fresh_produce.png'
     },
     'onion-fresh': {
         title: 'Hành tây vàng & đỏ nhập khẩu thương hạng',
@@ -150,7 +150,7 @@ const productDatabase = {
             { label: 'Năng lực cung ứng', val: '3,000 Tấn / Tháng' },
             { label: 'Chứng từ', val: 'Phytosanitary, Hóa đơn VAT, CO' }
         ],
-        img: 'assets/images/fresh_produce.png'
+        img: '/client-assets/images/fresh_produce.png'
     },
     'garlic-fresh': {
         title: 'Tỏi trắng & Gừng già Trung Quốc / Myanmar / Việt Nam',
@@ -165,7 +165,7 @@ const productDatabase = {
             { label: 'Năng lực cung ứng', val: '2,000 Tấn / Tháng' },
             { label: 'Hóa đơn & Chứng từ', val: 'Hóa đơn VAT đầy đủ, Phytosanitary' }
         ],
-        img: 'assets/images/fresh_produce.png'
+        img: '/client-assets/images/fresh_produce.png'
     },
     'cantaloupe-fruit': {
         title: 'Dưa vàng Hoàng Kim VietGAP & Trái cây theo mùa',
@@ -178,7 +178,7 @@ const productDatabase = {
             { label: 'Đóng gói', val: 'Thùng carton 10kg có mút xốp định hình' },
             { label: 'Chứng nhận', val: 'VietGAP, GlobalGAP, Truy xuất QR' }
         ],
-        img: 'assets/images/fresh_fruits.png'
+        img: '/client-assets/images/fresh_fruits.png'
     },
     'sesame-seeds': {
         title: 'Vừng đen, Vừng trắng & Vừng vàng nguyên chất B2B',
@@ -195,7 +195,7 @@ const productDatabase = {
             { label: 'Đặt hàng tối thiểu', val: '1 Tấn' },
             { label: 'Năng lực cung ứng', val: '1,000 Tấn / Tháng' }
         ],
-        img: 'assets/images/dried_produce.png'
+        img: '/client-assets/images/dried_produce.png'
     },
     'mung-beans': {
         title: 'Đậu xanh nguyên hạt còn vỏ / Tách đôi bỏ vỏ / Tách đôi nguyên vỏ',
@@ -212,7 +212,7 @@ const productDatabase = {
             { label: 'Đặt hàng tối thiểu', val: '2 Tấn' },
             { label: 'Năng lực cung ứng', val: '1,500 Tấn / Tháng' }
         ],
-        img: 'assets/images/dried_produce.png'
+        img: '/client-assets/images/dried_produce.png'
     },
     'soybeans': {
         title: 'Đậu tương (Đậu nành hạt chất lượng cao)',
@@ -228,7 +228,7 @@ const productDatabase = {
             { label: 'Đặt hàng tối thiểu', val: '3 Tấn / 1 Container' },
             { label: 'Năng lực cung ứng', val: '2,000 Tấn / Tháng' }
         ],
-        img: 'assets/images/dried_produce.png'
+        img: '/client-assets/images/dried_produce.png'
     },
     'dried-mushrooms': {
         title: 'Mộc nhĩ & Nấm hương khô chọn lọc',
@@ -242,7 +242,7 @@ const productDatabase = {
             { label: 'Đóng gói', val: 'Thùng carton 10kg, 20kg hoặc túi hút chân không' },
             { label: 'Hạn dùng', val: '24 tháng' }
         ],
-        img: 'assets/images/dried_produce.png'
+        img: '/client-assets/images/dried_produce.png'
     },
     'refined-sugar': {
         title: 'Đường tinh luyện thương mại B2B',
@@ -257,7 +257,7 @@ const productDatabase = {
             { label: 'Đóng gói', val: 'Bao PP/PE 50kg có tem nhãn ATTP' },
             { label: 'Đặt hàng tối thiểu', val: '5 Tấn' }
         ],
-        img: 'assets/images/dried_produce.png'
+        img: '/client-assets/images/dried_produce.png'
     },
     'french-fries': {
         title: 'Khoai tây chiên đông lạnh cắt thẳng & cắt sóng',
@@ -271,7 +271,7 @@ const productDatabase = {
             { label: 'Hạn sử dụng', val: '24 tháng kể từ ngày sản xuất' },
             { label: 'Đặt hàng tối thiểu', val: '50 Thùng (Giao xe lạnh tận nơi)' }
         ],
-        img: 'assets/images/processed_potatoes.png'
+        img: '/client-assets/images/processed_potatoes.png'
     },
     'potato-wedges': {
         title: 'Khoai tây múi cau (Potato Wedges) & Khoai tây nghiền',
@@ -284,7 +284,7 @@ const productDatabase = {
             { label: 'Bảo quản', val: '-18°C đông lạnh' },
             { label: 'Chứng nhận', val: 'HACCP, ISO, BRC Food' }
         ],
-        img: 'assets/images/processed_potatoes.png'
+        img: '/client-assets/images/processed_potatoes.png'
     },
     'vn-export-produce': {
         title: 'Nông sản Việt Nam xuất khẩu (Tỏi, Gừng, Dưa vàng, Nông sản khô)',
@@ -297,7 +297,7 @@ const productDatabase = {
             { label: 'Đóng gói xuất khẩu', val: 'Thùng carton in ấn theo thương hiệu / Bao lưới trên pallet' },
             { label: 'Điều kiện giao hàng', val: 'FOB Hải Phòng/Cát Lái, CIF cảng đến' }
         ],
-        img: 'assets/images/fresh_fruits.png'
+        img: '/client-assets/images/fresh_fruits.png'
     },
     'sourcing-b2b': {
         title: 'Hàng hóa XNK & Dịch vụ tìm nguồn theo yêu cầu',
@@ -310,7 +310,7 @@ const productDatabase = {
             { label: 'Quy trình hợp tác', val: 'Báo giá → Gửi mẫu → Kiểm định → Hợp đồng' },
             { label: 'Điều kiện giao nhận', val: 'FOB, CIF, CFR, DDP tận kho khách' }
         ],
-        img: 'assets/images/cold_storage_warehouse.png'
+        img: '/client-assets/images/cold_storage_warehouse.png'
     }
 };
 
